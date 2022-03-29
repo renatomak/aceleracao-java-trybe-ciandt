@@ -12,14 +12,18 @@ public class Fatorial {
     System.out.println("O fatorial de 18 é igual a " + fatorial18);
 
   }
-  
+  /**
+   * The fatorial method.
+   *
+   * @param 
+   */
   public static long fatorial() {
     int index = 2;
     long result = 1;
     int fat = 18;
-    while(index <= fat) {
-	result *= index;
-	index += 1;
+    while (index <= fat) {
+      result *= index;
+      index += 1;
     }
     return result;
   }
