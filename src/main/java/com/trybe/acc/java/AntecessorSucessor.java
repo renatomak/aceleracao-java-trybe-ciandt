@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class AntecessorSucessor {
 
+  /**
+   * @author renato
+   *
+   */
   public static void main(String[] args) {
 	  
 	  // Ler a entrada de um número pelo console
