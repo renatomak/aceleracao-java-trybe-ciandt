@@ -13,7 +13,10 @@ public class ConexaoDiscada {
    *
    */
   public static void main(String[] args) {
-    // Seu código aqui
+    int index = 0;
+    while (index < 3 || conectou()) {
+      // index += 1; 
+    }
   }
 
   // Chame esta função escrevendo `conectou()`
