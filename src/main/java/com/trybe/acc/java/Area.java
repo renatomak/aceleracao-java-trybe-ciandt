@@ -17,8 +17,8 @@ public class Area {
 
     double area = 0.0;
 
-    System.out.println("A area do quadrado de lado " + 
-      lado + " é igual a " + area
+    System.out.println("A area do quadrado de lado " 
+        + lado + " é igual a " + area
     );
-   }
+  }
 }
