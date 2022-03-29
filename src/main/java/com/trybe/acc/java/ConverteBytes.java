@@ -16,10 +16,10 @@ public class ConverteBytes {
     System.out.println("Digite um número:");
     byte valor = scan.nextByte();
     
-    // Seu código aqui
+    int qtdBits = valor * 8;
     
     // Imprime a saída no console. OBS: descomente a próxima linha
-    //System.out.println(valor + " bytes correspodem a " + qtdBits + " bits");
+    System.out.println(valor + " bytes correspodem a " + qtdBits + " bits");
   }
 
 }
