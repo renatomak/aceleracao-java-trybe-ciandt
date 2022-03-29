@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88b529b8-6ed0-4573-923b-c8f5d84831a0" name="Changes" comment="" />
+    <list default="true" id="88b529b8-6ed0-4573-923b-c8f5d84831a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trybe/acc/java/AntecessorSucessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trybe/acc/java/AntecessorSucessor.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +29,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2727qPZwZ65dgrcsgURLXiyzGvc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,6 +89,9 @@
       <updated>1648506520407</updated>
       <workItem from="1648506521815" duration="4300000" />
       <workItem from="1648512522866" duration="86000" />
+      <workItem from="1648547316957" duration="79000" />
+      <workItem from="1648547409985" duration="783000" />
+      <workItem from="1648549403588" duration="8000" />
     </task>
     <servers />
   </component>
