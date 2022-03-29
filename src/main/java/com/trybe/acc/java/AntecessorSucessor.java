@@ -23,7 +23,7 @@ public class AntecessorSucessor {
     // Imprime a saída no console. OBS: descomente a próxima linha
     System.out.println("O número " + numero + " tem " 
         + antecessor + " como seu antecessor e "
-        + sucessor+ " como seu sucessor."
+        + sucessor + " como seu sucessor."
     );
 
   }
