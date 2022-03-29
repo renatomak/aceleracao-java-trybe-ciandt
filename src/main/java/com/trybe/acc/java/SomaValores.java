@@ -27,6 +27,6 @@ public class SomaValores {
     // Imprime a saída no console. OBS: descomente a próxima linha
     //System.out.println("A soma é: " + soma);
 
- }
+  }
   
 }
