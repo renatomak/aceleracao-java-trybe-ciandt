@@ -14,8 +14,10 @@ public class ConexaoDiscada {
    */
   public static void main(String[] args) {
     int index = 0;
-    while (index < 3 || conectou()) {
-      // index += 1; 
+    while (index < 3) {
+      if (conectou())
+        return;
+      index += 1;
     }
   }
 
