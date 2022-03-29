@@ -11,7 +11,12 @@ public class NumerosPares {
    * 
    */
   public static void main(String[] args) {
+    for (int index = 4; index <= 20; index += 1) {
+      if (index % 2 == 0) {
+        imprime(index);
+      }
 
+    }
   }
 
   /**
