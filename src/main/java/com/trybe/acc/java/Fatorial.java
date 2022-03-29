@@ -1,14 +1,17 @@
 package com.trybe.acc.java;
 
 public class Fatorial {
+  /**
+  * The main method.
+  *
+  * @param args the arguments
+  */
+  public static void main(String[] args) {
+    //Seu código aqui
 
-	public static void main(String[] args) {
-	    //Seu código aqui
-		
-			
-			// Imprime a saída no console. OBS: descomente a próxima linha
-			//System.out.println("O fatorial de 18 é igual a " + fatorial18);
+    // Imprime a saída no console. OBS: descomente a próxima linha
+    //System.out.println("O fatorial de 18 é igual a " + fatorial18);
 
-	}
+  }
 
 }
