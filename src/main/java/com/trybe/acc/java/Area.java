@@ -15,7 +15,7 @@ public class Area {
     System.out.println("Digite a medida do lado do quadrado:");
     double lado = scan.nextDouble();
 
-    double area = 0.0;
+    double area = lado * lado;
 
     System.out.println("A area do quadrado de lado " 
         + lado + " é igual a " + area
