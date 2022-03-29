@@ -6,13 +6,13 @@ public class AntecessorSucessor {
 
   /**
    * @author renato
-   * @param array de strings
+   * @param args é um array de strings
    */
   public static void main(String[] args) {
 
-	  // Ler a entrada de um número pelo console
-	  Scanner scan = new Scanner(System.in);
-	  
+      // Ler a entrada de um número pelo console
+      Scanner scan = new Scanner(System.in);
+
 	  System.out.println("Digite um número:");
 	  int numero = scan.nextInt();
 	  
