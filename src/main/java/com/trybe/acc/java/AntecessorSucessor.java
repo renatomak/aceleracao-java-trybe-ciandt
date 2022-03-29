@@ -6,7 +6,7 @@ public class AntecessorSucessor {
 
   /**
    * @author renato
-   *
+   * @param array de strings
    */
   public static void main(String[] args) {
 	  
