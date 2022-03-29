@@ -8,7 +8,7 @@ public class ConverteBytes {
   * The main method.
   *
   * @param args the arguments
-  */	
+  */
   public static void main(String[] args) {
     // Ler a entrada de um número pelo console
     Scanner scan = new Scanner(System.in).useLocale(Locale.US);
