@@ -9,14 +9,14 @@ public class NumerosAleatorios {
    */
   public static void main(String[] args) {
     // Seu código vai aqui
-    
-    while(true) {
+
+    while (true) {
       int numero = numeroAleatorio();
       imprime(numero);
       if (numero == 4) {
         return;
       }
-      
+
     }
   }
 
