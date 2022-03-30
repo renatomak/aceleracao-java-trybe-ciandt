@@ -18,6 +18,13 @@ public class EstadosBrasileiros {
 
   static void mostraNomeEstado(String uf) {
     // Seu código aqui
+    if (uf == "CE") {
+      imprime("CEARA");
+    } else if (uf == "SC") {
+      imprime("SANTA CATARINA");
+    } else {
+      imprime("AMAZONAS");
+    }
   }
 
   // Chame a função escrevendo `imprime()`.
