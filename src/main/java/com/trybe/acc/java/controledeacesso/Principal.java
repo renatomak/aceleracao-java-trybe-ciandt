@@ -34,15 +34,15 @@ public class Principal {
 
 
   }
-  
+
   static void imprime(ArrayList<Short> ages) {
-    for(short age : ages) {
+    for (short age : ages) {
       System.out.print(age);
     }
   }
-  
+
   static void checkAge(Short age) {
-    if(age < 18) {
+    if (age < 18) {
       System.out.println("Pessoa cliente menor de idade, catraca liberada!");
     } else if (age >= 18 && age <= 50) {
       System.out.println("Pessoa adulta, catraca liberada!");
