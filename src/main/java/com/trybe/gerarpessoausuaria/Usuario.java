@@ -11,8 +11,8 @@ public class Usuario extends Pessoa {
    *
    */
   public String getUsuario() {
-    String nome = super.nome;
-    String sobrenome = super.sobrenome;
+    String nome = this.nome;
+    String sobrenome = this.sobrenome;
 
     if (nome != null && nome.trim() != "" && sobrenome != null && sobrenome.trim() != "") {
       return String.format("%s.%s", nome, sobrenome);
