@@ -10,6 +10,15 @@ public class PessoaFuncionaria {
   private String endereco;
   private double salario;
 
+
+  /**
+   * Construtor PessoaFuncionaria
+   * 
+   * @param nomeCompleto
+   * @param cpf
+   * @param endereco
+   * @param salario
+   */
   public PessoaFuncionaria(String nomeCompleto, String cpf, String endereco, double salario) {
     super();
     this.nomeCompleto = nomeCompleto;
