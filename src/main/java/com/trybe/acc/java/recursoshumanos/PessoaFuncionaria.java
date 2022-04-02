@@ -12,12 +12,10 @@ public class PessoaFuncionaria {
 
 
   /**
-   * Construtor PessoaFuncionaria
-   * 
-   * @param nomeCompleto
-   * @param cpf
-   * @param endereco
-   * @param salario
+   * @param nomeCompleto string
+   * @param cpf string
+   * @param endereco string
+   * @param salario double
    */
   public PessoaFuncionaria(String nomeCompleto, String cpf, String endereco, double salario) {
     super();
