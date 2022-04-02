@@ -12,6 +12,7 @@ public class PessoaFuncionaria {
 
 
   /**
+   * Construtor
    * @param nomeCompleto string
    * @param cpf string
    * @param endereco string
