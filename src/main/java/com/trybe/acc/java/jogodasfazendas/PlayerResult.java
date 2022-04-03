@@ -9,6 +9,7 @@ public class PlayerResult {
   private Farm[] farms;
 
   /**
+   * playerResult method.
    * @param playerName
    * @param farms
    */
@@ -19,6 +20,7 @@ public class PlayerResult {
   }
 
   /**
+   * score method.
    * @return
    */
   public double score() {
