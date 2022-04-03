@@ -5,8 +5,10 @@ public abstract class Polygon implements Farm {
   protected double base;
   protected double height;
 
-
-
+  /**
+   * @param base
+   * @param height
+   */
   public Polygon(double base, double height) {
     super();
     this.base = base;

@@ -8,12 +8,19 @@ public class PlayerResult {
   private String playerName;
   private Farm[] farms;
 
+  /**
+   * @param playerName
+   * @param farms
+   */
   public PlayerResult(String playerName, Farm[] farms) {
     super();
     this.playerName = playerName;
     this.farms = farms;
   }
 
+  /**
+   * @return
+   */
   public double score() {
     double sum = 0;
 
