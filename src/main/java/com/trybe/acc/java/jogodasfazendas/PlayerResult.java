@@ -10,8 +10,8 @@ public class PlayerResult {
 
   /**
    * playerResult method.
-   * @param playerName
-   * @param farms
+   * @param playerName String
+   * @param farms list
    */
   public PlayerResult(String playerName, Farm[] farms) {
     super();

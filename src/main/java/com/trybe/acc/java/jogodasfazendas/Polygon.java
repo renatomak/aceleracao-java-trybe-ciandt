@@ -6,8 +6,9 @@ public abstract class Polygon implements Farm {
   protected double height;
 
   /**
-   * @param base
-   * @param height
+   * Polygon method.
+   * @param base double
+   * @param height double
    */
   public Polygon(double base, double height) {
     super();
