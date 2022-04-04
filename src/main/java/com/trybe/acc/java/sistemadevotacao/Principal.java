@@ -16,38 +16,49 @@ public class Principal {
     String nome = "";
     Integer numero = 0;
     String cpf = "";
-    int opcaoVotacao = 0;
+    short opcao = -1;
 
 
 
-    while (menuCadastroPessoasCandidatas() == 1) {
-      imprimir("Entre com o nome da pessoa candidata: ");
-      nome = scan.next();
+
+    do {
+      menuCadastroPessoasCandidatas();
+      opcao = scan.nextShort();
+
+      if(opcao == 1) {
+        imprimir("Entre com o nome da pessoa candidata: ");
+        nome = scan.next();
+        imprimir("Entre com o número da pessoa candidata: ");
+        numero = scan.nextInt();
+        gerenciamentoVotacao.cadastrarPessoaCandidata(nome, numero);
+      }
       
-
-      imprimir("Entre com o número da pessoa candidata: ");
-      numero = scan.nextInt();
-      gerenciamentoVotacao.cadastrarPessoaCandidata(nome, numero);
-    }
+    } while(opcao == 1);
     
-    gerenciamentoVotacao.mostrarCandidatos();
+    // gerenciamentoVotacao.mostrarCandidatos();
     
-
-    while (menuCadastroPessoasEleitoras() == 1) {
-      imprimir("Entre com o nome da pessoa eleitora: ");
-      nome = scan.next();
-      imprimir("Entre com o cpf da pessoa eleitora: ");
-      cpf = scan.next();
+    opcao = -1;
+    do {
+      menuCadastroPessoasEleitoras();
+      opcao = scan.nextShort();
       
-      gerenciamentoVotacao.cadastrarPessoaEleitora(nome, cpf);
-    }
+      if (opcao == 1) {
+        imprimir("Entre com o nome da pessoa eleitora: ");
+        nome = scan.next();
+        imprimir("Entre com o cpf da pessoa eleitora: ");
+        cpf = scan.next();
+      
+        gerenciamentoVotacao.cadastrarPessoaEleitora(nome, cpf);
+      }
+    } while(opcao == 1)
     
-    gerenciamentoVotacao.mostrarEleitores();
-    
+    // gerenciamentoVotacao.mostrarEleitores();
+    opcao = -1;
     do{
-      opcaoVotacao = menuVotacao();
-      
-      switch (opcaoVotacao) {
+      menuVotacao();
+      opcao = scan.nextShort();
+
+      switch (opcao) {
         case 1:
           imprimir("Entre com o cpf da pessoa eleitora: ");
           cpf = scan.next();
@@ -60,7 +71,7 @@ public class Principal {
           gerenciamentoVotacao.mostrarResultado();
           break;
       }
-    }while(opcaoVotacao != 3);
+    }while(opcao != 3);
     
     gerenciamentoVotacao.mostrarResultado();
     
@@ -72,35 +83,21 @@ public class Principal {
     System.out.println(message);
   }
 
-  // Por quê não posso fechar o scan dentro da primeira função de menu a ser chamada?
-  static short menuCadastroPessoasCandidatas() {
-    Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+  static void menuCadastroPessoasCandidatas() {
     String menu = String.format("Cadastrar pessoa candidata?" + Principal.menu);
-
     System.out.println(menu);
-    short escolha = scan.nextShort();
-    // scan.close();
-    return escolha;
   }
 
-  static short menuCadastroPessoasEleitoras() {
-    Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+  static void menuCadastroPessoasEleitoras() {
     String menu = String.format("Cadastrar pessoa eleitora?" + Principal.menu);
-
     System.out.println(menu);
     short escolha = sc.nextShort();
-    // sc.close();
-    return escolha;
   }
 
-  static short menuVotacao() {
-    Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+  static void menuVotacao() {
     String menu = String.format("Entre com o número correspondente à opção desejada:\n"
         + "1 - Votar\n" + "2 - Resultado Parcial\n" + "3 - Finalizar Votação");
-
     System.out.println(menu);
-    short escolha = sc.nextShort();
-    return escolha;
   }
 
 }
