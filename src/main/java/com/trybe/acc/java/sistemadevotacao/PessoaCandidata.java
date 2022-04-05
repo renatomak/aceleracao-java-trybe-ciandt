@@ -5,6 +5,11 @@ public class PessoaCandidata extends Pessoa {
   private Integer numero;
   private Integer votos;
 
+  /**
+   * constructor.
+   * @param nome string
+   * @param numero integer
+   */
   public PessoaCandidata(String nome, Integer numero) {
     super(nome);
     this.numero = numero;
@@ -41,6 +46,11 @@ public class PessoaCandidata extends Pessoa {
 
   public void receberVoto() {
     this.votos += 1;
+  }
+
+  @Override
+  public String toString() {
+    return "PessoaCandidata [nome= " + this.nome + " numero= " + numero + ", votos=" + votos + "]";
   }
 
 }

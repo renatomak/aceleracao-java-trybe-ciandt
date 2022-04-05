@@ -2,24 +2,23 @@ package com.trybe.acc.java.sistemadevotacao;
 
 
 
-public class UsefulFunctions { 
+public class Utils {
 
   protected static final String menu = String
-    .format("\n1 - Sim\n" + "2 - Não\n" + "Entre com o número correspondente à opção desejada:");
+      .format("\n1 - Sim\n" + "2 - Não\n" + "Entre com o número correspondente à opção desejada:");
 
   static void imprimir(String message) {
     System.out.println(message);
   }
 
   static void menuCadastroPessoasCandidatas() {
-    String menu = String.format("Cadastrar pessoa candidata?" + Principal.menu);
+    String menu = String.format("Cadastrar pessoa candidata?" + Utils.menu);
     System.out.println(menu);
   }
 
   static void menuCadastroPessoasEleitoras() {
-    String menu = String.format("Cadastrar pessoa eleitora?" + Principal.menu);
+    String menu = String.format("Cadastrar pessoa eleitora?" + Utils.menu);
     System.out.println(menu);
-    short escolha = sc.nextShort();
   }
 
   static void menuVotacao() {
