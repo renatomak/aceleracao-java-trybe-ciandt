@@ -6,7 +6,8 @@ public class AntecessorSucessor {
 
   /**
    * The main method.
-   *
+   * https://github.com/tryber/acc-java-02-exercises-antecessor-sucessor
+   * 
    * @param args the arguments
    */
   public static void main(String[] args) {
@@ -21,10 +22,9 @@ public class AntecessorSucessor {
     int sucessor = numero + 1;
 
     // Imprime a saída no console. OBS: descomente a próxima linha
-    System.out.println("O número " + numero + " tem " 
+    System.out.println("O número " + numero + " tem "
         + antecessor + " como seu antecessor e "
-        + sucessor + " como seu sucessor."
-    );
+        + sucessor + " como seu sucessor.");
 
   }
 
