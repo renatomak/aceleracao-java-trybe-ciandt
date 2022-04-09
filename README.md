@@ -17,6 +17,7 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 - [X] Números pares
 - [X] Estado brasileiro
 - [X] Números aleatórios
+
 31/03 - Essenciais de Java - Finalmente, o 'Hello, world!' em Java!
 - [x] Idade em dias
 - [X] Média anual
@@ -26,8 +27,11 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 
 ## Semana 02:
 05/04 - Orientação a objetos - Abstração: as Classes em Java
+
 - [x] Conta poupança
+
 05/04 - Orientação a objetos - Getters e Setters
 - [X] Encapsulamento-recursos-humanos
+
 06/04 - Orientação a objetos - Encapsulamento e Herança
 - [x] Gerar pessoa usuária
