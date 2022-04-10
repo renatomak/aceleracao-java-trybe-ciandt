@@ -41,3 +41,12 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 
 ### 12/04 - Desafio Agregador
 - [X] Sistema de votação
+
+13/04 - Manipulação de textos e arquivos - Leitura e escrita em arquivos
+- [x] Gerador de senhas
+
+13/04 - Manipulação de textos e arquivos - Lidando com Strings
+- [ ]
+
+### 14/04 -  Manipulação de textos e arquivos - Desafio Agregador
+- [ ] Conversor CSV
