@@ -2,8 +2,9 @@ package com.trybe.acc.java.transformatexto;
 
 public class Texto {
   /**
-   * @param string
-   * @return string
+   * method.
+   * @param string qualquer
+   * @return string conforme processamento
    */
   public String transformaTexto(String string) {
     String newString = string.replace("+", " ");
