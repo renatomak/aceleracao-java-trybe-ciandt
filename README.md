@@ -1,5 +1,7 @@
 # Bootcamp CI&T e Trybe
 
+## Boas vindas ao repositório dos desafios da Aceleração Java!
+
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Bootcamp CI&T desenvolvido pela Trybe:
 
 O programa conta com mais de 360 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
