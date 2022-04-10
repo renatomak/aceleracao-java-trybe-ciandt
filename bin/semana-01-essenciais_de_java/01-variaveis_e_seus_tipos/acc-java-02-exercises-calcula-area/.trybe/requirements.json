@@ -1,9 +1,0 @@
-{
-    "requirements": [
-      {
-        "description": "1 - A aplicação pergunta, no terminal, a medida do lado do quadrado",
-        "bonus": false
-      }
-    ]
-}
-  
