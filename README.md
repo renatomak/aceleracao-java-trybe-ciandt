@@ -1,10 +1,24 @@
+# Boas vindas ao repositório dos desafios da Aceleração Java!
+
+
+
+
 # Bootcamp CI&T e Trybe
 
-## Boas vindas ao repositório dos desafios da Aceleração Java!
-
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Bootcamp CI&T desenvolvido pela Trybe:
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Bootcamp CI&T em parceiria com a [Trybe](https://www.betrybe.com/):
 
 O programa conta com mais de 360 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
+
+## Para testar os projetos:
+
+1. Clone o repositório
+  * `git clone https://github.com/renatomak/trybe-ciet-bootcamp-java-backend.git`
+  * Com a IDE de sua preferencia aberta, faça o import do projeto que deseja testar.
+
+2. Instale as dependências:
+    * `mvn install`
+
+---
 
 ## Semana 01:
 
