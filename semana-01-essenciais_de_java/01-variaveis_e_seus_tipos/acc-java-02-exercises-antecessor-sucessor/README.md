@@ -6,19 +6,6 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e
 
 # Boas vindas ao repositório do desafio da Aceleração Java!
 
-
-## Para testar o projeto:
-
-1. Clone o repositório
-  * Por exemplo: `git clone git@github.com:tryber/desafio-aceleracao.git`
-  * Entre no diretório do repositório que você acabou de clonar:
-    * neste caso `cd desafio-aceleracao`
-
-2. Instale as dependências:
-    * `mvn install`
-
----
-
 # Requisitos do desafio
 
 ## Antecessor e Sucessor
