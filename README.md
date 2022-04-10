@@ -46,7 +46,7 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 - [x] Gerador de senhas
 
 13/04 - Manipulação de textos e arquivos - Lidando com Strings
-- [ ]
+- [ ] Transforma texto
 
 ### 14/04 -  Manipulação de textos e arquivos - Desafio Agregador
 - [ ] Conversor CSV
