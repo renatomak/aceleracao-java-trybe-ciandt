@@ -38,3 +38,6 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 - [x] Gerar pessoa usuária
 - [X] Jogo das Fazendas
 - [X] Polimorfismo-recursos-humanos
+
+12/04 - Desafio Agregador
+- [X] Sistema de votação
