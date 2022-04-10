@@ -9,7 +9,7 @@ Imagine um jogo onde as pessoas jogadoras são fazendeiras e a pessoa vencedora 
 
 Crie um programa usando a linguagem Java que calcule a área de diferentes fazendas. As fazendas na forma quadrada possuem o atributo lado, as circulares possuem o atributo raio e as fazendas triangulares e as retangulares possuem os atributos base e altura. Ao escrever as classes do seu programa, tome como base o diagrama UML a seguir:
 
-![UML_Desafio](./img/desafio.gif)
+![UML_Desafio](./img/desafio.png)
 
 Vamos colocar em prática as habilidades aprendidas nesta lição?
 
