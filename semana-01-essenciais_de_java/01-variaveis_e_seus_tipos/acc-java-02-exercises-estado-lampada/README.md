@@ -95,18 +95,42 @@ Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um vid
 
 # Requisitos do desafio
 
-### Descrição do desafio: Área das fazendas
+## Estado da lâmpada 
 
-Imagine um jogo onde as pessoas jogadoras são fazendeiras e a pessoa vencedora é aquela que possui a maior quantidade de terras. Para desenvolver este jogo, precisamos calcular a área das fazendas de cada pessoa jogadora. Considere quatro formas possíveis das fazendas: triângulo, quadrado, retângulo e círculo.
+Desenvolva um algoritmo em Java que armazene o estado de uma lâmpada e imprima no seguinte formato: `A lampada ligada: X!`. 💡
 
-Crie um programa usando a linguagem Java que calcule a área de diferentes fazendas. As fazendas na forma quadrada possuem o atributo lado, as circulares possuem o atributo raio e as fazendas triangulares e as retangulares possuem os atributos base e altura. Ao escrever as classes do seu programa, tome como base o diagrama UML a seguir:
+```java
+package com.trybe.acc.java;
 
-![UML_Desafio](./img/desafio.gif)
+public class Lampada {
 
-Vamos colocar em prática as habilidades aprendidas nesta lição?
+	public static void main(String[] args) {
+			// Seu código aqui
+						
+			// Imprime a saída no console. OBS: descomente a próxima linha
+			//System.out.println("A lampada ligada: " + isLigada + "!");
 
-> **Dica**: apesar de a forma de um quadrado ser mais parecida com a de um retângulo, a melhor maneira de escrever o programa é considerar que o triângulo e o retângulo têm mais características em comum.
+	}
 
+}
+```
+
+
+## Exemplos
+
+### Exemplo 1
+
+Supondo que a lâmpada esteja ligada, então a saída será:
+```
+A lâmpada ligada: true!
+```
+
+### Exemplo 2
+
+Supondo que a lâmpada esteja desligada, então a saída será:
+```
+A lâmpada ligada: false!
+```
 
 ---
 
