@@ -43,7 +43,7 @@ O programa conta com mais de 360 horas de aulas presenciais e online, aborda int
 - [X] Sistema de votação
 
 13/04 - Manipulação de textos e arquivos - Leitura e escrita em arquivos
-- [x] Gerador de senhas
+- [ ] Gerador de senhas
 
 13/04 - Manipulação de textos e arquivos - Lidando com Strings
 - [ ] Transforma texto
