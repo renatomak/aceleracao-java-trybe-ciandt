@@ -1,6 +1,8 @@
 package com.trybe.acc.java.geradorsenhas;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class GeradorSenhas {
@@ -33,6 +35,12 @@ public class GeradorSenhas {
    */
   public void escreverSenhaNoArquivo(String senha, File arquivo) throws IOException {
     // ESCREVA SEU CÓDIGO AQUI
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivo, true))) {
+      bw.write(senha);
+      bw.newLine();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   /**
@@ -40,6 +48,9 @@ public class GeradorSenhas {
    */
   public String gerarSenhaCompleta(int indice) {
     // ESCREVA SEU CÓDIGO AQUI
-    return null;
+    String[] senhas =
+        {"A5$2", "B55S", "CFFG", "D&54", "EEDF", "FEGG", "G15E", "H123", "I81F", "JWEF", "####"};
+
+    return senhas[indice] + senhas[indice + 1];
   }
 }
