@@ -3,11 +3,11 @@
 
 
 
-# Bootcamp CI&T e Trybe
+# CI&T e Trybe
 
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Bootcamp CI&T em parceiria com a [Trybe](https://www.betrybe.com/):
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Aceleração [CI&T](https://ciandt.com/br/) em parceiria com a [Trybe](https://www.betrybe.com/):
 
-O programa conta com mais de 360 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
+O programa conta com mais de 125 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
 
 ## Para testar os projetos:
 
