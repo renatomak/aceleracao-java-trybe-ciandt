@@ -78,6 +78,7 @@ public class Conversor {
 
   /**
    * convert line.
+   * 
    * @param line string
    * @return string
    */
@@ -93,6 +94,7 @@ public class Conversor {
 
   /**
    * convert date.
+   * 
    * @param date date
    * @return string
    */
@@ -114,6 +116,7 @@ public class Conversor {
 
   /**
    * format cpf.
+   * 
    * @param cpf
    * @return String
    */
