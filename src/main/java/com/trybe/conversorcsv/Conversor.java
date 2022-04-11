@@ -99,7 +99,7 @@ public class Conversor {
    * @return string
    */
   public static String convertDate(String date) {
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     String[] dates = date.split("/");
     int year = Integer.parseInt(dates[2]);
     int month = Integer.parseInt(dates[1]) - 1;
@@ -115,9 +115,9 @@ public class Conversor {
   }
 
   /**
-   * format cpf.
+   * format cpf com padrão nacional.
    * 
-   * @param cpf
+   * @param cpf string
    * @return String
    */
   public static String formatCpf(String cpf) {
