@@ -21,7 +21,7 @@ public class Conversor {
    * @param args Não utilizado.
    * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou gravar os
    *         arquivos de saída.
-   * @throws ParseException
+   * @throws ParseException exception parse
    */
   public static void main(String[] args) throws IOException, ParseException {
     File pastaDeEntradas = new File("./entradas/");
@@ -39,7 +39,7 @@ public class Conversor {
    *
    * @throws IOException Caso ocorra algum problema ao ler os arquivos de entrada ou gravar os
    *         arquivos de saída.
-   * @throws ParseException
+   * @throws ParseException exception parse
    */
   public void converterPasta(File pastaDeEntradas, File pastaDeSaidas) throws IOException {
     File[] folders = pastaDeEntradas.listFiles(File::isFile);
@@ -74,10 +74,13 @@ public class Conversor {
 
     }
 
-
-
   }
 
+  /**
+   * convert line.
+   * @param line string
+   * @return string
+   */
   public static String convertLine(String line) {
     String[] array = line.split(",");
 
@@ -88,6 +91,11 @@ public class Conversor {
     return String.join(",", array);
   }
 
+  /**
+   * convert date.
+   * @param date date
+   * @return string
+   */
   public static String convertDate(String date) {
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     String[] dates = date.split("/");
@@ -104,6 +112,11 @@ public class Conversor {
     return dateFormat.format(dateRepresentation);
   }
 
+  /**
+   * format cpf.
+   * @param cpf
+   * @return String
+   */
   public static String formatCpf(String cpf) {
     String mask = "###.###.###-##";
     String result = "";
