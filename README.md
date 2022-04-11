@@ -1,9 +1,5 @@
-# Boas vindas ao repositório dos desafios da Aceleração Java!
+# Boas vindas ao repositório dos desafios da Aceleração Java - CI&T e Trybe!
 
-
-
-
-# CI&T e Trybe
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Aceleração [CI&T](https://ciandt.com/br/) em parceiria com a [Trybe](https://www.betrybe.com/):
 
