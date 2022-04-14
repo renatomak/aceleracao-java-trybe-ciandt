@@ -16,9 +16,9 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ---
 
-## Semana 01:
+## 01. Essenciais de Java:
 
-30/03 - Essenciais de Java - Variáveis e seus tipos:
+1.1 Variáveis e seus tipos:
 
 - [x] [Antecessor e sucessor](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-antecessor-sucessor)
 - [x] [Calcula area](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-calcula-area)
@@ -32,43 +32,45 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 - [x] [Estado brasileiro](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-if-else-desafio-estado-brasileiro)
 - [x] [Números aleatórios](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-while-desafio-numeros-aleatorios)
 
-31/03 - Essenciais de Java - Finalmente, o 'Hello, world!' em Java!
+1.2 Finalmente, o 'Hello, world!' em Java!
 
 - [x] [Idade em dias](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-idade-em-dias)
 - [x] [Média anual](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-media-anual)
 
-### 01/04 - Desafio Agregador
+### 1º Desafio Agregador
 
 - [x] [Controle de Acesso](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/desafio-agregador)
 
-## Semana 02:
+## 2. Orientação a objetos:
 
-05/04 - Orientação a objetos - Abstração: as Classes em Java
+2.1 Abstração: as Classes em Java
 
 - [x] [Conta poupança](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-conta-poupanca)
 
-05/04 - Orientação a objetos - Getters e Setters
+2.2 Getters e Setters
 
 - [x] [Encapsulamento-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-encapsulamento-recursos-humanos)
 
-06/04 - Orientação a objetos - Encapsulamento e Herança
+2.3 Encapsulamento e Herança
 
 - [x] [Gerar pessoa usuária](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-gerar-pessoa-usuaria)
 - [x] [Jogo das Fazendas](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-jogo-das-fazendas)
 - [x] [Polimorfismo-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-polimorfismo-recursos-humanos)
 
-### 12/04 - Desafio Agregador
+### 2º - Desafio Agregador
 
 - [x] [Sistema de votação](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/desafio-agregador/acc-java-02-exercises-sistema-de-votacao)
 
-13/04 - Manipulação de textos e arquivos - Leitura e escrita em arquivos
+## 3. Manipulação de textos e arquivos
+
+3.1 Leitura e escrita em arquivos
 
 - [x] [Gerador de senhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-gerador-senhas)
 
-13/04 - Manipulação de textos e arquivos - Lidando com Strings
+3.2 Lidando com Strings
 
 - [x] [Transforma texto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-transforma-texto)
 
-### 14/04 - Manipulação de textos e arquivos - Desafio Agregador
+### 3º Desafio Agregador
 
 - [x] [Conversor CSV](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/desafio-agregador/acc-java-02-exercises-conversor-csv)
