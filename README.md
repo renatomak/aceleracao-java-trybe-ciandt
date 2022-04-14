@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Termos e acordos
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
@@ -195,3 +196,79 @@ Link: [Formulário](https://be-trybe.typeform.com/to/PsefzL2e)
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
 ---
+=======
+# Boas vindas ao repositório dos desafios da Aceleração Java - CI&T e Trybe!
+
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Aceleração [CI&T](https://ciandt.com/br/) em parceiria com a [Trybe](https://www.betrybe.com/):
+
+O programa conta com mais de 125 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
+
+## Para testar os projetos:
+
+1. Clone o repositório
+
+- `git clone https://github.com/renatomak/trybe-ciet-bootcamp-java-backend.git`
+- Com a IDE de sua preferencia aberta, faça o import do projeto que deseja testar.
+
+2. Instale as dependências:
+   - `mvn install`
+
+---
+
+## Semana 01:
+
+30/03 - Essenciais de Java - Variáveis e seus tipos:
+
+- [x] [Antecessor e sucessor](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-antecessor-sucessor)
+- [x] [Calcula area](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-calcula-area)
+- [x] [Calcula IMC](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-calcula-imc)
+- [x] [Converte bytes](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-converte-bytes)
+- [x] [Estado da lampada](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-estado-lampada)
+- [x] [Fatorial](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-fatorial)
+- [x] [Soma elementos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-soma-elementos)
+- [x] [Conexão discada](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-do-while-conexao-discada)
+- [x] [Números pares](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-for-numeros-pares)
+- [x] [Estado brasileiro](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-if-else-desafio-estado-brasileiro)
+- [x] [Números aleatórios](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-while-desafio-numeros-aleatorios)
+
+31/03 - Essenciais de Java - Finalmente, o 'Hello, world!' em Java!
+
+- [x] [Idade em dias](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-idade-em-dias)
+- [x] [Média anual](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-media-anual)
+
+### 01/04 - Desafio Agregador
+
+- [x] [Controle de Acesso](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/desafio-agregador)
+
+## Semana 02:
+
+05/04 - Orientação a objetos - Abstração: as Classes em Java
+
+- [x] [Conta poupança](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-conta-poupanca)
+
+05/04 - Orientação a objetos - Getters e Setters
+
+- [x] [Encapsulamento-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-encapsulamento-recursos-humanos)
+
+06/04 - Orientação a objetos - Encapsulamento e Herança
+
+- [x] [Gerar pessoa usuária](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-gerar-pessoa-usuaria)
+- [x] [Jogo das Fazendas](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-jogo-das-fazendas)
+- [x] [Polimorfismo-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-polimorfismo-recursos-humanos)
+
+### 12/04 - Desafio Agregador
+
+- [x] [Sistema de votação](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/desafio-agregador/acc-java-02-exercises-sistema-de-votacao)
+
+13/04 - Manipulação de textos e arquivos - Leitura e escrita em arquivos
+
+- [X] [Gerador de senhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-gerador-senhas)
+
+13/04 - Manipulação de textos e arquivos - Lidando com Strings
+
+- [x] [Transforma texto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-transforma-texto)
+
+### 14/04 - Manipulação de textos e arquivos - Desafio Agregador
+
+- [ ] [Conversor CSV]()
+>>>>>>> 917f4716fe609d4433ea50541c36830799ecea18
