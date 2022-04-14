@@ -63,11 +63,11 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 13/04 - Manipulação de textos e arquivos - Leitura e escrita em arquivos
 
-- [ ] [Gerador de senhas]()
+- [X] [Gerador de senhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-gerador-senhas)
 
 13/04 - Manipulação de textos e arquivos - Lidando com Strings
 
-- [x] [Transforma texto]()
+- [x] [Transforma texto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-transforma-texto)
 
 ### 14/04 - Manipulação de textos e arquivos - Desafio Agregador
 
