@@ -27,9 +27,6 @@ public class Conversor {
     File pastaDeEntradas = new File("./entradas/");
     File pastaDeSaidas = new File("./saidas/");
     pastaDeEntradas.mkdir();
-    pastaDeSaidas.mkdirs();
-    File pastaDeTestes = new File("./testeconversor/saidas");
-    pastaDeTestes.mkdirs();
 
     new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
   }
@@ -47,6 +44,8 @@ public class Conversor {
    * @throws ParseException exception parse
    */
   public void converterPasta(File pastaDeEntradas, File pastaDeSaidas) throws IOException {
+    pastaDeSaidas.mkdir();
+
     File[] folders = pastaDeEntradas.listFiles(File::isFile);
 
 
@@ -54,7 +53,6 @@ public class Conversor {
     for (File folder : folders) {
       FileReader fileReader = new FileReader(folder);
       FileWriter fileWriter = new FileWriter(pastaDeSaidas + File.separator + folder.getName());
-      System.out.println(pastaDeSaidas + File.separator + folder.getName());
 
       BufferedReader bufferedReader = new BufferedReader(fileReader);
       BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
