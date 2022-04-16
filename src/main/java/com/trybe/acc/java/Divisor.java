@@ -2,6 +2,12 @@ package com.trybe.acc.java;
 
 public class Divisor {
 
+  /**
+   * dividir dois int.
+   * @param a int
+   * @param b int
+   * @return int
+   */
   public Integer dividir(int a, int b) {
     int result = 0;
     try {
