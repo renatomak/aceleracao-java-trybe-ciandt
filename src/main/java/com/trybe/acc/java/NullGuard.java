@@ -4,7 +4,7 @@ public class NullGuard {
   /**
    * printName recebe um int e return uma string.
    * 
-   * @param divisor
+   * @param divisor do tipo int. 
    * @return
    */
   public String printName(int divisor) {

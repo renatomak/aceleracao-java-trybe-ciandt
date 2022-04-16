@@ -7,7 +7,7 @@ public class NullGenerator {
    * 
    * @param number integer
    * @return string
-   * @throws NullPointerException
+   * @throws NullPointerException quando o valor for impar.
    */
   public String getNome(Integer number) throws NullPointerException {
     if (number % 2 != 0) {
