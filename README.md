@@ -80,7 +80,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 4.1 Try/Catch
 
 - [x] [Divisor](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-divisor)
-- [ ] [Tratando nulos]()
+- [x] [Tratando nulos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-tratando-nulos)
 
   4.2 Refinando seu tratamento de erros
 
