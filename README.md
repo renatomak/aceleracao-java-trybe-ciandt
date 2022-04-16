@@ -75,12 +75,12 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [x] [Conversor CSV](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/desafio-agregador/acc-java-02-exercises-conversor-csv)
 
-4. Tratamento de erros - Try/Catch
+### 4. Tratamento de erros - Try/Catch
 
 - [X] [Divisor](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-divisor)
 - [ ] [Tratando nulos]()
 
-4.1 Tratamento de erros - Refinando seu tratamento de erros
+### 4.1 Tratamento de erros - Refinando seu tratamento de erros
 
 - [ ] [Maior Idade]()
 - [ ] [Leitura de arquivos]()
