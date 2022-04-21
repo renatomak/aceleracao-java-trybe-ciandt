@@ -11,19 +11,21 @@ import java.io.IOException;
 public class FileReaderUtils {
 
   /**
-   * Retorna a primeira linha de um arquivo.
+   * @return string
    */
-  public String getFirstLine() throws FileNotFoundException {
-    BufferedReader reader = new BufferedReader(new FileReader("arquivo_nao_existente.txt"));
-    try {
-      return reader.lines().findFirst().get();
-    } finally {
-      try {
-        reader.close();
-      } catch (IOException e) {
-        System.out.println(e);
-      }
+  public String getFirstLine() {
+    String result = "";
+    try (BufferedReader reader = new BufferedReader(new FileReader("arquivo_nao_existente.txt"))) {
+      result = reader.lines().findFirst().get();
+
+      reader.close();
+      return result;
+    } catch (FileNotFoundException e) {
+      result = "Arquivo não existe";
+    } catch (IOException e) {
+      System.out.println(e);
     }
+    return result;
   }
-  
+
 }
