@@ -11,6 +11,8 @@ import java.io.IOException;
 public class FileReaderUtils {
 
   /**
+   * método para ler uma linha de um arquivo.
+   * 
    * @return string
    */
   public String getFirstLine() {
