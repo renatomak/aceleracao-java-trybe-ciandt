@@ -9,8 +9,8 @@ public class Show {
    * Método do desafio.
    * 
    * @param idade
-   * @return
-   * @throws PessoaMenorDeIdadeException
+   * @return true or false
+   * @throws PessoaMenorDeIdadeException quando a idade for menor que 18
    */
   public boolean permitirEntrada(int idade) throws PessoaMenorDeIdadeException {
 
