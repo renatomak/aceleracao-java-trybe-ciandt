@@ -8,7 +8,7 @@ public class Show {
   /**
    * Método do desafio.
    * 
-   * @param idade
+   * @param idade valor inteiro
    * @return true or false
    * @throws PessoaMenorDeIdadeException quando a idade for menor que 18
    */
