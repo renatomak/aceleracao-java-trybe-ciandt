@@ -7,9 +7,16 @@ public class Show {
 
   /**
    * Método do desafio.
+   * 
+   * @param idade
+   * @return
+   * @throws PessoaMenorDeIdadeException
    */
-  public boolean permitirEntrada(int idade) {
-    // Altere este método
-    return false;
+  public boolean permitirEntrada(int idade) throws PessoaMenorDeIdadeException {
+
+    if (idade < 18) {
+      throw new PessoaMenorDeIdadeException();
+    }
+    return true;
   }
 }
