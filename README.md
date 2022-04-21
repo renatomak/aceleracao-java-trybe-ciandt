@@ -85,4 +85,4 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
   4.2 Refinando seu tratamento de erros
 
    - [X] [Maior Idade](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-maior-idade)
-   - [ ] [Leitura de arquivos]()
+   - [X] [Leitura de arquivos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-leitura-arquivos)
