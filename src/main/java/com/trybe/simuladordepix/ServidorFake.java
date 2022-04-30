@@ -12,7 +12,7 @@ public class ServidorFake implements Servidor {
 
       @Override
       public String enviarPix(int valor, String chave) {
-        return CodigosDeRetorno.SUCESSO;
+        return CodigosDeRetorno.CHAVE_PIX_NAO_ENCONTRADA;
       }
     };
   }

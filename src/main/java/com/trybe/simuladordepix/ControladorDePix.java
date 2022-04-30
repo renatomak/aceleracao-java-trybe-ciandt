@@ -21,6 +21,32 @@ public class ControladorDePix {
    *         o resultado da operação.
    */
   public String aoConfirmarPix(int valor, String chave) {
+    if (valor <= 0) {
+      return Mensagens.VALOR_NAO_POSITIVO;
+    }
+
+    if (chave.trim().isEmpty()) {
+      return Mensagens.CHAVE_EM_BRANCO;
+    }
+    try {
+      processadorDePix.executarPix(valor, chave);
+      return Mensagens.SUCESSO;
+    } catch (ErroDePix | IOException e) {
+      // TODO Auto-generated catch block
+      if (e.getMessage().contains(Mensagens.CHAVE_NAO_ENCONTRADA)) {
+        return Mensagens.CHAVE_NAO_ENCONTRADA;
+      }
+      if (e.getMessage().contains(Mensagens.SALDO_INSUFICIENTE)) {
+        return Mensagens.SALDO_INSUFICIENTE;
+      }
+      if (e.getMessage().contains(Mensagens.ERRO_INTERNO)) {
+        return Mensagens.ERRO_INTERNO;
+      }
+      if (e.getMessage().contains(Mensagens.ERRO_DE_CONEXAO)) {
+        return Mensagens.ERRO_DE_CONEXAO;
+      }
+      e.printStackTrace();
+    }
     return null; // TODO: Implementar.
   }
 }
