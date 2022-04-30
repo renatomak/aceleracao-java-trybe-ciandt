@@ -1,7 +1,6 @@
 package com.trybe.simuladordepix;
 
 import java.io.IOException;
-import java.net.SocketTimeoutException;
 import com.trybe.simuladordepix.exception.ErroChaveEmBranco;
 import com.trybe.simuladordepix.exception.ErroChaveNaoEncontrada;
 import com.trybe.simuladordepix.exception.ErroInterno;
