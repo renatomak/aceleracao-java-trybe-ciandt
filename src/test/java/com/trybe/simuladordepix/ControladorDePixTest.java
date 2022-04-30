@@ -11,6 +11,11 @@ import java.net.SocketTimeoutException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import com.trybe.simuladordepix.exception.ErroChaveEmBranco;
+import com.trybe.simuladordepix.exception.ErroChaveNaoEncontrada;
+import com.trybe.simuladordepix.exception.ErroInterno;
+import com.trybe.simuladordepix.exception.ErroSaldoInsuficiente;
+import com.trybe.simuladordepix.exception.ErroValorNaoPositivo;
 
 public class ControladorDePixTest {
 
