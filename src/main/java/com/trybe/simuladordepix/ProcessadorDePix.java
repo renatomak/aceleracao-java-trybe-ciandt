@@ -1,11 +1,11 @@
 package com.trybe.simuladordepix;
 
-import java.io.IOException;
 import com.trybe.simuladordepix.exception.ErroChaveEmBranco;
 import com.trybe.simuladordepix.exception.ErroChaveNaoEncontrada;
 import com.trybe.simuladordepix.exception.ErroInterno;
 import com.trybe.simuladordepix.exception.ErroSaldoInsuficiente;
 import com.trybe.simuladordepix.exception.ErroValorNaoPositivo;
+import java.io.IOException;
 
 public class ProcessadorDePix {
 
@@ -28,7 +28,7 @@ public class ProcessadorDePix {
    */
   public void executarPix(int valor, String chave) throws ErroDePix, IOException {
     // TODO: Implementar.
-    
+
     if (valor <= 0) {
       throw new ErroValorNaoPositivo();
     }
