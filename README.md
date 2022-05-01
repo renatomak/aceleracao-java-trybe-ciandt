@@ -47,7 +47,15 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [x] [Conta poupança](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-conta-poupanca)
 
-  2.2 Getters e Setters
+<<<<<<< HEAD
+2.2 Getters e Setters
+=======
+
+---
+
+2.2 Getters e Setters
+
+> > > > > > > 373697c6aeaff0280079eb83424dfb6ad5b09e4a
 
 - [x] [Encapsulamento-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-encapsulamento-recursos-humanos)
 
@@ -60,6 +68,8 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 ### 2º - Desafio Agregador
 
 - [x] [Sistema de votação](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/desafio-agregador/acc-java-02-exercises-sistema-de-votacao)
+
+---
 
 ## 3. Manipulação de textos e arquivos
 
@@ -74,6 +84,8 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 ## 3º Desafio Agregador
 
 - [x] [Conversor CSV](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/desafio-agregador/acc-java-02-exercises-conversor-csv)
+
+---
 
 ## 4. Tratamento de erros
 
@@ -90,3 +102,27 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 ## 4º Desafio Agregador
 
 - [x] [Simulador de Pix](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-simulador-de-pix)
+
+---
+
+## 5. Coleçẽs
+
+5.1 List e Set
+
+- [ ] [Agenda]()
+
+  5.2 Map
+
+- [ ] [Agenda com Map]()
+
+  5.3 Streams
+
+- [ ] [Criador de Stream]()
+
+  5.4 Operando sobre Streams
+
+- [ ] [Concessionaria]()
+
+## 5º Desafio Agregador
+
+- [ ] [Consulta filmes]()
