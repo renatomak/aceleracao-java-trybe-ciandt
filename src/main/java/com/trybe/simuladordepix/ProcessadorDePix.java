@@ -36,10 +36,9 @@ public class ProcessadorDePix {
     if (chave.trim().isEmpty()) {
       throw new ErroChaveEmBranco();
     }
-    Conexao conexao = null;
-
+    Conexao conexao = servidor.abrirConexao();
     try {
-      conexao = servidor.abrirConexao();
+      
       String result = conexao.enviarPix(valor, chave);
 
       if (!result.equals(CodigosDeRetorno.SUCESSO)) {
