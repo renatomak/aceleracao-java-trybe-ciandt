@@ -105,7 +105,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
   5.2 Map
 
-- [x] [Agenda com Map]()
+- [x] [Agenda com Map](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-agenda-com-map)
 
   5.3 Streams
 
