@@ -30,24 +30,9 @@ public class ControladorDePix {
       processadorDePix.executarPix(valor, chave);
       return Mensagens.SUCESSO;
     } catch (ErroDePix e) {
-      // TODO Auto-generated catch block
-      if (e.getMessage().contains(Mensagens.CHAVE_NAO_ENCONTRADA)) {
-        return Mensagens.CHAVE_NAO_ENCONTRADA;
-      }
-      if (e.getMessage().contains(Mensagens.SALDO_INSUFICIENTE)) {
-        return Mensagens.SALDO_INSUFICIENTE;
-      }
-      if (e.getMessage().contains(Mensagens.ERRO_INTERNO)) {
-        return Mensagens.ERRO_INTERNO;
-      }
-      if (e.getMessage().contains(Mensagens.ERRO_DE_CONEXAO)) {
-        return Mensagens.ERRO_DE_CONEXAO;
-      }
-      // e.printStackTrace();
+      return e.getMessage();
     } catch (IOException e) {
-      // TODO: handle exception
       return Mensagens.ERRO_DE_CONEXAO;
     }
-    return null; // TODO: Implementar.
   }
 }
