@@ -47,16 +47,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [x] [Conta poupança](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-conta-poupanca)
 
-<<<<<<< HEAD
 2.2 Getters e Setters
-=======
-
----
-
-2.2 Getters e Setters
-
-> > > > > > > 373697c6aeaff0280079eb83424dfb6ad5b09e4a
-
 - [x] [Encapsulamento-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-encapsulamento-recursos-humanos)
 
   2.3 Encapsulamento e Herança
