@@ -1,10 +1,5 @@
 package com.trybe.simuladordepix;
 
-import com.trybe.simuladordepix.exception.ErroChaveEmBranco;
-import com.trybe.simuladordepix.exception.ErroChaveNaoEncontrada;
-import com.trybe.simuladordepix.exception.ErroInterno;
-import com.trybe.simuladordepix.exception.ErroSaldoInsuficiente;
-import com.trybe.simuladordepix.exception.ErroValorNaoPositivo;
 import java.io.IOException;
 
 public class ProcessadorDePix {

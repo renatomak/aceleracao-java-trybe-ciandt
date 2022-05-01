@@ -1,7 +1,4 @@
-package com.trybe.simuladordepix.exception;
-
-import com.trybe.simuladordepix.ErroDePix;
-import com.trybe.simuladordepix.Mensagens;
+package com.trybe.simuladordepix;
 
 public class ErroSaldoInsuficiente extends ErroDePix {
 
