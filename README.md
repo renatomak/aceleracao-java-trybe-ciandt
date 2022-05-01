@@ -86,3 +86,9 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [x] [Maior Idade](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-maior-idade)
 - [x] [Leitura de arquivos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-leitura-arquivos)
+
+## 4º Desafio Agregador
+
+- [x] [Simulador de Pix](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-simulador-de-pix)
+
+
