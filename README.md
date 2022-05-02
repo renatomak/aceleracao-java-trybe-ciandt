@@ -113,7 +113,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
   5.4 Operando sobre Streams
 
-- [x] [Concessionaria]()
+- [x] [Concessionaria](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-concessionaria)
 
 ## 5º Desafio Agregador
 
