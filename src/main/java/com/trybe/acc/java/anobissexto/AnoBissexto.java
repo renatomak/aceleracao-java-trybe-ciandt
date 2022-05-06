@@ -10,6 +10,10 @@ public class AnoBissexto {
     return Year.isLeap(ano);
   }
 
+  /**
+   * @param data string
+   * @return ano int
+   */
   public int identificarProximoAnoBissexto(String data) {
     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     LocalDate date = LocalDate.parse(data, dateFormatter);
