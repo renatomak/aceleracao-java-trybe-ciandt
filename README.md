@@ -1,159 +1,182 @@
-### Termos e acordos
+# Boas vindas ao repositório dos desafios da Aceleração Java - CI&T e Trybe!
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por [Renato Marques da Silva](https://github.com/renatomak) durante o Aceleração [CI&T](https://ciandt.com/br/) em parceiria com a [Trybe](https://www.betrybe.com/):
 
----
+O programa conta com mais de 125 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software na linguagem Java e habilidades comportamentais.
 
-# Boas vindas ao repositório do desafio da Aceleração Java!
-
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver o desafio, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu desafio a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
-
----
-# Instruções para entregar seu projeto
-
-## Não se esqueça de consultar as documentações!
-
-⚠️ **Importante**:
-
-Esse projeto tem como intuito te treinar para ter mais familiaridade com a documentação de aplicações, por tanto, poderão haver alguns comandos ou atributos que não estão no curso, mas que devem ser descritos no decorrer dos requisitos.
-
-Nesses casos, é importante se atentar a aquilo que o requisito pede, e lembrar sempre de utilizar a [documentação oficial](https://docs.oracle.com/en/java/javase/11/) do Java para pesquisar detalhes sobre comandos.
-
-
-## Antes de começar a desenvolver
-
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
+## Para testar os projetos:
 
 1. Clone o repositório
-  * Por exemplo: `git clone git@github.com:tryber/desafio-aceleracao.git`
-  * Entre no diretório do repositório que você acabou de clonar:
-    * neste caso `cd desafio-aceleracao`
+
+- `git clone https://github.com/renatomak/trybe-ciet-bootcamp-java-backend.git`
+- Com a IDE de sua preferencia aberta, faça o import do projeto que deseja testar.
 
 2. Instale as dependências:
-    * `mvn install`
-
-3. Crie uma branch a partir da branch `main`
-
-  * Verifique que você está na branch `main`
-    * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `main`
-    * Exemplo: `git checkout main`
-  * Agora, crie uma branch onde você vai guardar os commits do seu desafio
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-desafio`
-    * Exemplo:
-      * `git checkout -b joaozinho-acc-java-sample`
-
-4. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-  - Usando o exemplo anterior:
-    - `git push -u origin joaozinho-acc-java-sample`
-
-5. Crie um novo `Pull Request` _(PR)_
-  * Vá até a aba de _Pull Requests_ deste repositório no GitHub
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a página de _Pull Requests_ do repositório e confira que o seu _Pull Request_ está criado
- 
- ⚠️ **Lembre-se do CheckStyle! Deixe seu Eclipse configurado para arrumar o estilo automaticamente. Qualquer dúvida, volte no conteúdo.**
+   - `mvn install`
 
 ---
 
-## Durante o desenvolvimento
+## 01. Essenciais de Java:
 
-* ⚠ **PULL REQUESTS COM ISSUES NO CHECKSTYLE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+1.1 Variáveis e seus tipos:
 
-* Faça `commits` das alterações que você fizer no código regularmente
+- [x] [Antecessor e sucessor](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-antecessor-sucessor)
+- [x] [Calcula area](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-calcula-area)
+- [x] [Calcula IMC](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-calcula-imc)
+- [x] [Converte bytes](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-converte-bytes)
+- [x] [Estado da lampada](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-estado-lampada)
+- [x] [Fatorial](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-fatorial)
+- [x] [Soma elementos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/01-variaveis_e_seus_tipos/acc-java-02-exercises-soma-elementos)
+- [x] [Conexão discada](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-do-while-conexao-discada)
+- [x] [Números pares](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-for-numeros-pares)
+- [x] [Estado brasileiro](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-if-else-desafio-estado-brasileiro)
+- [x] [Números aleatórios](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/02-estruturas_condicionais_e_de_repeticao/acc-java-02-exercises-while-desafio-numeros-aleatorios)
 
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+  1.2 Finalmente, o 'Hello, world!' em Java!
 
-* Os comandos que você utilizará com mais frequência são:
-  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-  2. `git add` _(para adicionar arquivos ao stage do Git)_
-  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+- [x] [Idade em dias](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-idade-em-dias)
+- [x] [Média anual](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/03-finalmente_o_hello_world_em_java/acc-java-02-exercises-media-anual)
 
----
+### 1º Desafio Agregador
 
-## Depois de terminar o desenvolvimento (opcional)
+- [x] [Controle de Acesso](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-01-essenciais_de_java/desafio-agregador)
 
-Para **"entregar"** seu projeto, siga os passos a seguir:
+## 2. Orientação a objetos:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`
+2.1 Abstração: as Classes em Java
 
-Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
+- [x] [Conta poupança](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-conta-poupanca)
 
----
+  2.2 Getters e Setters
 
-# Requisitos do desafio
+- [x] [Encapsulamento-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-encapsulamento-recursos-humanos)
 
-## Simulador de Rendimento
+  2.3 Encapsulamento e Herança
 
-Agora é a hora de você colocar em prática o que aprendeu sobre a classe `LocalDateTime`!
-Aqui nesse desafio você deverá montar um simulador de rendimentos. A pessoa usuária deve entrar com um montante de dinheiro inicial e com o valor que objetiva ter no futuro, e, por fim, seu simulador deve dizer em que ano o objetivo terá sido atingido ou ultrapassado.
+- [x] [Gerar pessoa usuária](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-gerar-pessoa-usuaria)
+- [x] [Jogo das Fazendas](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-jogo-das-fazendas)
+- [x] [Polimorfismo-recursos-humanos](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/acc-java-02-exercises-polimorfismo-recursos-humanos)
 
-Você terá que escrever uma classe nomeada `SimuladorRendimento`, e nela deve haver um método chamado `simularRendimentoAnos`.
-Esse método `simularRendimentoAnos` deve receber dois argumentos `double`: um representando o valor do montante inicial, outro representando o valor do objetivo. O retorno deve ser um número inteiro que representa o ano futuro em que o objetivo será alcançado ou ultrapassado. Os passos desse método são: 
+### 2º - Desafio Agregador
 
-1- o método `simularRendimentoAnos` recebe dois argumentos `double`, que representam o valor inicial e o valor do objetivo, respectivamente;
-2- considerando que o rendimento anual é de 10%, o método deve calcular quantos anos serão necessários para o valor inicial alcançar o valor do objetivo;
-3- o método deve usar a classe `LocalDateTime` para pegar o ano atual (ex: 2022), somar a quantidade de anos que foram calculados no passo anterior e retornar em que ano do nosso calendário o valor do objetivo será alcançado. (Dicas: utilize os métodos `.plusYears()` e `.getYear()` para fazer essa manipulação.)
-4- retornar um inteiro que representa o ano em que o objetivo será alcançado ou ultrapassado (ex: 2047).
-
-
-# Exemplo
-Se eu chamar o método `simularRendimentoAnos` passando 500 como valor inicial, e 5000 como valor do objetivo, considerando que estou executando isso no ano 2022, o retorno do método deve ser 2047. Isso porque o rendimento é de 10%, então para o valor inicial 500 alcançar 5000, levará 25 anos.
-
-Note: se meu valor inicial é 500, no primeiro ano, com o rendimento de 10%, o valor que terei será 550. Para o segundo ano, o rendimento é calculado em cima do valor 550, ou seja, um rendimento de 10% em cima de 550 gera 605. No terceiro ano, o rendimento é calculado em cima do valor 605, e assim sucessivamente. Em outras palavras, como é rendimento, é cumulativo.
-
-500 -> inicial
-
-550 -> primeiro ano
-
-605 -> segundo ano
-
-665.5 -> terceiro ano
-
-732.05 -> quarto ano
-
-...
-
-4924.87 -> vigésimo quarto ano
-
-5417.36 -> vigésimo quinto ano
-
-Adicione esse método `main` na sua classe `SimuladorRendimento`:
-```java
-public static void main(String[] args) {
-    SimuladorRendimento obj = new SimuladorRendimento();
-    double inicial = 500;
-    double objetivo = 5000;
-    System.out.println("Com " + inicial + " seu rendimento será " + objetivo 
-            + " no ano " + obj.simularRendimentoAnos(inicial, objetivo));
-}
-```
-Após executar seu programa, a saída deverá ser:
-```
-Com 500.0 seu rendimento será 5000.0 no ano 2047
-```
-
+- [x] [Sistema de votação](https://github.com/renatomak/trybe-ciet-bootcamp-java-backend/tree/main/semana-02-orientacao_a_objetos/desafio-agregador/acc-java-02-exercises-sistema-de-votacao)
 
 ---
 
-# Avisos Finais
+## 3. Manipulação de textos e arquivos
 
-Ao finalizar e submeter o desafio, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
+3.1 Leitura e escrita em arquivos
 
-Link: [Formulário](https://be-trybe.typeform.com/to/PsefzL2e)
+- [x] [Gerador de senhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-gerador-senhas)
 
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+  3.2 Lidando com Strings
+
+- [x] [Transforma texto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/acc-java-02-exercises-transforma-texto)
+
+## 3º Desafio Agregador
+
+- [x] [Conversor CSV](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/semana-03-manituplacao_de_textos_e_arquivos/desafio-agregador/acc-java-02-exercises-conversor-csv)
+
+---
+
+## 4. Tratamento de erros
+
+4.1 Try/Catch
+
+- [x] [Divisor](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-divisor)
+- [x] [Tratando nulos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-tratando-nulos)
+
+  4.2 Refinando seu tratamento de erros
+
+- [x] [Maior Idade](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-maior-idade)
+- [x] [Leitura de arquivos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-excecao-leitura-arquivos)
+
+## 4º Desafio Agregador
+
+- [x] [Simulador de Pix](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/04-tratamento_de_erros/acc-java-02-exercises-simulador-de-pix)
+
+---
+
+## 5. Coleçẽs
+
+5.1 List e Set
+
+- [x] [Agenda](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-agenda)
+
+  5.2 Map
+
+- [x] [Agenda com Map](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-agenda-com-map)
+
+  5.3 Streams
+
+- [x] [Criador de Stream](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-criador-stream)
+
+  5.4 Operando sobre Streams
+
+- [x] [Concessionaria](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/acc-java-02-exercises-concessionaria)
+
+## 5º Desafio Agregador
+
+- [x] [Consulta filmes](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/desafio-agregador)
+
+---
+
+## 6. Datas
+
+6.1 Datas com horários
+
+- [ ] [Simulador de Rendimentos]()
+
+  6.2 Operações sobre datas ou horários
+
+- [x] [Ano Bissexto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-ano-bissexto)
+
+## 6º Desafio Agregador
+
+- [ ] [Planejamento de viagem]()
+
+---
+
+## 7. Gestão de Dependências
+
+7.1 Maven e Gradle
+
+- [ ] [Gradle war]()
+
+## 7º Desafio Agregador
+
+- [ ] [Banck Account]()
+
+---
+
+## 8. Testes JUnit 5
+
+8.1 Testes unitários com JUnit 5
+
+- [ ] [Sistema de RH]()
+
+  8.2 TDD com JUnit 5
+
+- [ ] [Caixa Eletronico]()
+
+## 8º Desafio Agregador
+
+- [ ] [Caixa eletronico]()
+
+---
+
+## 9. ORM: Hibernate
+
+9.1 Criando entidades
+
+- [ ] [Veiculo Hibernate]()
+
+  9.2 Relacionamentos e consultas
+
+- [ ] []()
+
+## 9º Desafio Agregador
+
+- [ ] []()
 
 ---
