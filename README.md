@@ -117,4 +117,54 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 5º Desafio Agregador
 
-- [ ] [Consulta filmes]()
+- [X] [Consulta filmes](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/desafio-agregador)
+
+## 6. Datas
+
+6.1 Datas com horários
+
+- [ ] [Simulador de Rendimentos]()
+
+6.2 Operações sobre datas ou horários
+
+- [ ] [Ano Bissexto]()
+
+## 6º Desafio Agregador
+- [ ] [Planejamento de viagem]()
+
+## 7. Gestão de Dependências
+
+7.1 Maven e Gradle
+
+- [ ] [Gradle war]()
+
+## 7º Desafio Agregador
+- [x] [Banck Account]()
+
+## 8. Testes JUnit 5
+
+8.1 Testes unitários com JUnit 5
+
+- [ ] [Sistema de RH]()
+
+8.2 TDD com JUnit 5
+
+- [ ] [Caixa Eletronico]()
+
+## 8º Desafio Agregador
+- [ ] [Caixa eletronico]()
+
+
+## 9. ORM: Hibernate
+
+9.1 Criando entidades
+
+- [ ] [Veiculo Hibernate]()
+
+9.2 Relacionamentos e consultas
+
+- [ ] []()
+
+## 9º Desafio Agregador
+- [ ] []()
+
