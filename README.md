@@ -143,7 +143,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 - [ ] [Gradle war]()
 
 ## 7º Desafio Agregador
-- [x] [Banck Account]()
+- [ ] [Banck Account]()
 
 ---
 
