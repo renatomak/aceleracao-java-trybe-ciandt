@@ -129,7 +129,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
   6.2 Operações sobre datas ou horários
 
-- [ ] [Ano Bissexto]()
+- [X] [Ano Bissexto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-ano-bissexto)
 
 ## 6º Desafio Agregador
 
