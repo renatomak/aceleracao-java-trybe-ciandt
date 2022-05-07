@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>acc-java-02-exercises-simulador-de-pix</name>
+	<name>consulta-filmes</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -28,7 +28,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1651918819963</id>
+			<id>1651918819953</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -1,5 +1,7 @@
 package com.trybe.consultafilmes;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Principal {
@@ -12,6 +14,9 @@ public class Principal {
   public static void main(String[] args) {
     Consultas consultas = new Consultas(Filmes.todos());
     Set<String> resultados = consultas.atoresQueInterpretaramSiProprios();
-    System.out.println(resultados);
+    List<String> result = consultas.atoresQueAtuaramEmFilmesDoDiretorEmOrdemAlfabetica(" ");
+    List<Filme> filmes = consultas.filmesEmQuePeloMenosUmDiretorAtuouMaisRecentesPrimeiro();
+    Map<String, Set<Filme>> stringSetMap = consultas.filmesLancadosNoAnoAgrupadosPorCategoria(2021);
+    System.out.println(stringSetMap);
   }
 }
