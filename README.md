@@ -125,7 +125,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 6.1 Datas com horários
 
-- [ ] [Simulador de Rendimentos]()
+- [X] [Simulador de Rendimentos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-simulador-rendimento)
 
   6.2 Operações sobre datas ou horários
 
