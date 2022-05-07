@@ -10,10 +10,10 @@ public class Viagem {
   /**
    * Método construtor da classe.
    * 
-   * @param distanciaKm
-   * @param origem
-   * @param destino
-   * @param partida
+   * @param distanciaKm string
+   * @param origem string
+   * @param destino string
+   * @param partida string
    * 
    */
   public Viagem(String partida, String origem, String destino, Double distanciaKm) {

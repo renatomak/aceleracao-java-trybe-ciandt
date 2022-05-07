@@ -25,11 +25,10 @@ public class Tempo {
   }
 
   /**
-   * retonarDesembarqueHorarioLocalDestino.
-   * 
-   * Transforma todos os fusos horarios disponíveis na classe ZoneId em um array de Strings, onde
-   * nos percorremos em busca do identificador do fuso horario do nosso destino, uma vez com esse
-   * fuso horario, podemos recuperar o horario local de desembarque no nosso destino
+   * retonarDesembarqueHorarioLocalDestino. Transforma todos os fusos horarios disponíveis na classe
+   * ZoneId em um array de Strings, onde nos percorremos em busca do identificador do fuso horario
+   * do nosso destino, uma vez com esse fuso horario, podemos recuperar o horario local de
+   * desembarque no nosso destino
    */
   public String retonarDesembarqueHorarioLocalDestino() {
 
