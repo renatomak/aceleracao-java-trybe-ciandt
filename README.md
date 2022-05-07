@@ -133,7 +133,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 6º Desafio Agregador
 
-- [ ] [Planejamento de viagem]()
+- [X] [Planejamento de viagem](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/desafio-agregador/acc-java-02-exercises-planejamento-de-viagem)
 
 ---
 
