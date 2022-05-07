@@ -119,6 +119,8 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [X] [Consulta filmes](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/05-cole%C3%A7%C3%B5es/desafio-agregador)
 
+---
+
 ## 6. Datas
 
 6.1 Datas com horários
@@ -132,6 +134,8 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 ## 6º Desafio Agregador
 - [ ] [Planejamento de viagem]()
 
+---
+
 ## 7. Gestão de Dependências
 
 7.1 Maven e Gradle
@@ -140,6 +144,8 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 7º Desafio Agregador
 - [x] [Banck Account]()
+
+---
 
 ## 8. Testes JUnit 5
 
@@ -154,6 +160,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 ## 8º Desafio Agregador
 - [ ] [Caixa eletronico]()
 
+---
 
 ## 9. ORM: Hibernate
 
@@ -167,4 +174,6 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 9º Desafio Agregador
 - [ ] []()
+
+---
 
