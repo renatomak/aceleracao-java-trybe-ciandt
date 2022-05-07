@@ -10,7 +10,7 @@ class ViagemTest {
   @Test
   @DisplayName("4 - Testa o método construtor da classe viagem")
   void construtorTest() {
-    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000.0);
+    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000);
 
     assertEquals("07/05/2022 01:00:00", viagem.retonarDesembarqueHorarioLocalDestino());
   }
@@ -18,7 +18,7 @@ class ViagemTest {
   @Test
   @DisplayName("5 - Testa o método retonarDesembarqueHorarioLocalDestino da classe Viagem")
   void retonarDesembarqueHorarioLocalDestinoTest() {
-    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000.0);
+    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000);
 
     assertEquals("07/05/2022 01:00:00", viagem.retonarDesembarqueHorarioLocalDestino());
   }
@@ -26,7 +26,7 @@ class ViagemTest {
   @Test
   @DisplayName("6 - Testa o método retornarDuracaoVoo")
   void retornarDuracaoVooTest() {
-    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000.0);
+    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000);
 
     assertEquals(24, viagem.retornarDuracaoVoo());
   }
@@ -34,7 +34,7 @@ class ViagemTest {
   @Test
   @DisplayName("7 - Testa o método retornarInformacaoViagem")
   void retornarInformacaoViagemTest() {
-    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000.0);
+    Viagem viagem = new Viagem("05/05/2022 13:00:00", "Recife", "Tokyo", 17000);
 
     assertTrue(viagem.retornarInformacaoViagem().contains("07/05/2022"));
   }

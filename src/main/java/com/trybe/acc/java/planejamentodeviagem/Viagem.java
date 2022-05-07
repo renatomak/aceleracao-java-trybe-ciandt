@@ -16,7 +16,7 @@ public class Viagem {
    * @param partida string
    * 
    */
-  public Viagem(String partida, String origem, String destino, Double distanciaKm) {
+  public Viagem(String partida, String origem, String destino, double distanciaKm) {
     this.embarque = partida;
     this.origem = origem;
     this.destino = destino;
