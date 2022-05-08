@@ -13,6 +13,7 @@ public class AccountNumberFormatter {
    * Formata o número da conta.
    *
    * @param literalAccountNumber número da conta
+   * @return número da conta no tamnho padronizado.
    */
   public String formatAccountNumber(int literalAccountNumber) {
     String str = "" + literalAccountNumber;

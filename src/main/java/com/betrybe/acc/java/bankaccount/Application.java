@@ -12,15 +12,16 @@ public class Application {
    */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    System.out.println("Informe o número da conta: ");
-    int accountNumber = scanner.nextInt();
-    scanner.nextLine();
-
     AccountNumberFormatter accountNumberFormatter = new AccountNumberFormatter();
 
-    String result = accountNumberFormatter.formatAccountNumber(accountNumber);
+    System.out.println("Informe o número da conta: ");
+    int accountNumber = scanner.nextInt();
 
-    System.out.println("Número da conta: " + result);
+    String result = accountNumberFormatter.formatAccountNumber(accountNumber);
+    
+    System.out.println("Numero da conta: " + result);
+
+    scanner.close();
   }
 
 }
