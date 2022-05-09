@@ -1,26 +1,31 @@
 package com.trybe.acc.java.sistemarh;
 
 public class PessoaColaboradora {
+
+  private double salarioBruto;
+
   public double calcularSalarioLiquido() {
-    return 0;
+    return this.salarioBruto - (this.salarioBruto * 0.2);
   }
 
   public double calcularValorBrutoRecebidoAnual(int ano) {
-    return 0;
+    return this.salarioBruto * 12 * ano;
   }
 
   public double calcularValorLiquidoRecebidoAnual(int ano) {
-    return 0;
+    return calcularSalarioLiquido() * 12 * ano;
   }
 
   public double calcularValorImpostoAnual(int ano) {
-    return 0;
+    return this.salarioBruto * 0.2 * 12 * ano;
   }
 
   public double getSalarioBruto() {
-    return 0;
+    return this.salarioBruto;
   }
 
-  public void setSalarioBruto(double salarioBruto) {}
+  public void setSalarioBruto(double salarioBruto) {
+    this.salarioBruto = salarioBruto;
+  }
 
 }
