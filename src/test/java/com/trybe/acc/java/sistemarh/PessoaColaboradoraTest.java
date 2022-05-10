@@ -42,9 +42,16 @@ public class PessoaColaboradoraTest {
   }
 
   @Test
-  @DisplayName("14. Teste da função que calcula valor de imposto anul.")
-  public void testegetSalarioBruto() {
+  @DisplayName("14. Teste da função que recupera o salario.")
+  public void testeGetSalarioBruto() {
     Assertions.assertEquals(3000, pessoaColaboradora.getSalarioBruto());
+  }
+  
+  @Test
+  @DisplayName("15. Teste da função que atualiza o salario.")
+  public void testeSetSalarioBruto() {
+    pessoaColaboradora.setSalarioBruto(6000);
+    Assertions.assertEquals(6000, pessoaColaboradora.getSalarioBruto());
   }
 
 }
