@@ -6,10 +6,14 @@ package com.trybe.contabancaria;
 
 public class ValidaCpf {
 
+  /**
+   * Método para validar um cpf.
+   * @param cpf string.
+   * @return boolean.
+   */
   public static boolean validarCpf(String cpf) {
     boolean isValid = true;
-    String strDV_01 = cpf.substring(cpf.length() - 2, cpf.length() - 1);
-    String strDV_02 = cpf.substring(cpf.length() - 1);
+    
 
     String numbers = cpf.substring(0, cpf.length() - 3).replace(".", "");
 
@@ -41,6 +45,9 @@ public class ValidaCpf {
     if (secondDV == 10 || secondDV == 11) {
       firstDV = 0;
     }
+    
+    String strDV_01 = cpf.substring(cpf.length() - 2, cpf.length() - 1);
+    String strDV_02 = cpf.substring(cpf.length() - 1);
 
     if (firstDV != Integer.parseInt(strDV_01) || secondDV != Integer.parseInt(strDV_02)) {
       isValid = false;

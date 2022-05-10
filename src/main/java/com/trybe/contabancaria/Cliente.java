@@ -21,6 +21,11 @@ public class Cliente {
     return cpf;
   }
 
+  /**
+   * Metodo para modificar o cpf.
+   * 
+   * @param cpf string.
+   */
   public void setCpf(String cpf) {
     if (ValidaCpf.validarCpf(cpf)) {
       this.cpf = cpf;
