@@ -145,7 +145,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 7º Desafio Agregador
 
-- [ ] [Bank Account]()
+- [X] [Bank Account](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/07-gerenciador_de_dependencias/acc-java-02-exercises-bank-account)
 
 ---
 
