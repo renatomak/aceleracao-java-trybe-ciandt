@@ -125,7 +125,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 6.1 Datas com horários
 
-- [X] [Simulador de Rendimentos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-simulador-rendimento)
+- [x] [Simulador de Rendimentos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-simulador-rendimento)
 
   6.2 Operações sobre datas ou horários
 
@@ -133,7 +133,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 6º Desafio Agregador
 
-- [X] [Planejamento de viagem](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/desafio-agregador/acc-java-02-exercises-planejamento-de-viagem)
+- [x] [Planejamento de viagem](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/desafio-agregador/acc-java-02-exercises-planejamento-de-viagem)
 
 ---
 
@@ -141,11 +141,11 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 7.1 Maven e Gradle
 
-- [ ] [Gradle war]()
+- [x] [Gradle war]()
 
 ## 7º Desafio Agregador
 
-- [ ] [Banck Account]()
+- [ ] [Bank Account]()
 
 ---
 
