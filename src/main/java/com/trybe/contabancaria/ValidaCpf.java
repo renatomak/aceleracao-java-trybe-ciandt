@@ -14,15 +14,15 @@ public class ValidaCpf {
   public static boolean validarCpf(String cpf) {
     boolean isValid = true;
     
+    cpf = cpf.replace(".", "").replaceAll("-", "");
 
-    String numbers = cpf.substring(0, cpf.length() - 3).replace(".", "");
 
-    String[] listFistPart = numbers.split("");
+    String[] numbers = cpf.split("");
     int sum = 0;
     int count = 10;
 
-    for (int index = 0; index < listFistPart.length; index++) {
-      sum += Integer.parseInt(listFistPart[index]) * count;
+    for (int index = 0; index < numbers.length - 2; index++) {
+      sum += Integer.parseInt(numbers[index]) * count;
       --count;
     }
     int firstDV = 11 - (sum % 11);
@@ -30,14 +30,10 @@ public class ValidaCpf {
       firstDV = 0;
     }
 
-    numbers = cpf.substring(0, cpf.length() - 1).replace(".", "").replace("-", "");
-
-    listFistPart = numbers.split("");
-
     count = 11;
     sum = 0;
-    for (int index = 0; index < listFistPart.length; index++) {
-      sum += Integer.parseInt(listFistPart[index]) * count;
+    for (int index = 0; index < numbers.length - 1; index++) {
+      sum += Integer.parseInt(numbers[index]) * count;
       --count;
     }
 
@@ -46,10 +42,8 @@ public class ValidaCpf {
       firstDV = 0;
     }
     
-    String strDV_01 = cpf.substring(cpf.length() - 2, cpf.length() - 1);
-    String strDV_02 = cpf.substring(cpf.length() - 1);
 
-    if (firstDV != Integer.parseInt(strDV_01) || secondDV != Integer.parseInt(strDV_02)) {
+    if (firstDV != Integer.parseInt(numbers[9]) || secondDV != Integer.parseInt(numbers[10])) {
       isValid = false;
     }
     return isValid;
