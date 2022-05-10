@@ -14,7 +14,7 @@ public class PessoaColaboradoraTest {
   public void setUp() {
     pessoaColaboradora = new PessoaColaboradora();
     pessoaColaboradora.setSalarioBruto(3000);
-    ano = 3;
+    ano = 5;
   }
 
   @Test
@@ -26,19 +26,19 @@ public class PessoaColaboradoraTest {
   @Test
   @DisplayName("11. Teste da função que calcula valor bruto recebido em dada quantidade de anos.")
   public void testeCalcularValorBrutoRecebidoAnual() {
-    Assertions.assertEquals(108000, pessoaColaboradora.calcularValorBrutoRecebidoAnual(ano));
+    Assertions.assertEquals(180000, pessoaColaboradora.calcularValorBrutoRecebidoAnual(ano));
   }
 
   @Test
   @DisplayName("12. Teste da função que calcula valor liquido recebido em dada quantidade de anos.")
   public void testeCalcularValorLiquidoRecebidoAnual() {
-    Assertions.assertEquals(86400, pessoaColaboradora.calcularValorLiquidoRecebidoAnual(ano));
+    Assertions.assertEquals(144000, pessoaColaboradora.calcularValorLiquidoRecebidoAnual(ano));
   }
 
   @Test
   @DisplayName("13. Teste da função que calcula valor de imposto anul.")
   public void testeCalcularValorImpostoAnual() {
-    Assertions.assertEquals(21600, pessoaColaboradora.calcularValorImpostoAnual(ano));
+    Assertions.assertEquals(36000, pessoaColaboradora.calcularValorImpostoAnual(ano));
   }
 
   @Test
