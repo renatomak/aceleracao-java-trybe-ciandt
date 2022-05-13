@@ -8,10 +8,12 @@ public class Conta {
   private String tipoConta;
   private String idConta;
   private PessoaCliente pessoaCliente;
-  private List<Transacao> transacaos = new ArrayList<>();
+  private List<Transacao> transacoes = new ArrayList<>();
+  private double saldo;
 
   /**
    * Método construtor.
+   * 
    * @param tipoConta string.
    * @param pessoaCliente do tipo PessoaCliente.
    * @param banco do tipo Banco.
@@ -20,26 +22,40 @@ public class Conta {
     this.tipoConta = tipoConta;
     this.idConta = banco.gerarNumeroNovaConta();
     this.pessoaCliente = pessoaCliente;
+    this.saldo = 0.0;
+    if (tipoConta.equals(ContaUtils.CONTA_CORRENTE)) {
+      this.saldo = 800.00;
+    }
   }
 
+  /**
+   * Method add transaction.
+   *
+   * @param quantidade type double.
+   * @param descricao type String.
+   */
   public void adicionarTransacao(double quantidade, String descricao) {
     Transacao transacao = new Transacao(quantidade, descricao);
-    transacaos.add(transacao);
+
+    if (descricao.equals(ContaUtils.TRANSACAO_DEPOSITO)) {
+      this.saldo += quantidade;
+      transacoes.add(transacao);
+    }
+    if (descricao.equals(ContaUtils.TRANSACAO_SAQUE)) {
+      if (this.saldo >= quantidade) {
+        this.saldo -= quantidade;
+        transacoes.add(transacao);
+      }
+    }
   }
 
   /**
    * Método para retornar o salda da conta.
+   * 
    * @return double
    */
   public double retornarSaldo() {
-    double depositos =
-        transacaos.stream().filter(transacao -> transacao.getDescricao().contains("Deposito"))
-            .mapToDouble(Transacao::getQuantia).sum();
-    double saques =
-        transacaos.stream().filter(transacao -> transacao.getDescricao().contains("Saque"))
-            .mapToDouble(Transacao::getQuantia).sum();
-
-    return depositos - saques;
+    return this.saldo;
   }
 
   public String retornarResumoConta() {
@@ -48,7 +64,7 @@ public class Conta {
   }
 
   public void retornarExtrato() {
-    transacaos.forEach(transacao -> System.out.println(transacao.retornarResumoTransacao()));
+    transacoes.forEach(transacao -> System.out.println(transacao.retornarResumoTransacao()));
   }
 
   public String getIdConta() {
@@ -63,7 +79,7 @@ public class Conta {
     return tipoConta;
   }
 
-  public List<Transacao> getTransacaos() {
-    return transacaos;
+  public List<Transacao> getTransacoes() {
+    return transacoes;
   }
 }

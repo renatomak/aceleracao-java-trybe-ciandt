@@ -1,7 +1,5 @@
 package com.trybe.acc.java.caixaeletronico;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -11,7 +9,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 
 @DisplayName("Teste da classe Conta")
 class ContaTest {
@@ -33,6 +30,7 @@ class ContaTest {
     formatDate = dateTimeFormatter.format(instant);
 
   }
+
   @Test
   @DisplayName("6 - Testa o construtor da classe conta.")
   void construtorTest() {
@@ -44,19 +42,19 @@ class ContaTest {
   @Test
   @DisplayName("7 - Testa o método adicionar transação e retornar saldo da conta.")
   void adicionarTransacaoTestRetornarSaldoTest() {
-    conta.adicionarTransacao(1000, "Deposito");
-    conta.adicionarTransacao(2000, "Deposito");
-    conta.adicionarTransacao(500, "Saque");
+    conta.adicionarTransacao(1000, ContaUtils.TRANSACAO_DEPOSITO);
+    conta.adicionarTransacao(2000, ContaUtils.TRANSACAO_DEPOSITO);
+    conta.adicionarTransacao(500, ContaUtils.TRANSACAO_SAQUE);
 
-    Assertions.assertTrue(conta.getTransacaos().size() == 3);
-    Assertions.assertEquals(2500.00, conta.retornarSaldo());
+    Assertions.assertEquals(3, conta.getTransacoes().size());
+    Assertions.assertEquals(3300.00, conta.retornarSaldo());
 
   }
 
   @Test
   @DisplayName("8 - Testa o método retornar resumo está retornando uma string com os valores corretamente.")
   void retornarResumoContaTest() {
-    Assertions.assertTrue(conta.retornarResumoConta().contains("0.00 - Conta Corrente"));
+    Assertions.assertTrue(conta.retornarResumoConta().contains("800.00 - Conta Corrente"));
   }
 
   @Test
@@ -66,12 +64,14 @@ class ContaTest {
     PrintStream printStream = new PrintStream(baos);
     System.setOut(printStream);
 
-    conta.adicionarTransacao(1000, "Deposito");
-    conta.adicionarTransacao(2000, "Deposito");
-    conta.adicionarTransacao(500, "Saque");
+    conta.adicionarTransacao(1000, ContaUtils.TRANSACAO_DEPOSITO);
+    conta.adicionarTransacao(2000, ContaUtils.TRANSACAO_DEPOSITO);
+    conta.adicionarTransacao(500, ContaUtils.TRANSACAO_SAQUE);
     conta.retornarExtrato();
 
-    String expected = String.format("%s - 1000.00 - Deposito\n%s - 2000.00 - Deposito\n%s - 500.00 - Saque", formatDate, formatDate, formatDate);
+    String expected =
+        String.format("%s - 1000.00 - Deposito\n%s - 2000.00 - Deposito\n%s - 500.00 - Saque",
+            formatDate, formatDate, formatDate);
 
     String[] linha = baos.toString().split(System.lineSeparator());
 

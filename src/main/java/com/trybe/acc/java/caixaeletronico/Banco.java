@@ -37,10 +37,10 @@ public class Banco {
    * @param password type string.
    * @return new person client.
    */
-  public PessoaCliente adicionaPessoaCliente(String name, String tipyAccount, String cpf,
+  public PessoaCliente adicionarPessoaCliente(String name, String tipyAccount, String cpf,
       String password) {
     PessoaCliente client = new PessoaCliente(name, cpf, password);
-    Conta account = new Conta(tipyAccount, client, this);
+    Conta account = new Conta(ContaUtils.CONTA_CORRENTE, client, this);
     Conta poupanca = new Conta(ContaUtils.CONTA_POUPANCA, client, this);
 
     client.adicionarConta(account);
@@ -96,5 +96,9 @@ public class Banco {
 
   public static void setNumberOfAccounts(int numberOfAccounts) {
     Banco.numberOfAccounts = numberOfAccounts;
+  }
+
+  public PessoaCliente getPessoaCliente(int index) {
+    return clients.get(index);
   }
 }

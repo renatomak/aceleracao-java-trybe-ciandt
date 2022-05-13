@@ -1,7 +1,5 @@
 package com.trybe.acc.java.caixaeletronico;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
@@ -23,9 +21,7 @@ class PessoaClienteTest {
     banco = new Banco();
     conta = new Conta(ContaUtils.CONTA_CORRENTE, pessoaCliente, banco);
     pessoaCliente.adicionarConta(conta);
-    conta.adicionarTransacao(1000, "Deposito");
-    conta.adicionarTransacao(2000, "Deposito");
-    conta.adicionarTransacao(500, "Saque");
+    conta.adicionarTransacao(100, ContaUtils.TRANSACAO_SAQUE);
 
     String patternDate = "dd/MM/yyyy HH:mm:ss";
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(patternDate);
@@ -65,7 +61,7 @@ class PessoaClienteTest {
   @Test
   @DisplayName("14 - Testa o método retornar saldo de uma conta específica da pessoa cliente.")
   void retornarSaldoContaEspecificaTest() {
-    Assertions.assertEquals(2500.00, pessoaCliente.retornarSaldoContaEspecifica(0));
+    Assertions.assertEquals(700.00, pessoaCliente.retornarSaldoContaEspecifica(0));
   }
 
 
@@ -85,8 +81,8 @@ class PessoaClienteTest {
     pessoaCliente.retornarExtratoContaEspecifica(0);
 
     String expected =
-        String.format("%s - 1000.00 - Deposito\n%s - 2000.00 - Deposito\n%s - 500.00 - Saque",
-            formatDate, formatDate, formatDate);
+        String.format("%s - 100.00 - Saque",
+            formatDate);
 
     String[] line = baos.toString().split(System.lineSeparator());
 
@@ -105,8 +101,8 @@ class PessoaClienteTest {
   @Test
   @DisplayName("17 - Testa o método adiciona transacao de uma conta específica da pessoa cliente.")
   void adicionarTransacaoContaEspecificaTest() {
-    pessoaCliente.adicionarTransacaoContaEspecifica(0, 1000.00, "Deposito");
-    Assertions.assertTrue(conta.getTransacaos().size() == 4);
+    pessoaCliente.adicionarTransacaoContaEspecifica(0, 1000.00, ContaUtils.TRANSACAO_DEPOSITO);
+    Assertions.assertEquals(2, conta.getTransacoes().size());
   }
 
   @Test
@@ -136,7 +132,8 @@ class PessoaClienteTest {
         exit.append("\n").append(transacao);
       }
     }
-    Assertions.assertTrue(exit.toString().contains(" - 2500.00 - Conta Corrente"));
+    System.out.println(exit.toString());
+    Assertions.assertTrue(exit.toString().contains(" - 700.00 - Conta Corrente"));
   }
 
   @Test
