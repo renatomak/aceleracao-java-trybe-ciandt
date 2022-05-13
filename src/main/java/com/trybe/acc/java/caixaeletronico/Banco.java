@@ -1,9 +1,9 @@
 package com.trybe.acc.java.caixaeletronico;
 
-import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.StringUtils;
 
 public class Banco {
   private static final int DEFAULT_SIZE_ACCOUNT_NUMBER = 10;
