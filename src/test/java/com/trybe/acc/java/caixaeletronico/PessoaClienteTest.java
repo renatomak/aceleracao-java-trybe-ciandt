@@ -2,10 +2,7 @@ package com.trybe.acc.java.caixaeletronico;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -19,6 +16,7 @@ class PessoaClienteTest {
   Conta conta;
   Banco banco;
   String formatDate;
+
   @BeforeEach
   public void setUp() {
     pessoaCliente = new PessoaCliente("Renato Marques", "844.430.530-85", "123456789");
@@ -35,6 +33,11 @@ class PessoaClienteTest {
     formatDate = dateTimeFormatter.format(instant);
   }
 
+  @AfterEach
+  public void cleanUpEach() {
+    Banco.setNumberOfAccounts(0);
+  }
+
   @Test
   @DisplayName("12 - Testa o construtor da classe Pessoa Cliente.")
   void construtorTest() {
@@ -46,7 +49,7 @@ class PessoaClienteTest {
     PessoaCliente cliente = new PessoaCliente("Renato Marques", "844.430.530-85", "123456789");
 
     String[] linha = baos.toString().split(System.lineSeparator());
-    String saida = linha[linha.length-1];
+    String saida = linha[linha.length - 1];
 
     Assertions.assertNotNull(cliente);
     Assertions.assertEquals(expected, saida);
@@ -81,7 +84,9 @@ class PessoaClienteTest {
 
     pessoaCliente.retornarExtratoContaEspecifica(0);
 
-    String expected = String.format("%s - 1000,00 - Deposito\n%s - 2000,00 - Deposito\n%s - 500,00 - Saque", formatDate, formatDate, formatDate);
+    String expected =
+        String.format("%s - 1000,00 - Deposito\n%s - 2000,00 - Deposito\n%s - 500,00 - Saque",
+            formatDate, formatDate, formatDate);
 
     String[] line = baos.toString().split(System.lineSeparator());
 

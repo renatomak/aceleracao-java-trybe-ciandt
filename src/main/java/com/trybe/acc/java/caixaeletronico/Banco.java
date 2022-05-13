@@ -94,4 +94,7 @@ public class Banco {
     pessoaCliente.adicionarTransacaoContaEspecifica(daConta, quantia, ContaUtils.TRANSACAO_SAQUE);
   }
 
+  public static void setNumberOfAccounts(int numberOfAccounts) {
+    Banco.numberOfAccounts = numberOfAccounts;
+  }
 }
