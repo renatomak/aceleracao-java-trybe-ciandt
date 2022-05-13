@@ -85,7 +85,7 @@ class PessoaClienteTest {
     pessoaCliente.retornarExtratoContaEspecifica(0);
 
     String expected =
-        String.format("%s - 1000,00 - Deposito\n%s - 2000,00 - Deposito\n%s - 500,00 - Saque",
+        String.format("%s - 1000.00 - Deposito\n%s - 2000.00 - Deposito\n%s - 500.00 - Saque",
             formatDate, formatDate, formatDate);
 
     String[] line = baos.toString().split(System.lineSeparator());
@@ -136,7 +136,7 @@ class PessoaClienteTest {
         exit.append("\n").append(transacao);
       }
     }
-    Assertions.assertTrue(exit.toString().contains(" - 2500,00 - Conta Corrente"));
+    Assertions.assertTrue(exit.toString().contains(" - 2500.00 - Conta Corrente"));
   }
 
   @Test

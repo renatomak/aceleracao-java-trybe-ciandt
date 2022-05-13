@@ -56,7 +56,7 @@ class ContaTest {
   @Test
   @DisplayName("8 - Testa o método retornar resumo está retornando uma string com os valores corretamente.")
   void retornarResumoContaTest() {
-    Assertions.assertTrue(conta.retornarResumoConta().contains("0,00 - Conta Corrente"));
+    Assertions.assertTrue(conta.retornarResumoConta().contains("0.00 - Conta Corrente"));
   }
 
   @Test
@@ -71,7 +71,7 @@ class ContaTest {
     conta.adicionarTransacao(500, "Saque");
     conta.retornarExtrato();
 
-    String expected = String.format("%s - 1000,00 - Deposito\n%s - 2000,00 - Deposito\n%s - 500,00 - Saque", formatDate, formatDate, formatDate);
+    String expected = String.format("%s - 1000.00 - Deposito\n%s - 2000.00 - Deposito\n%s - 500.00 - Saque", formatDate, formatDate, formatDate);
 
     String[] linha = baos.toString().split(System.lineSeparator());
 
