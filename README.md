@@ -157,7 +157,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
   8.2 TDD com JUnit 5
 
-- [X] [Caixa Eletronico]()
+- [X] [Sistema Bancario](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/acc-java-02-exercises-sistema-bancario)
 
 ## 8º Desafio Agregador
 
