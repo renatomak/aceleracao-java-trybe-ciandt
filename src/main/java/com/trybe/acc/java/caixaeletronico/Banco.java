@@ -3,11 +3,9 @@ package com.trybe.acc.java.caixaeletronico;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.apache.commons.lang3.StringUtils;
 
 
 public class Banco {
-  private static final int DEFAULT_SIZE_ACCOUNT_NUMBER = 10;
   private static int numberOfAccounts = 0;
   private List<PessoaCliente> clients = new ArrayList<>();
   private List<Conta> contas = new ArrayList<>();
@@ -19,11 +17,14 @@ public class Banco {
    */
   public String gerarNumeroNovaConta() {
     numberOfAccounts++;
-    String numberAccount = "" + numberOfAccounts;
-    if (numberAccount.length() == DEFAULT_SIZE_ACCOUNT_NUMBER) {
-      return numberAccount;
+    String numberAccount = "";
+    for (int i = 0; i < 9; i++) {
+      if (numberAccount.length() + ("" + numberOfAccounts).length() < 9) {
+        numberAccount += "0";
+      }
     }
-    return StringUtils.leftPad(numberAccount, DEFAULT_SIZE_ACCOUNT_NUMBER, '0');
+    numberAccount += "" + numberOfAccounts;
+    return numberAccount;
   }
 
 
