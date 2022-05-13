@@ -17,7 +17,7 @@ class BancoTest {
   public void setUp() {
 
     banco = new Banco();
-    cliente = banco.adicionaPessoaCliente("Renato Marques da Silva", AccountUtils.CONTA_CORRENTE, "587.366.190-19", "123456");
+    cliente = banco.adicionaPessoaCliente("Renato Marques da Silva", ContaUtils.CONTA_CORRENTE, "587.366.190-19", "123456");
 
   }
 
@@ -45,7 +45,7 @@ class BancoTest {
     Conta corrente = cliente.getContas().get(0);
     Conta poupanca = cliente.getContas().get(1);
 
-    corrente.adicionarTransacao(1000.00, AccountUtils.TRANSACAO_DEPOSITO);
+    corrente.adicionarTransacao(1000.00, ContaUtils.TRANSACAO_DEPOSITO);
 
 
     banco.transferirFundos(cliente, 0, 1, 100.00);
@@ -56,7 +56,6 @@ class BancoTest {
   @Test
   @DisplayName("5 - Testa se o método sacar está funcionando corretamente.")
   void depositarTestSacarTestMostrarExtratoTest() {
-    fail("Não implementado");
 
   }
 

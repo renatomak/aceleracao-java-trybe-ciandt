@@ -10,12 +10,23 @@ public class Transacao {
 
   private Conta conta;
 
+  /**
+   * Method for create new transaction.
+   * 
+   * @param quantia type double.
+   * @param descricao type String.
+   */
   public Transacao(double quantia, String descricao) {
     this.quantia = quantia;
     this.descricao = descricao;
     this.instante = retornarInstante();
   }
 
+  /**
+   * Method return instant.
+   * 
+   * @return type String.
+   */
   public String retornarInstante() {
     String patternDate = "dd/MM/yyyy HH:mm:ss";
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(patternDate);

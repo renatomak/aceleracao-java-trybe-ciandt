@@ -10,6 +10,13 @@ public class PessoaCliente {
   private String senha;
   private List<Conta> contas = new ArrayList<>();
 
+  /**
+   * Method constructor.
+   * 
+   * @param nomeCompleto type String.
+   * @param cpf type String.
+   * @param senha type String.
+   */
   public PessoaCliente(String nomeCompleto, String cpf, String senha) {
     this.nomeCompleto = nomeCompleto;
     this.cpf = cpf;

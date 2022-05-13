@@ -5,12 +5,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 
+
 public class Banco {
   private static final int DEFAULT_SIZE_ACCOUNT_NUMBER = 10;
   private static int numberOfAccounts = 0;
   private List<PessoaCliente> clients = new ArrayList<>();
   private List<Conta> contas = new ArrayList<>();
 
+  /**
+   * Method for generate new number account.
+   * 
+   * @return string with new number account.
+   */
   public String gerarNumeroNovaConta() {
     numberOfAccounts++;
     String numberAccount = "" + numberOfAccounts;
@@ -20,11 +26,21 @@ public class Banco {
     return StringUtils.leftPad(numberAccount, DEFAULT_SIZE_ACCOUNT_NUMBER, '0');
   }
 
+
+  /**
+   * Method for add new person client.
+   * 
+   * @param name type string.
+   * @param tipyAccount type string.
+   * @param cpf type string.
+   * @param password type string.
+   * @return new person client.
+   */
   public PessoaCliente adicionaPessoaCliente(String name, String tipyAccount, String cpf,
       String password) {
     PessoaCliente client = new PessoaCliente(name, cpf, password);
     Conta account = new Conta(tipyAccount, client, this);
-    Conta poupanca = new Conta(AccountUtils.CONTA_POUPANCA, client, this);
+    Conta poupanca = new Conta(ContaUtils.CONTA_POUPANCA, client, this);
 
     client.adicionarConta(account);
     client.adicionarConta(poupanca);
@@ -44,6 +60,13 @@ public class Banco {
     return clients.size();
   }
 
+  /**
+   * Method create new person client.
+   * 
+   * @param cpf type string.
+   * @param password type string.
+   * @return type person client.
+   */
   public PessoaCliente pessoaClienteLogin(String cpf, String password) {
     List<PessoaCliente> collect = clients.stream()
         .filter(client -> client.getCpf().equals(cpf) && client.getSenha().equals(password))
@@ -51,15 +74,23 @@ public class Banco {
     return collect.get(0);
   }
 
+  /**
+   * Method for transfer funds.
+   * 
+   * @param pessoaCliente type person client.
+   * @param daConta type int.
+   * @param paraConta type int.
+   * @param quantia type double.
+   */
   public void transferirFundos(PessoaCliente pessoaCliente, int daConta, int paraConta,
       double quantia) {
     this.sacar(pessoaCliente, daConta, quantia);
     pessoaCliente.adicionarTransacaoContaEspecifica(paraConta, quantia,
-        AccountUtils.TRANSACAO_DEPOSITO);
+        ContaUtils.TRANSACAO_DEPOSITO);
   }
 
   public void sacar(PessoaCliente pessoaCliente, int daConta, double quantia) {
-    pessoaCliente.adicionarTransacaoContaEspecifica(daConta, quantia, AccountUtils.TRANSACAO_SAQUE);
+    pessoaCliente.adicionarTransacaoContaEspecifica(daConta, quantia, ContaUtils.TRANSACAO_SAQUE);
   }
 
 }

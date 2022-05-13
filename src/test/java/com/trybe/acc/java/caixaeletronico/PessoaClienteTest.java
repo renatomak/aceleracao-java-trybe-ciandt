@@ -23,7 +23,7 @@ class PessoaClienteTest {
   public void setUp() {
     pessoaCliente = new PessoaCliente("Renato Marques", "844.430.530-85", "123456789");
     banco = new Banco();
-    conta = new Conta(AccountUtils.CONTA_CORRENTE, pessoaCliente, banco);
+    conta = new Conta(ContaUtils.CONTA_CORRENTE, pessoaCliente, banco);
     pessoaCliente.adicionarConta(conta);
     conta.adicionarTransacao(1000, "Deposito");
     conta.adicionarTransacao(2000, "Deposito");

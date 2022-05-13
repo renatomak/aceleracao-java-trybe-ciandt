@@ -10,6 +10,12 @@ public class Conta {
   private PessoaCliente pessoaCliente;
   private List<Transacao> transacaos = new ArrayList<>();
 
+  /**
+   * Método construtor.
+   * @param tipoConta string.
+   * @param pessoaCliente do tipo PessoaCliente.
+   * @param banco do tipo Banco.
+   */
   public Conta(String tipoConta, PessoaCliente pessoaCliente, Banco banco) {
     this.tipoConta = tipoConta;
     this.idConta = banco.gerarNumeroNovaConta();
@@ -21,6 +27,10 @@ public class Conta {
     transacaos.add(transacao);
   }
 
+  /**
+   * Método para retornar o salda da conta.
+   * @return double
+   */
   public double retornarSaldo() {
     double depositos =
         transacaos.stream().filter(transacao -> transacao.getDescricao().contains("Deposito"))

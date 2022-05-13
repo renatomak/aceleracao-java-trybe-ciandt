@@ -25,7 +25,7 @@ class ContaTest {
   public void setUp() {
     pessoaCliente = new PessoaCliente("Renato Marques", "844.430.530-85", "123456789");
     banco = new Banco();
-    conta = new Conta(AccountUtils.CONTA_CORRENTE, pessoaCliente, banco);
+    conta = new Conta(ContaUtils.CONTA_CORRENTE, pessoaCliente, banco);
 
     String patternDate = "dd/MM/yyyy HH:mm:ss";
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(patternDate);
@@ -37,7 +37,7 @@ class ContaTest {
   @DisplayName("6 - Testa o construtor da classe conta.")
   void construtorTest() {
     Assertions.assertNotNull(conta.getIdConta());
-    Assertions.assertEquals(AccountUtils.CONTA_CORRENTE, conta.getTipoConta());
+    Assertions.assertEquals(ContaUtils.CONTA_CORRENTE, conta.getTipoConta());
     Assertions.assertNotNull(conta.getPessoaCliente());
   }
 
