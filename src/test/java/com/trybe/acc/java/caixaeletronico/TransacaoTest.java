@@ -41,7 +41,7 @@ class TransacaoTest {
   @Test
   @DisplayName("23 - Testa o método retornar resumo transacao.")
   void retornarResumoTransacaoTest() {
-    String expected = String.format("%s - 1000,00 - Deposito recebido", formatDate);
+    String expected = String.format("%s - 1000.00 - Deposito recebido", formatDate);
     Assertions.assertEquals(expected, transacao.retornarResumoTransacao());
   }
 
