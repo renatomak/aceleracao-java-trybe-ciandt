@@ -151,13 +151,13 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 8. Testes JUnit 5
 
-8.1 Testes unitários com JUnit 5
+  8.1 Testes unitários com JUnit 5
 
-- [ ] [Sistema de RH]()
+- [X] [Sistema de RH](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/acc-java-02-exercises-sistema-rh)
 
   8.2 TDD com JUnit 5
 
-- [ ] [Caixa Eletronico]()
+- [X] [Caixa Eletronico]()
 
 ## 8º Desafio Agregador
 
