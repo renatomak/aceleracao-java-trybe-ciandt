@@ -18,8 +18,8 @@ public class Banco {
   public String gerarNumeroNovaConta() {
     numberOfAccounts++;
     String numberAccount = "";
-    for (int i = 0; i < 9; i++) {
-      if (numberAccount.length() + ("" + numberOfAccounts).length() < 9) {
+    for (int i = 0; i < 10; i++) {
+      if (numberAccount.length() + ("" + numberOfAccounts).length() < 10) {
         numberAccount += "0";
       }
     }
