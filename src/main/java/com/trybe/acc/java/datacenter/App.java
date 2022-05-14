@@ -27,17 +27,25 @@ public class App {
     app3.setNome("Trybe Course");
     app3.setDescricao("Javascript");
 
+    System.out.println(app1);
+    System.out.println(app2);
+    System.out.println(app3);
+
 
 
     Datacenter datacenter1 = new Datacenter();
     datacenter1.setNome("Cerrado");
     datacenter1.setLocalidade("Brasilia");
 
+    System.out.println(datacenter1);
 
     Servidor servidor1D1 = new Servidor();
     servidor1D1.setNome("LoboGuara");
     servidor1D1.setDatacenter(datacenter1);
     datacenter1.addServidor(servidor1D1);
+
+    System.out.println(servidor1D1);
+
 
 
     // Colocando App1 no servidor 1 do datacenter 1
@@ -61,6 +69,10 @@ public class App {
 
     // Colocando App3 no servidor 3 do datacenter 1
     servidor2D1.addAplicacao(app3);
+
+    System.out.println(servidor1D1);
+    System.out.println(servidor1D1.getDatacenter().getNome());
+    System.out.println(servidor2D1);
 
     DatacenterService service = new DatacenterService();
     service.save(datacenter1);
