@@ -5,6 +5,8 @@ import com.trybe.acc.java.datacenter.entity.Aplicacao;
 import com.trybe.acc.java.datacenter.util.JpaUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 public class AplicacaoService implements ServiceInterface<Aplicacao, Long> {
 
@@ -51,13 +53,16 @@ public class AplicacaoService implements ServiceInterface<Aplicacao, Long> {
 
   @Override
   public List<Aplicacao> list() {
+//    EntityManager em = JpaUtil.getEntityManager();
+//    AplicacaoDao aplicacaoDao = new AplicacaoDao(em);
+//
+//    List<Aplicacao> aplicacoes = aplicacaoDao.buscarTodos();
+//
+//    em.close();
+//    return aplicacoes;
     EntityManager em = JpaUtil.getEntityManager();
-    AplicacaoDao aplicacaoDao = new AplicacaoDao(em);
-
-    List<Aplicacao> aplicacoes = aplicacaoDao.buscarTodos();
-
-    em.close();
-    return aplicacoes;
+    Query query = em.createQuery("from Aplicacao");
+    return query.getResultList();
   }
 
   @Override

@@ -2,11 +2,7 @@ package com.trybe.acc.java.datacenter.entity;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class Aplicacao {
@@ -19,7 +15,7 @@ public class Aplicacao {
 
   private String descricao;
 
-  @ManyToMany(mappedBy = "aplicacoes")
+  @ManyToMany(mappedBy = "aplicacoes", fetch = FetchType.EAGER)
   private List<Servidor> servidores = new ArrayList<>();
 
 
@@ -47,9 +43,4 @@ public class Aplicacao {
     this.descricao = descricao;
   }
 
-  @Override
-  public String toString() {
-    return "Aplicacao{" + "id=" + id + ", nome='" + nome + '\'' + ", descricao='" + descricao + '\''
-        + ", servidores=" + servidores + '}';
-  }
 }

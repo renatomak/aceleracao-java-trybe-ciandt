@@ -29,7 +29,7 @@ public class AplicacaoDao {
   }
 
   public List<Aplicacao> buscarTodos() {
-    String jpql = "SELECT p FROM Aplicacao p";
+    String jpql = "SELECT aplicacao FROM Aplicacao aplicacao";
     return em.createQuery(jpql, Aplicacao.class).getResultList();
   }
 }

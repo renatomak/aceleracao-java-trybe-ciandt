@@ -154,6 +154,7 @@ public class AppTest {
   public void testInsertAplicacao() {
     AplicacaoService service = new AplicacaoService();
     List<Aplicacao> data = service.list();
+
     assertEquals(3, data.size());
   }
 
