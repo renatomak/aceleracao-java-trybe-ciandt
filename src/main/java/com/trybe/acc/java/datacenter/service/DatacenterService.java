@@ -1,75 +1,59 @@
 package com.trybe.acc.java.datacenter.service;
 
-import com.trybe.acc.java.datacenter.dao.DatacenterDao;
 import com.trybe.acc.java.datacenter.entity.Datacenter;
-import com.trybe.acc.java.datacenter.util.JpaUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 public class DatacenterService implements ServiceInterface<Datacenter, Long> {
 
   @Override
-  public void save(Datacenter datacenter) {
-    EntityManager em = JpaUtil.getEntityManager();
-    DatacenterDao servidorDao = new DatacenterDao(em);
+  public void save(Datacenter entity) {
+    EntityManager em = emf.createEntityManager();
 
     em.getTransaction().begin();
-
-    servidorDao.cadastrar(datacenter);
-
+    em.persist(entity);
     em.getTransaction().commit();
-    em.close();
 
+    em.close();
   }
 
   @Override
-  public void update(Datacenter datacenter) {
-    EntityManager em = JpaUtil.getEntityManager();
-    DatacenterDao datacenterDao = new DatacenterDao(em);
+  public void update(Datacenter entity) {
+    EntityManager em = emf.createEntityManager();
 
     em.getTransaction().begin();
-
-    datacenterDao.atualizar(datacenter);
-
+    em.merge(entity);
     em.getTransaction().commit();
+
     em.close();
   }
 
   @Override
   public void delete(Long id) {
-    EntityManager em = JpaUtil.getEntityManager();
-    DatacenterDao datacenterDao = new DatacenterDao(em);
+    EntityManager em = emf.createEntityManager();
+
+    Datacenter toBeDeleted = em.find(Datacenter.class, id);
 
     em.getTransaction().begin();
-
-    Datacenter servidor = datacenterDao.buscarPorId(1L);
-
-    datacenterDao.remover(servidor);
-
+    em.remove(toBeDeleted);
     em.getTransaction().commit();
+
     em.close();
   }
 
   @Override
   public List<Datacenter> list() {
-    EntityManager em = JpaUtil.getEntityManager();
-    DatacenterDao datacenterDao = new DatacenterDao(em);
+    EntityManager em = emf.createEntityManager();
 
-    List<Datacenter> datacenters = datacenterDao.buscarTodos();
+    Query query = em.createQuery("from Datacenter");
 
-    em.close();
-    return datacenters;
+    return query.getResultList();
   }
 
   @Override
   public Datacenter findById(Long id) {
-    EntityManager em = JpaUtil.getEntityManager();
-    DatacenterDao datacenterDao = new DatacenterDao(em);
-
-    Datacenter datacenter = datacenterDao.buscarPorId(1L);
-
-    em.close();
-
-    return datacenter;
+    EntityManager em = emf.createEntityManager();
+    return em.find(Datacenter.class, id);
   }
 }

@@ -20,7 +20,7 @@ public class Aplicacao {
 
   private String descricao;
 
-  @ManyToMany(mappedBy = "aplicacoes", fetch = FetchType.EAGER)
+  @ManyToMany(mappedBy = "aplicacoes")
   private List<Servidor> servidores = new ArrayList<>();
 
 

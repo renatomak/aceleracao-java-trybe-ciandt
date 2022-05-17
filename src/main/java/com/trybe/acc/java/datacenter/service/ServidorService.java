@@ -1,74 +1,59 @@
 package com.trybe.acc.java.datacenter.service;
 
-import com.trybe.acc.java.datacenter.dao.ServidorDao;
 import com.trybe.acc.java.datacenter.entity.Servidor;
-import com.trybe.acc.java.datacenter.util.JpaUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 public class ServidorService implements ServiceInterface<Servidor, Long> {
 
   @Override
-  public void save(Servidor servidor) {
-    EntityManager em = JpaUtil.getEntityManager();
-    ServidorDao servidorDao = new ServidorDao(em);
+  public void save(Servidor entity) {
+    EntityManager em = emf.createEntityManager();
 
     em.getTransaction().begin();
-
-    servidorDao.cadastrar(servidor);
-
+    em.persist(entity);
     em.getTransaction().commit();
+
     em.close();
   }
 
   @Override
-  public void update(Servidor servidor) {
-    EntityManager em = JpaUtil.getEntityManager();
-    ServidorDao servidorDao = new ServidorDao(em);
+  public void update(Servidor entity) {
+    EntityManager em = emf.createEntityManager();
 
     em.getTransaction().begin();
-
-    servidorDao.atualizar(servidor);
-
+    em.merge(entity);
     em.getTransaction().commit();
+
     em.close();
   }
 
   @Override
   public void delete(Long id) {
-    EntityManager em = JpaUtil.getEntityManager();
-    ServidorDao servidorDao = new ServidorDao(em);
+    EntityManager em = emf.createEntityManager();
+
+    Servidor toBeDeleted = em.find(Servidor.class, id);
 
     em.getTransaction().begin();
-
-    Servidor servidor = servidorDao.buscarPorId(1L);
-
-    servidorDao.remover(servidor);
-
+    em.remove(toBeDeleted);
     em.getTransaction().commit();
+
     em.close();
   }
 
   @Override
   public List<Servidor> list() {
-    EntityManager em = JpaUtil.getEntityManager();
-    ServidorDao servidorDao = new ServidorDao(em);
+    EntityManager em = emf.createEntityManager();
 
-    List<Servidor> servidores = servidorDao.buscarTodos();
+    Query query = em.createQuery("from Servidor");
 
-    em.close();
-    return servidores;
+    return query.getResultList();
   }
 
   @Override
   public Servidor findById(Long id) {
-    EntityManager em = JpaUtil.getEntityManager();
-    ServidorDao servidorDao = new ServidorDao(em);
-
-    Servidor servidor = servidorDao.buscarPorId(1L);
-
-    em.close();
-
-    return servidor;
+    EntityManager em = emf.createEntityManager();
+    return em.find(Servidor.class, id);
   }
 }
