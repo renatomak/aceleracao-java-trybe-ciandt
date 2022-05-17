@@ -1,9 +1,6 @@
 package com.trybe.gestaotime.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -18,6 +15,9 @@ public class Documento {
     private String numeroCarteiraTrabalho;
 
     private String numeroCbf;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private Jogador jogador;
 
     public Long getId() {
         return id;
