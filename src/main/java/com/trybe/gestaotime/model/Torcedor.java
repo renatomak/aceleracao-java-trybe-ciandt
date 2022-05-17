@@ -1,17 +1,19 @@
 package com.trybe.gestaotime.model;
 
-/**
- * Classe Torcedor.
- **/
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
+@Entity
 public class Torcedor {
 
-  /**
-   * Atributos.
-   **/
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  /**
-   * Métodos.
-   **/
+    private String nome;
+
+    @ManyToMany(mappedBy = "torcedores")
+    private List<Time> times = new ArrayList<>();
 
 }
