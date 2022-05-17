@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+import java.util.List;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import com.trybe.acc.java.datacenter.entity.Aplicacao;
 import com.trybe.acc.java.datacenter.entity.Datacenter;
 import com.trybe.acc.java.datacenter.entity.Servidor;
@@ -12,12 +18,6 @@ import com.trybe.acc.java.datacenter.service.AplicacaoService;
 import com.trybe.acc.java.datacenter.service.DatacenterService;
 import com.trybe.acc.java.datacenter.service.ServiceInterface;
 import com.trybe.acc.java.datacenter.service.ServidorService;
-import java.util.List;
-import java.util.stream.Stream;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for simple App.

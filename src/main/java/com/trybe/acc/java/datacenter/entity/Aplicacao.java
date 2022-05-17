@@ -20,7 +20,7 @@ public class Aplicacao {
 
   private String descricao;
 
-  @ManyToMany(mappedBy = "aplicacoes")
+  @ManyToMany(mappedBy = "aplicacoes", fetch = FetchType.EAGER)
   private List<Servidor> servidores = new ArrayList<>();
 
 
@@ -38,10 +38,6 @@ public class Aplicacao {
 
   public void setNome(String nome) {
     this.nome = nome;
-  }
-
-  public String getDescricao() {
-    return descricao;
   }
 
   public void setDescricao(String descricao) {

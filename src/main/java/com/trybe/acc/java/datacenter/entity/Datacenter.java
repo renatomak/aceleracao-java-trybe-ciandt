@@ -21,7 +21,7 @@ public class Datacenter {
   private String localidade;
 
   @OneToMany(mappedBy = "datacenter", cascade = CascadeType.ALL, orphanRemoval = true)
-  private List<Servidor> servidors = new ArrayList<>();
+  private List<Servidor> servidores = new ArrayList<>();
 
   public Long getId() {
     return id;
@@ -39,16 +39,12 @@ public class Datacenter {
     this.nome = nome;
   }
 
-  public String getLocalidade() {
-    return localidade;
-  }
-
   public void setLocalidade(String localidade) {
     this.localidade = localidade;
   }
 
   public void addServidor(Servidor servidor) {
-    servidors.add(servidor);
+    servidores.add(servidor);
   }
 
 }
