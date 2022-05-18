@@ -15,7 +15,7 @@ public class Jogador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String nome;
 
@@ -28,7 +28,7 @@ public class Jogador {
     @JoinColumn(name = "time_id")
     private Time time;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 

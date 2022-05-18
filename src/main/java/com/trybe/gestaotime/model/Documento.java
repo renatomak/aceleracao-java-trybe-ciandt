@@ -8,7 +8,7 @@ public class Documento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String cpf;
 
@@ -19,7 +19,7 @@ public class Documento {
     @OneToOne(fetch = FetchType.LAZY)
     private Jogador jogador;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
