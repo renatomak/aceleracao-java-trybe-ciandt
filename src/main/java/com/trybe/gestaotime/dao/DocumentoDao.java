@@ -2,63 +2,63 @@ package com.trybe.gestaotime.dao;
 
 import com.trybe.gestaotime.model.Documento;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.util.List;
 
 public class DocumentoDao extends GenericDao<Documento, Integer> {
 
-    @Override
-    public void salvar(Documento entity) {
-        EntityManager em = emf.createEntityManager();
+  @Override
+  public void salvar(Documento entity) {
+    EntityManager em = emf.createEntityManager();
 
-        em.getTransaction().begin();
-        em.persist(entity);
-        em.getTransaction().commit();
+    em.getTransaction().begin();
+    em.persist(entity);
+    em.getTransaction().commit();
 
-        em.close();
+    em.close();
+  }
+
+  @Override
+  public void editar(Documento entity) {
+    EntityManager em = emf.createEntityManager();
+
+    em.getTransaction().begin();
+    em.merge(entity);
+    em.getTransaction().commit();
+
+    em.close();
+  }
+
+  @Override
+  public void deletar(Integer id) {
+    EntityManager em = emf.createEntityManager();
+
+    Documento toBeDeleted = em.find(Documento.class, id);
+    if (toBeDeleted == null) {
+      return;
     }
 
-    @Override
-    public void editar(Documento entity) {
-        EntityManager em = emf.createEntityManager();
+    em.getTransaction().begin();
+    em.remove(toBeDeleted);
+    em.getTransaction().commit();
 
-        em.getTransaction().begin();
-        em.merge(entity);
-        em.getTransaction().commit();
+    em.close();
+  }
 
-        em.close();
-    }
+  @Override
+  public List<Documento> listar() {
+    EntityManager em = emf.createEntityManager();
 
-    @Override
-    public void deletar(Integer id) {
-        EntityManager em = emf.createEntityManager();
+    Query query = em.createQuery("from Documento");
 
-        Documento toBeDeleted = em.find(Documento.class, id);
-        if (toBeDeleted == null) {
-            return;
-        }
+    return query.getResultList();
+  }
 
-        em.getTransaction().begin();
-        em.remove(toBeDeleted);
-        em.getTransaction().commit();
-
-        em.close();
-    }
-
-    @Override
-    public List<Documento> listar() {
-        EntityManager em = emf.createEntityManager();
-
-        Query query = em.createQuery("from Documento");
-
-        return query.getResultList();
-    }
-
-    @Override
-    public Documento findById(Integer id) {
-        EntityManager em = emf.createEntityManager();
-        return em.find(Documento.class, id);
-    }
+  @Override
+  public Documento findById(Integer id) {
+    EntityManager em = emf.createEntityManager();
+    return em.find(Documento.class, id);
+  }
 
 }
