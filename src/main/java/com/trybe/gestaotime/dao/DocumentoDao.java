@@ -2,32 +2,63 @@ package com.trybe.gestaotime.dao;
 
 import com.trybe.gestaotime.model.Documento;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 public class DocumentoDao extends GenericDao<Documento, Integer> {
 
     @Override
     public void salvar(Documento entity) {
-        super.salvar(entity);
+        EntityManager em = emf.createEntityManager();
+
+        em.getTransaction().begin();
+        em.persist(entity);
+        em.getTransaction().commit();
+
+        em.close();
     }
 
     @Override
     public void editar(Documento entity) {
-        super.editar(entity);
+        EntityManager em = emf.createEntityManager();
+
+        em.getTransaction().begin();
+        em.merge(entity);
+        em.getTransaction().commit();
+
+        em.close();
     }
 
     @Override
     public void deletar(Integer id) {
+        EntityManager em = emf.createEntityManager();
+
+        Documento toBeDeleted = em.find(Documento.class, id);
+        if (toBeDeleted == null) {
+            return;
+        }
+
+        em.getTransaction().begin();
+        em.remove(toBeDeleted);
+        em.getTransaction().commit();
+
+        em.close();
     }
 
     @Override
     public List<Documento> listar() {
-        return super.listar();
+        EntityManager em = emf.createEntityManager();
+
+        Query query = em.createQuery("from Documento");
+
+        return query.getResultList();
     }
 
     @Override
-    public Documento findById(Long id) {
-        return null;
+    public Documento findById(Integer id) {
+        EntityManager em = emf.createEntityManager();
+        return em.find(Documento.class, id);
     }
 
 

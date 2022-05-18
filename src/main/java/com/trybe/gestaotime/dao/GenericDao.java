@@ -36,6 +36,4 @@ public abstract class GenericDao<T, I extends Serializable> {
         return null;
     }
 
-    public abstract Documento findById(Long id);
-
 }
