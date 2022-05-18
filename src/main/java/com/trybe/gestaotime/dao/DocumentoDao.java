@@ -61,5 +61,4 @@ public class DocumentoDao extends GenericDao<Documento, Integer> {
         return em.find(Documento.class, id);
     }
 
-
 }
