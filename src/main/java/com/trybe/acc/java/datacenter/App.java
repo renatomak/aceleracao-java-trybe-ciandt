@@ -27,12 +27,6 @@ public class App {
     app3.setNome("Trybe Course");
     app3.setDescricao("Javascript");
 
-    System.out.println(app1);
-    System.out.println(app2);
-    System.out.println(app3);
-
-
-
     Datacenter datacenter1 = new Datacenter();
     datacenter1.setNome("Cerrado");
     datacenter1.setLocalidade("Brasilia");

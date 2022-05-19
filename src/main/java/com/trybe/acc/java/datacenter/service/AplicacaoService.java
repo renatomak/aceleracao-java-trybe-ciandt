@@ -50,30 +50,8 @@ public class AplicacaoService implements ServiceInterface<Aplicacao, Long> {
   public List<Aplicacao> list() {
     EntityManager em = emf.createEntityManager();
 
-    Query query = em.createQuery("from Aplicacao");
-
-    return query.getResultList();
-    // EntityManager em = emf.createEntityManager();
-    //
-    // CriteriaBuilder cb = em.getCriteriaBuilder();
-    // CriteriaQuery<Aplicacao> cq = cb.createQuery(Aplicacao.class);
-    // Root<Aplicacao> rootEntry = cq.from(Aplicacao.class);
-    // CriteriaQuery<Aplicacao> all = cq.select(rootEntry);
-    //
-    // TypedQuery<Aplicacao> allQuery = em.createQuery(all);
-
-
-    // EntityManager em = emf.createEntityManager();
-    //
-    // Aplicacao entity = em.find(Aplicacao.class, 1L);
-    // List<Aplicacao> list = new ArrayList<>();
-    // list.add(entity);
-    // entity = em.find(Aplicacao.class, 2L);
-    // list.add(entity);
-    // entity = em.find(Aplicacao.class, 3L);
-    // list.add(entity);
-
-    // return list;
+    return em.createQuery("SELECT a FROM Aplicacao a", Aplicacao.class)
+            .getResultList();
   }
 
   @Override

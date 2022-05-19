@@ -60,6 +60,11 @@ public class Servidor {
     this.datacenter = datacenter;
   }
 
-  public void addAplicacao(Aplicacao app1) {}
+  public void addAplicacao(Aplicacao aplicacao) {
+    aplicacoes.add(aplicacao);
+  }
 
+  public void setAplicacoes(List<Aplicacao> aplicacoes) {
+    this.aplicacoes = aplicacoes;
+  }
 }
