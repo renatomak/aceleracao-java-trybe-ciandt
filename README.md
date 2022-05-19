@@ -161,20 +161,27 @@ A pessoa responsável pela arquitetura do software montou uma especificação t�
 - **Etapa 13 ☕**: Caso você tenha seguido todas as etapas até aqui, já deve ter obtido um sistema estruturalmente construído, embora não configurado. Para que o servidor web consiga interpretar corretamente nossas requisições, será necessário que uma classe registre nossos beans na inicialização como um configuração do app. Use o modelo abaixo como referência:
 
 	```java
-	@Configuration
-    @ApplicationPath("/api")
-	public class JerseyConfig extends ResourceConfig {
+  @Configuration
+  @ApplicationPath("/api")
+  public class JerseyConfig extends ResourceConfig {
 
-    	packages(SpecialityAppApplication.class.getPackageName());
-    	register(new AbstractBinder() {
-			
-			@Override
-			protected void configure() {
-				logger.info("Configurando binder");
-			}
-		});	
+    private Logger logger = LoggerFactory.getLogger(JerseyConfig.class);
 
-	}
+    /**
+    * Construtor para o JerseyConfig.
+    *
+    */
+    public JerseyConfig() {
+      packages(SpecialityAppApplication.class.getPackageName());
+      register(new AbstractBinder() {
+
+        @Override
+        protected void configure() {
+          logger.info("Configurando binder");
+        }
+      });
+    }
+  }
 	```
 
 - **Etapa 14 ☕**: Quando criamos o projeto, por padrão, ele também cria um arquivo `application.properties`, responsável por guardar as propriedades de configuração da aplicação no formato "chave"x"valor". Para este cenário, vamos remover esse arquivo e criar outro de mesmo nome, porém com a extensão .yml. Desta forma, obtemos um novo arquivo nomeado com `application.yml`, o qual armazena as propriedades do nosso sistema por indentação. Dentro deste arquivo você vai precisar declarar três blocos:
