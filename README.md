@@ -161,7 +161,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 8º Desafio Agregador
 
-- [ ] [Caixa eletronico]()
+- [X] [Caixa eletronico](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/desafio_agregador/acc-java-02-exercises-caixa-eletronico)
 
 ---
 
