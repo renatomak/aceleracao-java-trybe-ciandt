@@ -169,7 +169,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 9.1 Criando entidades
 
-- [ ] [Veiculo Hibernate]()
+- [X] [Veiculo Hibernate](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/acc-java-02-exercises-veiculo-hibernate)
 
   9.2 Relacionamentos e consultas
 
