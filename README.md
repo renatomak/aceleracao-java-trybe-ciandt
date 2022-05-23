@@ -177,6 +177,6 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 9º Desafio Agregador
 
-- [ ] []()
+- [X] [Gestão de times](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/desafio_agregador/acc-java-02-exercises-gestao-time)
 
 ---
