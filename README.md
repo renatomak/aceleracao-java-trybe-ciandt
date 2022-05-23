@@ -180,3 +180,23 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 - [X] [Gestão de times](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/desafio_agregador/acc-java-02-exercises-gestao-time)
 
 ---
+
+## 10. Java Web
+
+10.1 Como o Java vai para a Web?
+
+- [ ] [API Rest Spring]()
+
+10.2 Logs e Datasources
+
+- [ ] [Search cars]()
+
+10.3 Fazendo deploy de uma aplicação
+
+- [ ] [Buzzwarn]()
+
+## 10º Desafio Agregador
+
+- [ ] [Cadastro Especialidades]()
+
+---
