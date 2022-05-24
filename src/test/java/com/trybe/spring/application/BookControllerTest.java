@@ -117,7 +117,9 @@ class BookControllerTest {
   }
 
   private Book postBook(String name, String author) {
-    return this.restTemplate.postForObject(getUrl(), new BookDTO(name, author), Book.class);
+    Book book = this.restTemplate.postForObject(getUrl(), new BookDTO(name, author), Book.class);
+    System.out.println("BOOK: " + book);
+    return book;
   }
 
   private ResponseEntity<?> putBook(Book book) {
