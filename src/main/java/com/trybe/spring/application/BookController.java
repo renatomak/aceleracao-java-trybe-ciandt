@@ -5,15 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 @Path("/api/books")
@@ -74,5 +69,35 @@ public class BookController {
       return Response.status(404).build();
     }
   }
+
+  /**
+   * method get one book.
+   *
+   * @param id type UUID
+   * @return response
+   */
+  @PUT
+  @Path("/{id}")
+  @Consumes("application/json")
+  @Produces("application/json")
+  public Response update(@PathParam("id") UUID id, @RequestBody Book book) {
+    try {
+      Book newBook = books.stream().filter(b -> b.getId().equals(id)).findAny().orElseThrow();
+
+      if (book.getAuthor() != null) {
+        newBook.setAuthor(book.getAuthor());
+      }
+
+      if (book.getName() != null) {
+        newBook.setName(book.getName());
+      }
+
+      return Response.ok(newBook).build();
+    } catch (NoSuchElementException e) {
+      return Response.status(404).build();
+    }
+  }
+
+
 }
 

@@ -10,8 +10,6 @@ public class Book {
 
   private String author;
 
-
-
   /**
    * method construct.
    * 
@@ -23,9 +21,16 @@ public class Book {
     this.name = name;
     this.author = author;
   }
+  public Book() {
+
+  }
 
   public UUID getId() {
     return id;
+  }
+
+  public void setId(UUID id) {
+    this.id = id;
   }
 
   public String getName() {
