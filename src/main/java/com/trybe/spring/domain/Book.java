@@ -21,8 +21,18 @@ public class Book {
     this.name = name;
     this.author = author;
   }
-  public Book() {
 
+  public Book() {}
+
+  /**
+   * method constructor.
+   *
+   * @param book type Book
+   */
+  public Book(Book book) {
+    this.name = book.getName();
+    this.author = book.getAuthor();
+    this.id = UUID.randomUUID();
   }
 
   public UUID getId() {

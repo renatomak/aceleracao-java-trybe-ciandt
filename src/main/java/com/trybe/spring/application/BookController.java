@@ -5,7 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,10 +23,17 @@ public class BookController {
 
   private List<Book> books = new ArrayList<>();
 
+  /**
+   * method add one book.
+   *
+   * @param book type Book
+   * @return response
+   */
   @POST
   @Consumes("application/json") // tipo de dado que é consumido
   @Produces("application/json") // tipo de dado enviado como resposta
   public Response add(Book book) {
+    book = new Book(book);
     books.add(book);
     return Response.ok(book).build();
   }
