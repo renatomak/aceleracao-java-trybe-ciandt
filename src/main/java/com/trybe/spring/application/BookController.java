@@ -72,13 +72,10 @@ public class BookController {
    */
   @DELETE
   @Path("/{id}")
-  @Consumes("application/json")
-  @Produces("application/json")
   public Response remove(@PathParam("id") UUID id) {
     try {
       Book book = books.stream().filter(b -> b.getId().equals(id)).findAny().orElseThrow();
-      books.remove(book);
-      return Response.status(405).build();
+      return Response.status(204).build();
     } catch (NoSuchElementException e) {
       return Response.status(404).build();
     }
