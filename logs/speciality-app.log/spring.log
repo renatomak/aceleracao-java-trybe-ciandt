@@ -1,0 +1,109 @@
+2022-05-27 18:10:42.115  INFO 49510 --- [main] a.t.s.SpecialityAppApplication           : Starting SpecialityAppApplication using Java 17.0.1 on renato-H510M-H with PID 49510 (/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes started by renato in /home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades)
+2022-05-27 18:10:42.116  INFO 49510 --- [main] a.t.s.SpecialityAppApplication           : No active profile set, falling back to default profiles: default
+2022-05-27 18:10:42.471  INFO 49510 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-27 18:10:42.498  INFO 49510 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2022-05-27 18:10:42.840  INFO 49510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-27 18:10:42.849  INFO 49510 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-27 18:10:42.850  INFO 49510 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-27 18:10:42.901  INFO 49510 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-05-27 18:10:42.901  INFO 49510 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 761 ms
+2022-05-27 18:10:42.988  INFO 49510 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-27 18:10:43.101  INFO 49510 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-27 18:10:43.105  INFO 49510 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-05-27 18:10:43.193  INFO 49510 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-27 18:10:43.222  INFO 49510 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-05-27 18:10:43.299  INFO 49510 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-27 18:10:43.381  INFO 49510 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-27 18:10:43.693  INFO 49510 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes/import.sql'
+2022-05-27 18:10:43.695  INFO 49510 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-27 18:10:43.699  INFO 49510 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:10:43.884  WARN 49510 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-27 18:10:44.122  INFO 49510 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 18:10:44.131  INFO 49510 --- [main] a.t.s.SpecialityAppApplication           : Started SpecialityAppApplication in 2.272 seconds (JVM running for 2.524)
+2022-05-27 18:11:23.636  INFO 49510 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-27 18:11:23.637  INFO 49510 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-27 18:11:23.637  INFO 49510 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-27 18:13:00.352  INFO 49510 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:13:00.353  INFO 49510 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-27 18:13:00.355  INFO 49510 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-27 18:13:05.034  INFO 49906 --- [main] a.t.s.SpecialityAppApplication           : Starting SpecialityAppApplication using Java 17.0.1 on renato-H510M-H with PID 49906 (/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes started by renato in /home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades)
+2022-05-27 18:13:05.036  INFO 49906 --- [main] a.t.s.SpecialityAppApplication           : No active profile set, falling back to default profiles: default
+2022-05-27 18:13:05.339  INFO 49906 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-27 18:13:05.365  INFO 49906 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2022-05-27 18:13:05.617  INFO 49906 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-27 18:13:05.622  INFO 49906 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-27 18:13:05.622  INFO 49906 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-27 18:13:05.671  INFO 49906 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-05-27 18:13:05.671  INFO 49906 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 611 ms
+2022-05-27 18:13:05.735  INFO 49906 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-27 18:13:05.823  INFO 49906 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-27 18:13:05.826  INFO 49906 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-05-27 18:13:05.879  INFO 49906 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-27 18:13:05.901  INFO 49906 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-05-27 18:13:05.957  INFO 49906 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-27 18:13:06.008  INFO 49906 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-27 18:13:06.272  INFO 49906 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes/import.sql'
+2022-05-27 18:13:06.274  INFO 49906 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-27 18:13:06.278  INFO 49906 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:13:06.413  WARN 49906 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-27 18:13:06.552  INFO 49906 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 18:13:06.557  INFO 49906 --- [main] a.t.s.SpecialityAppApplication           : Started SpecialityAppApplication in 1.723 seconds (JVM running for 2.08)
+2022-05-27 18:15:00.046  INFO 49906 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-27 18:15:00.053  INFO 49906 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:15:00.054  INFO 49906 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-27 18:15:00.055  INFO 49906 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-27 18:15:01.361  INFO 50302 --- [main] a.t.s.SpecialityAppApplication           : Starting SpecialityAppApplication using Java 17.0.1 on renato-H510M-H with PID 50302 (/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes started by renato in /home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades)
+2022-05-27 18:15:01.362  INFO 50302 --- [main] a.t.s.SpecialityAppApplication           : No active profile set, falling back to default profiles: default
+2022-05-27 18:15:01.667  INFO 50302 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-27 18:15:01.690  INFO 50302 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+2022-05-27 18:15:01.936  INFO 50302 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-27 18:15:01.942  INFO 50302 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-27 18:15:01.942  INFO 50302 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-27 18:15:01.985  INFO 50302 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-05-27 18:15:01.985  INFO 50302 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 601 ms
+2022-05-27 18:15:02.041  INFO 50302 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-27 18:15:02.134  INFO 50302 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-27 18:15:02.138  INFO 50302 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-05-27 18:15:02.190  INFO 50302 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-27 18:15:02.210  INFO 50302 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-05-27 18:15:02.265  INFO 50302 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-27 18:15:02.313  INFO 50302 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-27 18:15:02.573  INFO 50302 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes/import.sql'
+2022-05-27 18:15:02.575  INFO 50302 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-27 18:15:02.579  INFO 50302 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:15:02.715  WARN 50302 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-27 18:15:02.856  INFO 50302 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 18:15:02.861  INFO 50302 --- [main] a.t.s.SpecialityAppApplication           : Started SpecialityAppApplication in 1.698 seconds (JVM running for 2.055)
+2022-05-27 18:16:03.704  INFO 50302 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-27 18:16:05.838  INFO 50302 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:16:05.839  INFO 50302 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-27 18:16:05.841  INFO 50302 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-27 18:16:07.146  INFO 50701 --- [main] a.t.s.SpecialityAppApplication           : Starting SpecialityAppApplication using Java 17.0.1 on renato-H510M-H with PID 50701 (/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes started by renato in /home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades)
+2022-05-27 18:16:07.147  INFO 50701 --- [main] a.t.s.SpecialityAppApplication           : No active profile set, falling back to default profiles: default
+2022-05-27 18:16:07.433  INFO 50701 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-27 18:16:07.457  INFO 50701 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2022-05-27 18:16:07.699  INFO 50701 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-27 18:16:07.704  INFO 50701 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-27 18:16:07.704  INFO 50701 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-27 18:16:07.749  INFO 50701 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2022-05-27 18:16:07.749  INFO 50701 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 581 ms
+2022-05-27 18:16:07.803  INFO 50701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-27 18:16:07.889  INFO 50701 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-27 18:16:07.893  INFO 50701 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-05-27 18:16:07.944  INFO 50701 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-27 18:16:07.966  INFO 50701 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-05-27 18:16:08.027  INFO 50701 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-27 18:16:08.076  INFO 50701 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-27 18:16:08.338  INFO 50701 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/renato/Documentos/trybe/aceleracao_ci&t/10-spring/desafio-agregador/acc-java-02-exercises-cadastro-especialidades/target/classes/import.sql'
+2022-05-27 18:16:08.340  INFO 50701 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-27 18:16:08.343  INFO 50701 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:16:08.479  WARN 50701 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-27 18:16:08.612  INFO 50701 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2022-05-27 18:16:08.617  INFO 50701 --- [main] a.t.s.SpecialityAppApplication           : Started SpecialityAppApplication in 1.668 seconds (JVM running for 2.015)
+2022-05-27 18:16:35.785  INFO 50701 --- [http-nio-8080-exec-8] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-27 18:16:35.785  INFO 50701 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-27 18:16:35.786  INFO 50701 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-27 18:22:57.591  INFO 50701 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-05-27 18:22:57.599  INFO 50701 --- [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-27 18:22:57.600  INFO 50701 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-27 18:22:57.602  INFO 50701 --- [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
