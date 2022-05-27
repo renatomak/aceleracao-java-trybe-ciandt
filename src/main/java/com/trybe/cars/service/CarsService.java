@@ -7,19 +7,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-
-/**
- * Classe CarsService.
- * 
- */
 @Service
 public class CarsService {
 
   @Autowired
-  private CarsRepository carsRepository;
+  private CarsRepository repository;
 
   public List<Car> getAllCars() {
-    return carsRepository.findAll();
+    return repository.findAll();
   }
 }
