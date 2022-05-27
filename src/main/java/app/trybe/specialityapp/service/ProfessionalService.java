@@ -36,17 +36,17 @@ public class ProfessionalService {
     @Transactional
     public Professional edit(Integer id, Professional entity) {
         try {
-            Professional professional = professionalRepository.getReferenceById(id);
+            Professional result = professionalRepository.findById(id).get();
 
-            if (isNull(professional.getName())) {
-                professional.setName(entity.getName());
+            if (!isNull(entity.getName())) {
+                result.setName(entity.getName());
             }
 
-            if (isNull(professional.getSpeciality())) {
-                professional.setSpeciality(entity.getSpeciality());
+            if (!isNull(entity.getSpeciality())) {
+                result.setSpeciality(entity.getSpeciality());
             }
-            entity = professionalRepository.save(professional);
-            return entity;
+            result = professionalRepository.save(result);
+            return result;
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException("Id not found " + id + ".");
         }
