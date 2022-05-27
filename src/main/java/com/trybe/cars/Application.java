@@ -1,5 +1,4 @@
-package com.trybe.search.cars;
-
+package com.trybe.cars;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 
  */
 @SpringBootApplication
-public class CarsApplication {
+public class Application {
   public static void main(String[] args) {
-    SpringApplication.run(CarsApplication.class, args);
+    SpringApplication.run(Application.class, args);
   }
 }
