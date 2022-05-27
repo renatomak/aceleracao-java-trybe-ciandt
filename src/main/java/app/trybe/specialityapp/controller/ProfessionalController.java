@@ -5,6 +5,7 @@ import app.trybe.specialityapp.service.ProfessionalService;
 import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,12 +37,16 @@ public class ProfessionalController {
     return ResponseEntity.ok(professionalService.findById(id));
   }
 
-  @PostMapping
+  /**
+   * Method insert new Professional.
+   * 
+   * @param professional type Professional.
+   * @return ResponseEntity type Professional.
+   */
+  @PostMapping("/add")
   public ResponseEntity<Professional> insert(@RequestBody Professional professional) {
     professional = professionalService.insert(professional);
-    URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}")
-        .buildAndExpand(professional.getId()).toUri();
-    return ResponseEntity.created(uri).body(professional);
+    return ResponseEntity.status(HttpStatus.CREATED).body(professional);
   }
 
   @PutMapping(value = "/{id}")

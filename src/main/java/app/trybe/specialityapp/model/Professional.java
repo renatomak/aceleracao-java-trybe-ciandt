@@ -23,6 +23,13 @@ public class Professional implements Serializable {
   @Column(name = "speciality")
   private String speciality;
 
+  /**
+   * Method construct.
+   * 
+   * @param id type Integer.
+   * @param name type String.
+   * @param speciality type String.
+   */
   public Professional(Integer id, String name, String speciality) {
     this.id = id;
     this.name = name;
