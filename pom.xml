@@ -68,6 +68,14 @@
 			<scope>test</scope>
 		</dependency>
 
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.jersey.test-framework.providers/jersey-test-framework-provider-grizzly2 &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.glassfish.jersey.test-framework.providers</groupId>-->
+<!--			<artifactId>jersey-test-framework-provider-grizzly2</artifactId>-->
+<!--			<version>3.1.0-M2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
