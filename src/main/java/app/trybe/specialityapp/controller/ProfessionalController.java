@@ -1,61 +1,68 @@
 package app.trybe.specialityapp.controller;
 
+import app.trybe.specialityapp.commons.ResponseMessage;
 import app.trybe.specialityapp.model.Professional;
 import app.trybe.specialityapp.service.ProfessionalService;
-import java.net.URI;
 import java.util.List;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
 
-@RestController
-@RequestMapping("/professional")
+@Controller
+@Path("/professional")
 public class ProfessionalController {
 
   @Autowired
   private ProfessionalService professionalService;
 
-  @GetMapping(value = "/all")
-  public ResponseEntity<List<Professional>> findAll() {
+
+  @GET
+  @Path("/all")
+  @Produces("application/json")
+  public Response findAll() {
     List<Professional> professionals = professionalService.findAll();
-    return ResponseEntity.ok(professionals);
+    return Response.ok(professionals).build();
   }
 
-  @GetMapping(value = "/{id}")
-  public ResponseEntity<Professional> findById(@PathVariable Integer id) {
-    return ResponseEntity.ok(professionalService.findById(id));
+  @GET
+  @Path("/{id}")
+  @Produces("application/json")
+  public Response findById(@PathParam("id") Integer id) {
+    return Response.ok(professionalService.findById(id)).build();
   }
 
   /**
    * Method insert new Professional.
-   * 
+   *
    * @param professional type Professional.
    * @return ResponseEntity type Professional.
    */
-  @PostMapping(value = "/add")
-  public ResponseEntity<Professional> insert(@RequestBody Professional professional) {
-    professional = professionalService.insert(professional);
-    return ResponseEntity.status(HttpStatus.CREATED).body(professional);
+  @POST
+  @Path("/add")
+  @Consumes("application/json")
+  @Produces("application/json")
+  public Response insert(Professional professional) {
+    professionalService.insert(professional);
+    return Response.status(Response.Status.CREATED).entity(ResponseMessage.MSG_CREATED).build();
   }
 
-  @PutMapping(value = "/edit/{id}")
-  public ResponseEntity<Professional> edit(@PathVariable Integer id,
-      @RequestBody Professional professional) {
-    return ResponseEntity.ok(professionalService.edit(id, professional));
+  @PUT
+  @Path("/edit/{id}")
+  @Consumes("application/json")
+  @Produces("application/json")
+  public Response edit(@PathParam("id") Integer id, Professional professional) {
+    // professionalService.edit(id, professional);
+    return Response.ok(ResponseMessage.MSG_EDIT(id)).build();
   }
 
-  @DeleteMapping(value = "/delete/{id}")
-  public ResponseEntity<Void> delete(@PathVariable Integer id) {
+  @DELETE
+  @Path("/delete/{id}")
+  @Produces("application/json")
+  public Response delete(@PathParam("id") Integer id) {
     professionalService.delete(id);
-    return ResponseEntity.noContent().build();
+    return Response.ok(ResponseMessage.MSG_DELETE(id)).build();
   }
+
 }
