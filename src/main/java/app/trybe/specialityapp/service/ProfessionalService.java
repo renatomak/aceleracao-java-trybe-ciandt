@@ -1,12 +1,12 @@
 package app.trybe.specialityapp.service;
 
+import app.trybe.specialityapp.commons.ResponseMessage;
 import app.trybe.specialityapp.model.Professional;
 import app.trybe.specialityapp.repository.ProfessionalRepository;
+import app.trybe.specialityapp.service.exceptions.ResourceNotFoundException;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.EntityNotFoundException;
-
-import app.trybe.specialityapp.service.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -26,9 +26,15 @@ public class ProfessionalService {
     return professionalRepository.findById(id).get();
   }
 
+  /**
+   * Method insert.
+   *
+   * @param entity type Professional.
+   * @return type Professional.
+   */
   public Professional insert(Professional entity) {
     if (!Objects.isNull(entity.getId())) {
-      throw new ResourceNotFoundException("Não é permitido inserir novos registros com ID explícito");
+      throw new ResourceNotFoundException(ResponseMessage.mensagemErroExplicitId);
     }
     return professionalRepository.save(entity);
   }
@@ -40,7 +46,6 @@ public class ProfessionalService {
    * @param entity type Professional.
    * @return type Professional.
    */
-
   public Professional edit(Integer id, Professional entity) {
     try {
       Professional result = professionalRepository.findById(id).get();

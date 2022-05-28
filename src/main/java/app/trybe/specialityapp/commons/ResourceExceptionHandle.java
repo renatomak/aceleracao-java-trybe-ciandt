@@ -18,8 +18,7 @@ public class ResourceExceptionHandle {
    * @return ResponseEntity.
    */
   @ExceptionHandler(ResourceNotFoundException.class)
-  public Response entityNotFound(ResourceNotFoundException e,
-      HttpServletRequest request) {
+  public Response entityNotFound(ResourceNotFoundException e, HttpServletRequest request) {
     HttpStatus status = HttpStatus.NOT_FOUND;
     ApplicationError err = new ApplicationError(status.value(), e.getMessage());
 
