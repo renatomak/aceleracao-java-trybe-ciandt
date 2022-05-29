@@ -3,9 +3,11 @@ package com.trybe.acc.java.minhasseries.service;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
 import com.trybe.acc.java.minhasseries.service.exceptions.ResourceNotFoundException;
+import com.trybe.acc.java.minhasseries.service.exceptions.SerieExistenteException;
 import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -30,8 +32,18 @@ public class SerieService {
     return serie.orElseThrow(() -> new ResourceNotFoundException("Entidade não encontrada"));
   }
 
+  /**
+   * Method insert.
+   * 
+   * @param entity type Serie.
+   * @return serie type Serie.
+   */
   @Transactional
   public Serie create(Serie entity) {
+    Boolean entityExists = serieRepository.existsByNome(entity.getNome());
+    if (entityExists) {
+      throw new SerieExistenteException();
+    }
     return serieRepository.save(entity);
   }
 
