@@ -28,7 +28,7 @@ public class ResourceExceptionHandle {
 
     err.setTimestamp(LocalDateTime.now());
     err.setStatus(status.value());
-    err.setError("Entity not found.");
+    err.setError(e.getMessage());
     err.setMessage(e.getMessage());
     err.setPath(request.getRequestURI());
     return ResponseEntity.status(status).body(err);
