@@ -1,0 +1,4 @@
+-- INSERT INTO tb_serie (id, nome) VALUES (1, 'O conto da Aia');
+-- INSERT INTO tb_serie (id, nome) VALUES (2, 'The Big Bang - A teoria');
+-- INSERT INTO tb_serie (id, nome) VALUES (3, 'Gerra dos Tronos');
+-- INSERT INTO tb_serie (id, nome) VALUES (4, 'The Wizard');
