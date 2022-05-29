@@ -54,6 +54,6 @@ public class SerieContoller {
   @DeleteMapping(value = "/{id}")
   public ResponseEntity<Void> delete(@PathVariable Integer id) {
     serieService.delete(id);
-    return ResponseEntity.noContent().build();
+    return ResponseEntity.ok().build();
   }
 }
