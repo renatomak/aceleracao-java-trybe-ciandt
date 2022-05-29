@@ -4,20 +4,20 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "tb_serie")
 public class Serie implements Serializable {
   private static final long serialVersionUID = -6996503012048232676L;
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   private String nome;
@@ -31,6 +31,10 @@ public class Serie implements Serializable {
 
   public Serie() {
 
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   public void adicionarEpisodio(Episodio episodio) {

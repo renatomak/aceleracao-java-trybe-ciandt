@@ -2,7 +2,6 @@ package com.trybe.acc.java.minhasseries.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,8 +13,7 @@ public class Episodio implements Serializable {
   private static final long serialVersionUID = -8194331057711583877L;
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   private Integer numero;
@@ -39,8 +37,8 @@ public class Episodio implements Serializable {
     this.duracaoEmMinutos = duracaoEmMinutos;
     this.serie = serie;
   }
-  
-  
+
+
   /**
    * Method constructor.
    * 
