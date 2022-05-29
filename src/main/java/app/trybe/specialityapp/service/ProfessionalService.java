@@ -1,12 +1,16 @@
 package app.trybe.specialityapp.service;
 
+import app.trybe.specialityapp.commons.ApplicationError;
 import app.trybe.specialityapp.commons.ResponseMessage;
 import app.trybe.specialityapp.model.Professional;
 import app.trybe.specialityapp.repository.ProfessionalRepository;
 import app.trybe.specialityapp.service.exceptions.ResourceNotFoundException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 import javax.persistence.EntityNotFoundException;
+import javax.ws.rs.core.Response;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -18,12 +22,38 @@ public class ProfessionalService {
   @Autowired
   ProfessionalRepository professionalRepository;
 
-  public List<Professional> findAll() {
-    return professionalRepository.findAll();
+  /**
+   * Method get all.
+   * 
+   * @return List type Professional.
+   * @throws ResourceNotFoundException type resourceNotFound.
+   */
+  public List<Professional> findAll() throws ResourceNotFoundException {
+    List<Professional> professionals = professionalRepository.findAll();
+
+    if (professionals.isEmpty()) {
+      throw new ResourceNotFoundException("Nenhum registro foi encontrado!");
+    }
+    return professionals;
   }
 
-  public Professional findById(Integer id) {
-    return professionalRepository.findById(id).get();
+  /**
+   * Method find by id.
+   * 
+   * @param id type Integer.
+   * @return Object type object.
+   */
+  public Object findById(Integer id) {
+    // return professionalRepository.findById(id).orElseThrow(() -> new
+    // ResourceNotFoundException("Entidade não encontrada"));
+    try {
+      return professionalRepository.findById(id).get();
+    } catch (NoSuchElementException e) {
+      ApplicationError err =
+          new ApplicationError(Response.Status.NOT_FOUND, "Entidade não encontrada");
+      return err;
+    }
+
   }
 
   /**
@@ -32,9 +62,9 @@ public class ProfessionalService {
    * @param entity type Professional.
    * @return type Professional.
    */
-  public Professional insert(Professional entity) {
+  public Professional insert(Professional entity) throws ResourceNotFoundException {
     if (!Objects.isNull(entity.getId())) {
-      throw new ResourceNotFoundException(ResponseMessage.mensagemErroExplicitId);
+      throw new ResourceNotFoundException(ResponseMessage.mensageErroExplicitId);
     }
     return professionalRepository.save(entity);
   }
@@ -46,22 +76,18 @@ public class ProfessionalService {
    * @param entity type Professional.
    * @return type Professional.
    */
-  public Professional edit(Integer id, Professional entity) {
-    try {
-      Professional result = professionalRepository.findById(id).get();
+  public Professional edit(Integer id, Professional entity) throws NoSuchElementException {
+    Professional result = professionalRepository.findById(id).get();
 
-      if (!Objects.isNull(entity.getName())) {
-        result.setName(entity.getName());
-      }
-
-      if (!Objects.isNull(entity.getSpeciality())) {
-        result.setSpeciality(entity.getSpeciality());
-      }
-      result = professionalRepository.save(result);
-      return result;
-    } catch (EntityNotFoundException e) {
-      throw new EntityNotFoundException("Id not found " + id + ".");
+    if (!Objects.isNull(entity.getName())) {
+      result.setName(entity.getName());
     }
+
+    if (!Objects.isNull(entity.getSpeciality())) {
+      result.setSpeciality(entity.getSpeciality());
+    }
+    result = professionalRepository.save(result);
+    return result;
   }
 
   /**
@@ -69,11 +95,7 @@ public class ProfessionalService {
    *
    * @param id type Integer.
    */
-  public void delete(Integer id) {
-    try {
-      professionalRepository.deleteById(id);
-    } catch (EmptyResultDataAccessException e) {
-      throw new EntityNotFoundException("Id not found " + id + ".");
-    }
+  public void delete(Integer id) throws EmptyResultDataAccessException {
+    professionalRepository.deleteById(id);
   }
 }
