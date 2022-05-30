@@ -75,7 +75,7 @@ public class BookController {
   public Response remove(@PathParam("id") UUID id) {
     try {
       Book book = books.stream().filter(b -> b.getId().equals(id)).findAny().orElseThrow();
-      return Response.status(204).build();
+      return Response.status(200).build();
     } catch (NoSuchElementException e) {
       return Response.status(404).build();
     }
@@ -108,7 +108,5 @@ public class BookController {
       return Response.status(404).build();
     }
   }
-
-
 }
 
