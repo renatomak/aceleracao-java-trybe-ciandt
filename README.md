@@ -197,6 +197,6 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 10º Desafio Agregador
 
-- [ ] [Cadastro Especialidades]()
+- [X] [Cadastro Especialidades](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-cadastro-especialidades)
 
 ---
