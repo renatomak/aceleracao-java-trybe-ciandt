@@ -2,3 +2,4 @@
 -- INSERT INTO tb_serie (id, nome) VALUES (2, 'The Big Bang - A teoria');
 -- INSERT INTO tb_serie (id, nome) VALUES (3, 'Gerra dos Tronos');
 -- INSERT INTO tb_serie (id, nome) VALUES (4, 'The Wizard');
+-- INSERT INTO tb_episodio (id, numero, duracao_em_minutos, serie_id) VALUES (2, 2, 60, 1);

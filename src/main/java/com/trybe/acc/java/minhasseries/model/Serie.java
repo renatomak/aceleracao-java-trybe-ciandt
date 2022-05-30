@@ -1,10 +1,14 @@
 package com.trybe.acc.java.minhasseries.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +26,8 @@ public class Serie implements Serializable {
 
   private String nome;
 
-  @OneToMany(mappedBy = "serie")
+  @OneToMany(mappedBy = "serie", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+  @JsonManagedReference
   private List<Episodio> episodios = new ArrayList<>();
 
   public Serie(String nome) {

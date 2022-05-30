@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -53,6 +54,21 @@ public class SerieService {
   }
 
   /**
+   * Method insert.
+   *
+   * @param entity type Episodio.
+   * @return episodio type Episodio.
+   */
+  @Transactional
+  public Serie create(Integer serieId, Episodio entity) {
+    Serie serie = this.findById(serieId);
+    entity.setSerie(serie);
+    episodioRepository.save(entity);
+    serie.adicionarEpisodio(entity);
+    return serie;
+  }
+
+  /**
    * Method update.
    * 
    * @param id type Integer.
@@ -83,22 +99,6 @@ public class SerieService {
     } catch (EmptyResultDataAccessException e) {
       throw new ResourceNotFoundException("ID " + id + " não encontrado.");
     }
-  }
-
-  /**
-   * Method insert.
-   *
-   * @param entity type Serie.
-   * @return serie type Serie.
-   */
-  @Transactional
-  public Serie create(Integer serieId, Episodio entity) {
-    Serie serie = serieRepository.getById(serieId);
-    serie.adicionarEpisodio(entity);
-    entity.setSerie(serie);
-    episodioRepository.save(entity);
-
-    return serie;
   }
 
 }

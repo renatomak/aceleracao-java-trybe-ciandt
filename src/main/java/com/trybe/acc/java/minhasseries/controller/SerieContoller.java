@@ -1,8 +1,8 @@
 package com.trybe.acc.java.minhasseries.controller;
 
+import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.service.SerieService;
-import java.net.URI;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
 @RestController
@@ -46,6 +45,20 @@ public class SerieContoller {
     return ResponseEntity.ok(serie);
   }
 
+  /**
+   * Method create.
+   *
+   * @param serieId type Integer.
+   * @param entity type Serie.
+   * @return RsponseEntity type Serie.
+   */
+  @PostMapping(value = "/{serieId}/episodios")
+  public ResponseEntity<Serie> create(@PathVariable("serieId") Integer serieId,
+                                      @RequestBody Episodio entity) {
+    Serie serie = serieService.create(serieId, entity);
+    return ResponseEntity.ok(serie);
+  }
+
   @PutMapping(value = "/{id}")
   public ResponseEntity<Serie> update(@PathVariable Integer id, @RequestBody Serie serie) {
     return ResponseEntity.ok(serieService.update(id, serie));
@@ -56,4 +69,5 @@ public class SerieContoller {
     serieService.delete(id);
     return ResponseEntity.ok().build();
   }
+
 }
