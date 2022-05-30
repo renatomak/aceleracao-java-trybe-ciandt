@@ -1,5 +1,6 @@
 package com.trybe.acc.java.minhasseries.service;
 
+import com.trybe.acc.java.minhasseries.dto.TempoDto;
 import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.repository.EpisodioRepository;
@@ -7,6 +8,7 @@ import com.trybe.acc.java.minhasseries.repository.SerieRepository;
 import com.trybe.acc.java.minhasseries.service.exceptions.ResourceNotFoundException;
 import com.trybe.acc.java.minhasseries.service.exceptions.SerieExistenteException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
@@ -34,6 +36,20 @@ public class SerieService {
   @Transactional(readOnly = true)
   public List<Episodio> findAll(Integer serieId) {
     return episodioRepository.findBySerieId(serieId);
+  }
+
+  /**
+   * Method countTimeInMinutes.
+   * 
+   * @return TempoDto type TempoDto.
+   */
+  @Transactional(readOnly = true)
+  public TempoDto countTimeInMinutes() {
+    Integer timeInMinutes = episodioRepository.sumTempoTotal();
+    if (Objects.isNull(timeInMinutes)) {
+      timeInMinutes = 0;
+    }
+    return new TempoDto(timeInMinutes);
   }
 
   @Transactional(readOnly = true)

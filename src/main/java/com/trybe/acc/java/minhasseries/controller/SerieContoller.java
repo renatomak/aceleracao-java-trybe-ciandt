@@ -1,5 +1,6 @@
 package com.trybe.acc.java.minhasseries.controller;
 
+import com.trybe.acc.java.minhasseries.dto.TempoDto;
 import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.service.SerieService;
@@ -35,6 +36,11 @@ public class SerieContoller {
     return ResponseEntity.ok(list);
   }
 
+  @GetMapping(value = "/tempo")
+  public ResponseEntity<TempoDto> time() {
+    return ResponseEntity.ok(serieService.countTimeInMinutes());
+  }
+
   @GetMapping(value = "/{id}")
   public ResponseEntity<Serie> findById(@PathVariable Integer id) {
     return ResponseEntity.ok(serieService.findById(id));
@@ -42,6 +48,7 @@ public class SerieContoller {
 
   /**
    * Method create.
+   * 
    * @param serie type Serie.
    * @return RsponseEntity type Serie.
    */
@@ -60,7 +67,7 @@ public class SerieContoller {
    */
   @PostMapping(value = "/{serieId}/episodios")
   public ResponseEntity<Serie> create(@PathVariable("serieId") Integer serieId,
-                                      @RequestBody Episodio entity) {
+      @RequestBody Episodio entity) {
     Serie serie = serieService.create(serieId, entity);
     return ResponseEntity.ok(serie);
   }
