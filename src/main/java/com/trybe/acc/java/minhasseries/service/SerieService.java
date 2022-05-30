@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -28,8 +27,13 @@ public class SerieService {
 
 
   @Transactional(readOnly = true)
-  public List<Serie> findAllPaged() {
+  public List<Serie> findAll() {
     return serieRepository.findAll();
+  }
+
+  @Transactional(readOnly = true)
+  public List<Episodio> findAll(Integer serieId) {
+    return episodioRepository.findBySerieId(serieId);
   }
 
   @Transactional(readOnly = true)

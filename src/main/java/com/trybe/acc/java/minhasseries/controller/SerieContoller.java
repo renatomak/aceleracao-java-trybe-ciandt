@@ -25,7 +25,13 @@ public class SerieContoller {
 
   @GetMapping
   public ResponseEntity<List<Serie>> findAll() {
-    List<Serie> list = serieService.findAllPaged();
+    List<Serie> list = serieService.findAll();
+    return ResponseEntity.ok(list);
+  }
+
+  @GetMapping(value = "/{serieId}/episodios")
+  public ResponseEntity<List<Episodio>> findAll(@PathVariable("serieId") Integer serieId) {
+    List<Episodio> list = serieService.findAll(serieId);
     return ResponseEntity.ok(list);
   }
 
