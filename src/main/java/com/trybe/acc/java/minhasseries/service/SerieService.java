@@ -1,6 +1,8 @@
 package com.trybe.acc.java.minhasseries.service;
 
+import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
+import com.trybe.acc.java.minhasseries.repository.EpisodioRepository;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
 import com.trybe.acc.java.minhasseries.service.exceptions.ResourceNotFoundException;
 import com.trybe.acc.java.minhasseries.service.exceptions.SerieExistenteException;
@@ -19,6 +21,9 @@ public class SerieService {
 
   @Autowired
   private SerieRepository serieRepository;
+
+  @Autowired
+  private EpisodioRepository episodioRepository;
 
 
   @Transactional(readOnly = true)
@@ -78,6 +83,22 @@ public class SerieService {
     } catch (EmptyResultDataAccessException e) {
       throw new ResourceNotFoundException("ID " + id + " não encontrado.");
     }
+  }
+
+  /**
+   * Method insert.
+   *
+   * @param entity type Serie.
+   * @return serie type Serie.
+   */
+  @Transactional
+  public Serie create(Integer serieId, Episodio entity) {
+    Serie serie = serieRepository.getById(serieId);
+    serie.adicionarEpisodio(entity);
+    entity.setSerie(serie);
+    episodioRepository.save(entity);
+
+    return serie;
   }
 
 }
