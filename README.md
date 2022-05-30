@@ -185,7 +185,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 10.1 Como o Java vai para a Web?
 
-- [ ] [API Rest Spring]()
+- [X] [API Rest Spring](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-api-rest-spring)
 
 10.2 Logs e Datasources
 
