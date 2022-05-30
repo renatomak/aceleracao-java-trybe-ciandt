@@ -1,6 +1,8 @@
 package com.trybe.acc.java.minhasseries.service;
 
+import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
+import com.trybe.acc.java.minhasseries.repository.EpisodioRepository;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
 import com.trybe.acc.java.minhasseries.service.exceptions.ResourceNotFoundException;
 import com.trybe.acc.java.minhasseries.service.exceptions.SerieExistenteException;
@@ -8,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
@@ -19,6 +22,9 @@ public class SerieService {
 
   @Autowired
   private SerieRepository serieRepository;
+
+  @Autowired
+  private EpisodioRepository episodioRepository;
 
 
   @Transactional(readOnly = true)
@@ -78,6 +84,21 @@ public class SerieService {
     } catch (EmptyResultDataAccessException e) {
       throw new ResourceNotFoundException("ID " + id + " não encontrado.");
     }
+  }
+
+  /**
+   * Method insert.
+   *
+   * @param entity type Episodio.
+   * @return episodio type Episodio.
+   */
+  @Transactional
+  public Serie create(Integer serieId, Episodio entity) {
+    Serie serie = serieRepository.getById(serieId);
+    entity.setSerie(serie);
+    serie.adicionarEpisodio(entity);
+    episodioRepository.save(entity);
+    return serie;
   }
 
 }

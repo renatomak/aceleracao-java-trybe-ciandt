@@ -1,5 +1,7 @@
 package com.trybe.acc.java.minhasseries.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -19,6 +21,7 @@ public class Episodio implements Serializable {
   private Integer numero;
 
   private Integer duracaoEmMinutos;
+
 
   @ManyToOne
   private Serie serie;
