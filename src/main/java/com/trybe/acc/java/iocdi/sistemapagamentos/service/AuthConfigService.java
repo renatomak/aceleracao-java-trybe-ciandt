@@ -4,7 +4,7 @@ import com.trybe.acc.java.iocdi.sistemapagamentos.model.Auth;
 
 public class AuthConfigService {
 
-    public Auth fazerLogin(Auth auth) {
-        return auth;
-    }
+  public Auth fazerLogin(Auth auth) {
+    return auth;
+  }
 }

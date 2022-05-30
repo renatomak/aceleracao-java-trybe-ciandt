@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Config {
 
-    @Bean
-    public AuthConfigService authConfigService() {
-        return new AuthConfigService();
-    }
+  @Bean
+  public AuthConfigService authConfigService() {
+    return new AuthConfigService();
+  }
 }

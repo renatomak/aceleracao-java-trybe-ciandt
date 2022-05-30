@@ -1,6 +1,5 @@
 package com.trybe.acc.java.iocdi.sistemapagamentos.interceptor;
 
-
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -8,15 +7,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Component
 public class InterceptorConfig implements WebMvcConfigurer {
 
-    private Interceptor interceptor;
+  private Interceptor interceptor;
 
-    public InterceptorConfig(Interceptor interceptor) {
-        this.interceptor = interceptor;
-    }
+  public InterceptorConfig(Interceptor interceptor) {
+    this.interceptor = interceptor;
+  }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(interceptor);
-    }
+  @Override
+  public void addInterceptors(InterceptorRegistry registry) {
+    registry.addInterceptor(interceptor);
+  }
 
 }
