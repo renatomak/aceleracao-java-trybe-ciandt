@@ -6,12 +6,17 @@ package com.trybe.calcularidade.exception;
 
 public class DataError {
 
-  /**
-   * Atributos.
-   **/
+  private String error;
 
+    public DataError(String error) {
+        this.error = error;
+    }
 
-  /**
-   * Métodos.
-   **/
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
 }

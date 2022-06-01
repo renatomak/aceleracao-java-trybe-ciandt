@@ -1,16 +1,14 @@
 package com.trybe.calcularidade.domain;
 
-/**
- * Classe Idade.
- */
-
 public class Idade {
-  /**
-   * Atributos.
-   */
 
-  /**
-   * Métodos.
-   */
+    private Integer idade;
 
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
 }
