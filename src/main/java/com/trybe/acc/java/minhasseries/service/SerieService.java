@@ -85,6 +85,7 @@ public class SerieService {
     entity.setSerie(serie);
     episodioRepository.save(entity);
     serie.adicionarEpisodio(entity);
+    serieRepository.save(serie);
     return serie;
   }
 
