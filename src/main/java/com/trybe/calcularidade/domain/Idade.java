@@ -2,13 +2,13 @@ package com.trybe.calcularidade.domain;
 
 public class Idade {
 
-    private Integer idade;
+  private Integer idade;
 
-    public Integer getIdade() {
-        return idade;
-    }
+  public Integer getIdade() {
+    return idade;
+  }
 
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
+  public void setIdade(Integer idade) {
+    this.idade = idade;
+  }
 }
