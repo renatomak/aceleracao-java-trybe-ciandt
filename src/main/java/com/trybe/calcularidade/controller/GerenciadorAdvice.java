@@ -1,5 +1,6 @@
 package com.trybe.calcularidade.controller;
 
+import com.trybe.calcularidade.exception.ArgumentoIlegalException;
 import com.trybe.calcularidade.exception.DataError;
 import com.trybe.calcularidade.exception.DataFuturaException;
 import com.trybe.calcularidade.exception.DataInvalidaException;
@@ -24,11 +25,9 @@ public class GerenciadorAdvice {
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(dataError);
   }
 
-  public void handlerInternalServerError(Object any) {}
-
-  @ExceptionHandler({ParseException.class})
-  public ResponseEntity<DataError> handlerInternalServerError(ParseException exception) {
-    DataError dataError = new DataError("Data não é número");
+  @ExceptionHandler({ArgumentoIlegalException.class})
+  public ResponseEntity<DataError> handlerInternalServerError(RuntimeException exception) {
+    DataError dataError = new DataError(exception.getMessage());
     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(dataError);
   }
 }

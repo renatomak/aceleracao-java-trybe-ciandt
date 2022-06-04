@@ -1,0 +1,8 @@
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 10
+  instances:
+    idade:
+      baseConfig: default
