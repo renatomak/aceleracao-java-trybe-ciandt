@@ -15,5 +15,18 @@ public class Logst {
    */
   public void countLogger() {
 
+    for (int i = 1; i <= 30; i++) {
+
+      if (i % 3 == 0 && i % 5 == 0) {
+        logging.warn(i);
+      } else if (i % 3 == 0) {
+        logging.trace(i);
+      } else if (i % 5 == 0) {
+        logging.debug(i);
+      } else {
+        logging.info(i);
+      }
+
+    }
   }
 }
