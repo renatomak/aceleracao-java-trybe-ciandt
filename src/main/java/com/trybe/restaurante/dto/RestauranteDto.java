@@ -1,17 +1,37 @@
 package com.trybe.restaurante.dto;
 
-/**
- * Classe RestauranteDto.
- **/
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 public class RestauranteDto {
 
-  /**
-   * Atributos.
-   */
+  @NotBlank
+  private String nome;
 
-  /**
-   * Métodos.
-   */
+  @NotBlank
+  @Size(min = 3)
+  private String descricao;
 
+  public RestauranteDto(Long id, String nome, String descricao) {
+    this.nome = nome;
+    this.descricao = descricao;
+  }
+
+  public RestauranteDto() {}
+
+  public String getNome() {
+    return nome;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+
+  public String getDescricao() {
+    return descricao;
+  }
+
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
 }
