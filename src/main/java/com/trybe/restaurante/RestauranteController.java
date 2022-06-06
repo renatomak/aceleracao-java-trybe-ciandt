@@ -5,6 +5,7 @@ import com.trybe.restaurante.service.RestauranteService;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.PATCH;
 import javax.ws.rs.POST;
@@ -43,5 +44,12 @@ public class RestauranteController {
   public Response atualizar(@PathParam("id") Long id, RestauranteDto dto) {
     return Response.status(Response.Status.OK)
             .entity(restauranteService.atualizar(id, dto)).build();
+  }
+
+  @DELETE
+  @Path("/{id}")
+  public Response deletar(@PathParam("id") Long id) {
+    restauranteService.deletar(id);
+    return Response.status(Response.Status.NO_CONTENT).build();
   }
 }

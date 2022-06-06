@@ -61,4 +61,9 @@ public class RestauranteService {
     return new RestauranteDto(entity);
   }
 
+  @Transactional
+  public void deletar(Long id) {
+    restauranteRepository.deleteById(id);
+  }
+
 }
