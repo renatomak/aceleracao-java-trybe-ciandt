@@ -1,9 +1,9 @@
 package com.trybe.restaurante.dto;
 
 import com.trybe.restaurante.entity.RestauranteEntity;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
 
 public class RestauranteDto {
 

@@ -18,6 +18,13 @@ public class RestauranteEntity {
   @Column
   private String descricao;
 
+  /**
+   * Method construct.
+   * 
+   * @param id type Long.
+   * @param nome type String.
+   * @param descricao type String.
+   */
   public RestauranteEntity(Long id, String nome, String descricao) {
     this.id = id;
     this.nome = nome;
