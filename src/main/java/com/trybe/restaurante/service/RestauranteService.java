@@ -1,14 +1,27 @@
 package com.trybe.restaurante.service;
 
-/**
- * Classe RestauranteService.
- **/
+import com.trybe.restaurante.dto.RestauranteDto;
+import com.trybe.restaurante.entity.RestauranteEntity;
+import com.trybe.restaurante.repository.RestauranteRepository;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.transaction.Transactional;
+
+@ApplicationScoped
 public class RestauranteService {
 
-  /**
-   * Atributos.
-   */
+  @Inject
+  private RestauranteRepository restauranteRepository;
+
+  @Transactional
+  public RestauranteDto salvar(RestauranteDto dto) {
+      RestauranteEntity entity = new RestauranteEntity();
+      entity.setNome(dto.getNome());
+      entity.setDescricao(dto.getDescricao());
+      restauranteRepository.persist(entity);
+      return dto;
+  }
 
   /**
    * Métodos.
