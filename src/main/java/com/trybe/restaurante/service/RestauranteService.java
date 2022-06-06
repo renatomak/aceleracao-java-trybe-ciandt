@@ -31,6 +31,20 @@ public class RestauranteService {
   }
 
   /**
+   * Method save.
+   * @param dto type RestauranteDto
+   * @return type RestauranteDto.
+   */
+  @Transactional
+  public RestauranteDto atualizar(Long id, RestauranteDto dto) {
+    RestauranteEntity entity = restauranteRepository.findById(id);
+    entity.setNome(dto.getNome());
+    entity.setDescricao(dto.getDescricao());
+    restauranteRepository.persist(entity);
+    return dto;
+  }
+
+  /**
    * Method findAll.
    * @return list type RestauranteDto.
    */

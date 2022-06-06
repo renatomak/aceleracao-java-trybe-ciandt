@@ -1,13 +1,17 @@
 package com.trybe.restaurante.entity;
 
+import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
-public class RestauranteEntity {
+public class RestauranteEntity implements Serializable {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -55,5 +59,23 @@ public class RestauranteEntity {
 
   public void setDescricao(String descricao) {
     this.descricao = descricao;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    RestauranteEntity entity = (RestauranteEntity) o;
+    return Objects.equals(id, entity.id) && Objects.equals(nome, entity.nome)
+        && Objects.equals(descricao, entity.descricao);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, nome, descricao);
   }
 }
