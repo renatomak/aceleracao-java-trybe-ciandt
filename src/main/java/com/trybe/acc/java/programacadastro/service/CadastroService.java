@@ -9,6 +9,7 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class CadastroService {
 
+  private static Integer idCadastro = 0;
   Map<Integer, DadosRetornoCadastro> dados = new HashMap<>();
 
   /**
@@ -16,7 +17,8 @@ public class CadastroService {
    * DadosRetornoCadastro.
    */
   public DadosRetornoCadastro cadastrar(String nome, String email, boolean protegido) {
-    Integer id = (int) (Math.random() * 100);
+    ++idCadastro;
+    Integer id = idCadastro;
     DadosRetornoCadastro retorno = new DadosRetornoCadastro();
     retorno.setIdCadastro(id);
     retorno.setNome(nome);
