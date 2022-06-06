@@ -42,4 +42,9 @@ public class RestauranteService {
             .collect(Collectors.toList());
   }
 
+  public RestauranteDto buscarPorId(Long id) {
+    RestauranteEntity entity = restauranteRepository.findById(id);
+    return new RestauranteDto(entity);
+  }
+
 }
