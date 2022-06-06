@@ -2,13 +2,16 @@ package com.trybe.restaurante;
 
 import com.trybe.restaurante.dto.RestauranteDto;
 import com.trybe.restaurante.service.RestauranteService;
+import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
 
 
 @Path("/restaurante")
@@ -23,5 +26,10 @@ public class RestauranteController {
   public Response salvar(RestauranteDto dto) {
 
     return Response.status(Response.Status.CREATED).entity(restauranteService.salvar(dto)).build();
+  }
+
+  @GET
+  public List<RestauranteDto> listar() {
+    return restauranteService.listar();
   }
 }

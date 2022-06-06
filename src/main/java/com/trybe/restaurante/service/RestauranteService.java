@@ -3,6 +3,8 @@ package com.trybe.restaurante.service;
 import com.trybe.restaurante.dto.RestauranteDto;
 import com.trybe.restaurante.entity.RestauranteEntity;
 import com.trybe.restaurante.repository.RestauranteRepository;
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -26,6 +28,18 @@ public class RestauranteService {
     entity.setDescricao(dto.getDescricao());
     restauranteRepository.persist(entity);
     return dto;
+  }
+
+  /**
+   * Method findAll.
+   * @return list type RestauranteDto.
+   */
+  public List<RestauranteDto> listar() {
+    return restauranteRepository
+            .findAll()
+            .stream()
+            .map(RestauranteDto::new)
+            .collect(Collectors.toList());
   }
 
 }
