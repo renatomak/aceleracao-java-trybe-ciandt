@@ -24,6 +24,7 @@ public class AutenticacaoResource {
   @Produces(MediaType.APPLICATION_JSON)
   public TokenResult login(LoginDto dados)
       throws AutenticacaoInvalidaException, InvalidKeySpecException, NoSuchAlgorithmException {
+    System.out.println("\n\n DADOS: " + dados);
     return TokenResult.construir(service.autenticar(dados.getLogin(), dados.getSenha()));
   }
 

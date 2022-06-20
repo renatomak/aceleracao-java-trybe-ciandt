@@ -3,8 +3,10 @@ package com.trybe.acc.java.programamilhas.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "TIPOLANCAMENTO")
 public class TipoLancamento {
 
   @Id

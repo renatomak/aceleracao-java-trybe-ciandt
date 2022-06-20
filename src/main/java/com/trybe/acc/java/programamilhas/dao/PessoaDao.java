@@ -27,4 +27,7 @@ public class PessoaDao {
     query.setParameter("hash", hash);
     return (Pessoa) query.getSingleResult();
   }
+
+  public PessoaDao() {
+  }
 }

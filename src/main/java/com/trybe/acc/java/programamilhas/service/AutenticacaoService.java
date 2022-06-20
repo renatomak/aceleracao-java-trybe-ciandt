@@ -29,10 +29,13 @@ public class AutenticacaoService {
   public String autenticar(String login, String pwd)
       throws AutenticacaoInvalidaException, InvalidKeySpecException, NoSuchAlgorithmException {
     Pessoa usuario = dao.autenticar(login, hashUtil.hash(pwd));
+    System.out.println("\n\nUSUARIO: " + usuario + "\n\n\n");
     if (usuario != null) {
       return tokenUtil.criarToken(usuario.getId());
     }
     throw new AutenticacaoInvalidaException();
   }
 
+  public AutenticacaoService() {
+  }
 }
