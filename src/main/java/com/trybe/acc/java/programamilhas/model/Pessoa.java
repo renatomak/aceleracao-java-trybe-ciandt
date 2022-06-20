@@ -1,6 +1,11 @@
 package com.trybe.acc.java.programamilhas.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "PESSOA")
@@ -41,10 +46,6 @@ public class Pessoa {
 
   @Override
   public String toString() {
-    return "Pessoa{" +
-            "id=" + id +
-            ", login='" + login + '\'' +
-            ", hash='" + hash + '\'' +
-            '}';
+    return "Pessoa{" + "id=" + id + ", login='" + login + '\'' + ", hash='" + hash + '\'' + '}';
   }
 }
