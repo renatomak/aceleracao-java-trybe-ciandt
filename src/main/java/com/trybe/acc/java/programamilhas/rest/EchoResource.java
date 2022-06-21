@@ -11,9 +11,9 @@ import javax.ws.rs.core.Response;
 @ApplicationScoped
 public class EchoResource {
 
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response echo() {
-        return Response.ok("Olá!").build();
-    }
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response echo() {
+    return Response.ok("Olá!").build();
+  }
 }
