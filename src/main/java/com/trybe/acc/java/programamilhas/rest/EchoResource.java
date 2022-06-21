@@ -9,10 +9,10 @@ import javax.ws.rs.core.Response;
 
 @Path("/echo")
 @ApplicationScoped
+@Produces(MediaType.APPLICATION_JSON)
 public class EchoResource {
 
   @GET
-  @Produces(MediaType.APPLICATION_JSON)
   public Response echo() {
     return Response.ok("Olá!").build();
   }
