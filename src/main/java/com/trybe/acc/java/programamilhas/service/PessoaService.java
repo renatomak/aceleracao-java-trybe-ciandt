@@ -2,9 +2,11 @@ package com.trybe.acc.java.programamilhas.service;
 
 import com.trybe.acc.java.programamilhas.dto.PessoaRequestDto;
 import com.trybe.acc.java.programamilhas.dto.PessoaResponseDto;
+import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.model.Pessoa;
 import com.trybe.acc.java.programamilhas.repository.PessoaRepository;
 import com.trybe.acc.java.programamilhas.util.HashUtil;
+import com.trybe.acc.java.programamilhas.util.TokenUtil;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -38,5 +40,17 @@ public class PessoaService {
     repository.persist(entity);
 
     return new PessoaResponseDto(dto.getLogin());
+  }
+
+  /**
+   * Method delte Pessoa.
+   *
+   * @param token type String.
+   * @throws AcessoNaoAutorizadoException type exception.
+   */
+  public void delete(String token) throws AcessoNaoAutorizadoException {
+    TokenUtil util = new TokenUtil();
+    Integer id = util.obterIdUsuario(token);
+    repository.deleteById(id);
   }
 }
