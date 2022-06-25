@@ -1,6 +1,6 @@
 package com.trybe.acc.java.programamilhas.rest;
 
-import com.trybe.acc.java.programamilhas.dto.PessoaRequestDto;
+import com.trybe.acc.java.programamilhas.dto.LoginDto;
 import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.service.PessoaService;
 
@@ -27,9 +27,10 @@ public class PessoaResource {
 
 
   @POST
-  public Response salvar(PessoaRequestDto dto)
+  public Response salvar(LoginDto dto)
       throws InvalidKeySpecException, NoSuchAlgorithmException {
-    return Response.status(Response.Status.OK).entity(service.create(dto)).build();
+    service.create(dto);
+    return Response.status(Response.Status.OK).build();
   }
 
   @DELETE
