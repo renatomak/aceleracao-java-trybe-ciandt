@@ -1,14 +1,11 @@
 package com.trybe.acc.java.programamilhas.service;
 
-import com.trybe.acc.java.programamilhas.dto.TipoLancamentoDto;
+import com.trybe.acc.java.programamilhas.dao.DominioDao;
 import com.trybe.acc.java.programamilhas.model.Parceiro;
 import com.trybe.acc.java.programamilhas.model.Produto;
-import com.trybe.acc.java.programamilhas.repository.ParceiroRepository;
-import com.trybe.acc.java.programamilhas.repository.ProdutoRepository;
-import com.trybe.acc.java.programamilhas.repository.TipoLancamentoRepository;
+import com.trybe.acc.java.programamilhas.model.TipoLancamento;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -18,13 +15,8 @@ import javax.transaction.Transactional;
 public class DominioService {
 
   @Inject
-  private TipoLancamentoRepository tipoLancamentoRepository;
+  private DominioDao dominioDao;
 
-  @Inject
-  private ProdutoRepository produtoRepository;
-
-  @Inject
-  private ParceiroRepository parceiroRepository;
 
   /**
    * Method crate TipoLancamento.
@@ -32,20 +24,18 @@ public class DominioService {
    * @return pessoaResponseDto type TipoLancamentoDto.
    */
   @Transactional
-  public List<TipoLancamentoDto> listTipoLancamentos() {
-    return tipoLancamentoRepository.findAll()
-        .stream().map(TipoLancamentoDto::new)
-        .collect(Collectors.toList());
+  public List<TipoLancamento> listTipoLancamentos() {
+    return dominioDao.listAllTiposLancamentos();
   }
 
   @Transactional
   public List<Produto> listProdutos() {
-    return produtoRepository.listAll();
+    return dominioDao.listAllProdutos();
   }
 
   @Transactional
   public List<Parceiro> listParceiros() {
-    return parceiroRepository.listAll();
+    return dominioDao.listAllParceiros();
   }
 
 }

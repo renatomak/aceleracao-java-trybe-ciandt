@@ -28,7 +28,7 @@ public class LancamentoResource {
   private LancamentoService lancamentoService;
 
   // TODO: incompleto
-  @GET
+  @POST
   @Path("/saldos")
   public Response saldos(@QueryParam(value = "token") String token)
           throws AcessoNaoAutorizadoException {

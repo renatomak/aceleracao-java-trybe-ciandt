@@ -1,17 +1,23 @@
 package com.trybe.acc.java.programamilhas.dao;
 
 import com.trybe.acc.java.programamilhas.model.Pessoa;
+import com.trybe.acc.java.programamilhas.util.HashUtil;
+
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 @ApplicationScoped
 public class PessoaDao {
 
   @Inject
   EntityManager entityManager;
+
+  @Inject
+  private HashUtil hashUtil;
 
   /**
    * Método responsável pela realização do login.
@@ -38,6 +44,23 @@ public class PessoaDao {
     Query query = entityManager.createQuery(hql);
     return query.getResultList();
   }
+  
+  
+
+  /**
+   * Method salve new pessoa.
+   * 
+   * @param entity type Pessoa.
+   */
+  @Transactional
+  public void salve(Pessoa entity) {
+    EntityManager em = entityManager.getEntityManagerFactory().createEntityManager();
+    em.getTransaction().begin();
+    em.persist(entity);
+    em.getTransaction().commit();
+    em.close();
+  }
+
 
   public PessoaDao() {}
 }

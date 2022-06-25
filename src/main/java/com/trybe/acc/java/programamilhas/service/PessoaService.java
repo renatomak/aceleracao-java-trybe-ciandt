@@ -1,10 +1,9 @@
 package com.trybe.acc.java.programamilhas.service;
 
+import com.trybe.acc.java.programamilhas.dao.PessoaDao;
 import com.trybe.acc.java.programamilhas.dto.PessoaRequestDto;
 import com.trybe.acc.java.programamilhas.dto.PessoaResponseDto;
-import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.model.Pessoa;
-import com.trybe.acc.java.programamilhas.repository.PessoaRepository;
 import com.trybe.acc.java.programamilhas.util.HashUtil;
 import com.trybe.acc.java.programamilhas.util.TokenUtil;
 
@@ -19,7 +18,7 @@ import javax.transaction.Transactional;
 public class PessoaService {
 
   @Inject
-  private PessoaRepository repository;
+  private PessoaDao pessoaDao;
 
 
 
@@ -42,19 +41,19 @@ public class PessoaService {
 
     entity.setLogin(dto.getLogin());
     entity.setHash(util.hash(dto.getSenha()));
-    repository.persist(entity);
+    pessoaDao.salve(entity);
 
     return new PessoaResponseDto(dto.getLogin());
   }
 
-  /**
-   * Method delte Pessoa.
-   *
-   * @param token type String.
-   * @throws AcessoNaoAutorizadoException type exception.
-   */
-  public void delete(String token) throws AcessoNaoAutorizadoException {
-    Integer id = tokenUtil.obterIdUsuario(token);
-    repository.deleteById(id);
-  }
+  // /**
+  // * Method delte Pessoa.
+  // *
+  // * @param token type String.
+  // * @throws AcessoNaoAutorizadoException type exception.
+  // */
+  // public void delete(String token) throws AcessoNaoAutorizadoException {
+  // Integer id = tokenUtil.obterIdUsuario(token);
+  // repository.deleteById(id);
+  // }
 }
