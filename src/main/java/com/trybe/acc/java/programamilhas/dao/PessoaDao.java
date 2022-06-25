@@ -28,6 +28,16 @@ public class PessoaDao {
     return (Pessoa) query.getSingleResult();
   }
 
-  public PessoaDao() {
+  /**
+   * Method list all saldos.
+   * 
+   * @return list type List.
+   */
+  public List listAll() {
+    String hql = "from " + Pessoa.class.getSimpleName();
+    Query query = entityManager.createQuery(hql);
+    return query.getResultList();
   }
+
+  public PessoaDao() {}
 }

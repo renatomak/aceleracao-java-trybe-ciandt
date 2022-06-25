@@ -21,6 +21,8 @@ public class PessoaService {
   @Inject
   private PessoaRepository repository;
 
+
+
   @Inject
   private TokenUtil tokenUtil;
 
@@ -40,7 +42,7 @@ public class PessoaService {
 
     entity.setLogin(dto.getLogin());
     entity.setHash(util.hash(dto.getSenha()));
-    // repository.persist(entity);
+    repository.persist(entity);
 
     return new PessoaResponseDto(dto.getLogin());
   }
