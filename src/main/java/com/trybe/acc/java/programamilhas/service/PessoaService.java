@@ -2,6 +2,7 @@ package com.trybe.acc.java.programamilhas.service;
 
 import com.trybe.acc.java.programamilhas.dao.PessoaDao;
 import com.trybe.acc.java.programamilhas.dto.LoginDto;
+import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.model.Pessoa;
 import com.trybe.acc.java.programamilhas.util.HashUtil;
 import com.trybe.acc.java.programamilhas.util.TokenUtil;
@@ -32,8 +33,7 @@ public class PessoaService {
    * @throws NoSuchAlgorithmException type exception.
    */
   @Transactional
-  public void create(LoginDto dto)
-      throws InvalidKeySpecException, NoSuchAlgorithmException {
+  public void create(LoginDto dto) throws InvalidKeySpecException, NoSuchAlgorithmException {
     Pessoa entity = new Pessoa();
     HashUtil util = new HashUtil();
 
@@ -42,14 +42,14 @@ public class PessoaService {
     pessoaDao.salve(entity);
   }
 
-  // /**
-  // * Method delte Pessoa.
-  // *
-  // * @param token type String.
-  // * @throws AcessoNaoAutorizadoException type exception.
-  // */
-  // public void delete(String token) throws AcessoNaoAutorizadoException {
-  // Integer id = tokenUtil.obterIdUsuario(token);
-  // repository.deleteById(id);
-  // }
+  /**
+   * Method delte Pessoa.
+   *
+   * @param token type String.
+   * @throws AcessoNaoAutorizadoException type exception.
+   */
+  public void delete(String token) throws AcessoNaoAutorizadoException {
+    Integer id = tokenUtil.obterIdUsuario(token);
+    pessoaDao.deleteById(id);
+  }
 }

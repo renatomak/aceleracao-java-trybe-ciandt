@@ -2,13 +2,14 @@ package com.trybe.acc.java.programamilhas.dao;
 
 import com.trybe.acc.java.programamilhas.model.Pessoa;
 import com.trybe.acc.java.programamilhas.util.HashUtil;
-
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
+
+
 
 @ApplicationScoped
 public class PessoaDao {
@@ -44,8 +45,8 @@ public class PessoaDao {
     Query query = entityManager.createQuery(hql);
     return query.getResultList();
   }
-  
-  
+
+
 
   /**
    * Method salve new pessoa.
@@ -60,6 +61,19 @@ public class PessoaDao {
     em.getTransaction().commit();
     em.close();
   }
+
+  /**
+   * Method delete pessoa.
+   *
+   * @param id type Integer.
+   */
+  @Transactional
+  public void deleteById(Integer id) {
+    Pessoa entity = entityManager.find(Pessoa.class, id);
+
+    entityManager.remove(entity);
+  }
+
 
 
   public PessoaDao() {}

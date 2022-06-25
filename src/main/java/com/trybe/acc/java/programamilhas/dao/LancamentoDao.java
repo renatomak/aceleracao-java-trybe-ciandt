@@ -1,6 +1,5 @@
 package com.trybe.acc.java.programamilhas.dao;
 
-import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.model.Lancamento;
 import com.trybe.acc.java.programamilhas.model.Pessoa;
 import com.trybe.acc.java.programamilhas.result.SaldoResult;
@@ -8,6 +7,7 @@ import com.trybe.acc.java.programamilhas.util.TokenUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -34,15 +34,29 @@ public class LancamentoDao {
    * </p>
    */
   public SaldoResult getSaldoById(Integer id) {
-    String hql =
-        "select sum(valor) from " + Lancamento.class.getSimpleName() + " where idpessoa=:id";
-    Query query = entityManager.createQuery(hql);
-    query.setParameter("id", id);
-    Integer saldo = query.getFirstResult();
+    List<Lancamento> lancamentos = getAllLancamentos();
+
+    Integer saldo = lancamentos.stream()
+        .filter(lancamento -> Objects.equals(lancamento.getUsuario().getId(), id))
+        .reduce(0, (acc, item) -> acc + item.getValor(), Integer::sum);
+
     SaldoResult saldoResult = new SaldoResult();
     saldoResult.setSaldo(saldo);
+
     return saldoResult;
   }
+
+  /**
+   * Method list all saldo result.
+   * 
+   * @return list type SaldoResult.
+   */
+  public List<Lancamento> getAllLancamentos() {
+    String hql = "from " + Lancamento.class.getSimpleName();
+    Query query = entityManager.createQuery(hql);
+    return query.getResultList();
+  }
+
 
 
   /**
@@ -56,14 +70,14 @@ public class LancamentoDao {
     List<SaldoResult> saldoResults = new ArrayList<>();
 
     pessoas.forEach(pessoa -> {
-      try {
-        Integer id = tokenUtil.obterIdUsuario(token);
-        SaldoResult saldoResult = getSaldoById(id);
-        saldoResults.add(saldoResult);
-      } catch (AcessoNaoAutorizadoException e) {
-        throw new RuntimeException(e);
-      }
+      SaldoResult saldoResult = getSaldoById(pessoa.getId());
+      System.out.println("\n" + saldoResult + "\n");
+      saldoResults.add(saldoResult);
     });
+
+    List<Lancamento> allLancamentos = getAllLancamentos();
+
+    allLancamentos.forEach(x -> System.out.println(x.getValor()));
 
     return saldoResults;
   }

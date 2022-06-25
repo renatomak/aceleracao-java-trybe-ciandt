@@ -34,10 +34,9 @@ public class PessoaResource {
   }
 
   @DELETE
-  @Path(value = "/{id}")
   public Response delete(@QueryParam(value = "token") String token)
       throws AcessoNaoAutorizadoException {
-    // service.delete(token);
-    return Response.status(Response.Status.NO_CONTENT).build();
+    service.delete(token);
+    return Response.ok().build();
   }
 }
