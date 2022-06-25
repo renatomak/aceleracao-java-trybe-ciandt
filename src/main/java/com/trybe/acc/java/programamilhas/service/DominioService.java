@@ -33,7 +33,9 @@ public class DominioService {
    */
   @Transactional
   public List<TipoLancamentoDto> listTipoLancamentos() {
-    return tipoLancamentoRepository.findAll().stream().map(TipoLancamentoDto::new).collect(Collectors.toList());
+    return tipoLancamentoRepository.findAll()
+        .stream().map(TipoLancamentoDto::new)
+        .collect(Collectors.toList());
   }
 
   @Transactional
