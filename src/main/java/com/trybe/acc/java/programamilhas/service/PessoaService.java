@@ -21,6 +21,9 @@ public class PessoaService {
   @Inject
   private PessoaRepository repository;
 
+  @Inject
+  private TokenUtil tokenUtil;
+
   /**
    * Method crate Pessoa.
    * 
@@ -37,7 +40,7 @@ public class PessoaService {
 
     entity.setLogin(dto.getLogin());
     entity.setHash(util.hash(dto.getSenha()));
-    repository.persist(entity);
+    // repository.persist(entity);
 
     return new PessoaResponseDto(dto.getLogin());
   }
@@ -49,8 +52,7 @@ public class PessoaService {
    * @throws AcessoNaoAutorizadoException type exception.
    */
   public void delete(String token) throws AcessoNaoAutorizadoException {
-    TokenUtil util = new TokenUtil();
-    Integer id = util.obterIdUsuario(token);
+    Integer id = tokenUtil.obterIdUsuario(token);
     repository.deleteById(id);
   }
 }
