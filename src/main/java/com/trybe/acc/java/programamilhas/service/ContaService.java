@@ -34,4 +34,15 @@ public class ContaService {
     tokenUtil.validarAdmToken(token);
     return lancamentoDao.getAllSaldos(token);
   }
+
+  /**
+   * Method crate Pessoa.
+   *
+   * @param token type PessoaRequestDto.
+   */
+  @Transactional
+  public SaldoResult getSaldo(String token) throws AcessoNaoAutorizadoException {
+    Integer id = tokenUtil.obterIdUsuario(token);
+    return lancamentoDao.getSaldoById(id);
+  }
 }
