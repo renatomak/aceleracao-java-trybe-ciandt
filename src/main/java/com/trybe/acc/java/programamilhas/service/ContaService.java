@@ -3,6 +3,7 @@ package com.trybe.acc.java.programamilhas.service;
 import com.trybe.acc.java.programamilhas.dao.LancamentoDao;
 import com.trybe.acc.java.programamilhas.dao.PessoaDao;
 import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
+import com.trybe.acc.java.programamilhas.model.Lancamento;
 import com.trybe.acc.java.programamilhas.result.SaldoResult;
 import com.trybe.acc.java.programamilhas.util.TokenUtil;
 import java.util.List;
@@ -44,5 +45,16 @@ public class ContaService {
   public SaldoResult getSaldo(String token) throws AcessoNaoAutorizadoException {
     Integer id = tokenUtil.obterIdUsuario(token);
     return lancamentoDao.getSaldoById(id);
+  }
+
+  /**
+   * Method crate Pessoa.
+   *
+   * @param token type PessoaRequestDto.
+   */
+  @Transactional
+  public List<Lancamento> getExtrato(String token) throws AcessoNaoAutorizadoException {
+    Integer id = tokenUtil.obterIdUsuario(token);
+    return lancamentoDao.getLancamentosById(id);
   }
 }

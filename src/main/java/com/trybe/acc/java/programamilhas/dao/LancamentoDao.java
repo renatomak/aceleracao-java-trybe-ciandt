@@ -8,6 +8,7 @@ import com.trybe.acc.java.programamilhas.util.TokenUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -44,6 +45,21 @@ public class LancamentoDao {
     saldoResult.setSaldo(saldo);
 
     return saldoResult;
+  }
+
+  /**
+   * Método responsável pela realização do login.
+   *
+   * <p>
+   * Não delete este método!
+   * </p>
+   */
+  public List<Lancamento> getLancamentosById(Integer id) {
+    List<Lancamento> lancamentos = getAllLancamentos();
+
+    return lancamentos.stream()
+            .filter(lancamento -> Objects.equals(lancamento.getUsuario().getId(), id))
+            .collect(Collectors.toList());
   }
 
   /**

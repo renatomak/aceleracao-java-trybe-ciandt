@@ -13,26 +13,19 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 
-@Path("/conta")
+@Path("/admin")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class ContaResource {
+public class ContaAdminResource {
 
   @Inject
   private ContaService contaService;
 
-
-  @GET
-  @Path("/saldo")
-  public Response getSaldo(@QueryParam(value = "token") String token)
+  @POST
+  @Path("/admin/saldos")
+  public Response getAllSaldos(@QueryParam(value = "token") String token)
       throws AcessoNaoAutorizadoException {
-    return Response.ok(contaService.getSaldo(token)).build();
+    return Response.ok(contaService.getAllSaldos(token)).build();
   }
 
-  @GET
-  @Path("/extrato")
-  public Response getExtrato(@QueryParam(value = "token") String token)
-          throws AcessoNaoAutorizadoException {
-    return Response.ok(contaService.getExtrato(token)).build();
-  }
 }
