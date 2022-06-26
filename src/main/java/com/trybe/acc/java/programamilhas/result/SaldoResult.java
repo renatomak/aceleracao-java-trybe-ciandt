@@ -11,4 +11,7 @@ public class SaldoResult {
   public void setSaldo(Integer saldo) {
     this.saldo = saldo;
   }
+
+  public SaldoResult() {
+  }
 }

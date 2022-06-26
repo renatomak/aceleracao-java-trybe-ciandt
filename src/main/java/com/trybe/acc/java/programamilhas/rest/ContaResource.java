@@ -5,7 +5,6 @@ import com.trybe.acc.java.programamilhas.service.ContaService;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -25,7 +24,7 @@ public class ContaResource {
   @GET
   @Path("/saldo")
   public Response getSaldo(@QueryParam(value = "token") String token)
-      throws AcessoNaoAutorizadoException {
+          throws AcessoNaoAutorizadoException {
     return Response.ok(contaService.getSaldo(token)).build();
   }
 

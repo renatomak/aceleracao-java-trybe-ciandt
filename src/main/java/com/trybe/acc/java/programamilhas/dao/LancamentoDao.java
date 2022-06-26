@@ -77,7 +77,7 @@ public class LancamentoDao {
 
   /**
    * Method list all saldo result.
-   * 
+   *
    * @return list type SaldoResult.
    */
   public List<SaldoResult> getAllSaldos(String token) {

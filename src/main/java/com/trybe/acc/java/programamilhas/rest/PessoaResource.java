@@ -28,14 +28,14 @@ public class PessoaResource {
 
   @POST
   public Response salvar(LoginDto dto)
-      throws InvalidKeySpecException, NoSuchAlgorithmException {
+          throws InvalidKeySpecException, NoSuchAlgorithmException {
     service.create(dto);
     return Response.status(Response.Status.OK).build();
   }
 
   @DELETE
   public Response delete(@QueryParam(value = "token") String token)
-      throws AcessoNaoAutorizadoException {
+          throws AcessoNaoAutorizadoException {
     service.delete(token);
     return Response.ok().build();
   }

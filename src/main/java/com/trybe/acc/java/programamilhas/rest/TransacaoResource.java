@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
-@Path("/admin")
+@Path("/transacao")
 @ApplicationScoped
 public class TransacaoResource {
 

@@ -27,7 +27,7 @@ public class ContaService {
 
   /**
    * Method crate Pessoa.
-   * 
+   *
    * @param token type PessoaRequestDto.
    */
   @Transactional
