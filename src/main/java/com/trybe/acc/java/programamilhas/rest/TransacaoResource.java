@@ -4,7 +4,6 @@ import com.trybe.acc.java.programamilhas.dao.PessoaDao;
 import com.trybe.acc.java.programamilhas.dto.TransferenciaDto;
 import com.trybe.acc.java.programamilhas.exception.AcessoNaoAutorizadoException;
 import com.trybe.acc.java.programamilhas.service.ContaService;
-import com.trybe.acc.java.programamilhas.service.LancamentoService;
 import com.trybe.acc.java.programamilhas.util.TokenUtil;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -16,7 +15,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/admin")
 @ApplicationScoped
-public class transacaoResource {
+public class TransacaoResource {
 
 
   @Inject
