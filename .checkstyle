@@ -2,7 +2,7 @@
 
 <fileset-config file-format-version="1.2.0" simple-config="false" sync-formatter="false">
   <local-check-config name="maven-checkstyle-plugin checkstyle" location="jar:file:/home/renato/.m2/repository/com/puppycrawl/tools/checkstyle/8.19/checkstyle-8.19.jar!/google_checks.xml" type="remote" description="maven-checkstyle-plugin configuration checkstyle">
-    <property name="checkstyle.header.file" value="/home/renato/Documents/trybe/aceleracao_ciandt/12-quarkus/.metadata/.plugins/org.eclipse.core.resources/.projects/acc-java-02-exercises-programa-cadastro/com.basistech.m2e.code.quality.checkstyleConfigurator/checkstyle-header-checkstyle.txt"/>
+    <property name="checkstyle.header.file" value="/home/renato/trybe/ciandt_aceleracao/semana_11_quarkus/.metadata/.plugins/org.eclipse.core.resources/.projects/acc-java-02-exercises-programa-cadastro/com.basistech.m2e.code.quality.checkstyleConfigurator/checkstyle-header-checkstyle.txt"/>
     <property name="checkstyle.cache.file" value="${project_loc}/target/checkstyle-cachefile"/>
   </local-check-config>
   <fileset name="java-sources-checkstyle" enabled="true" check-config-name="maven-checkstyle-plugin checkstyle" local="true">
