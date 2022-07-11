@@ -10,6 +10,7 @@ import javax.enterprise.context.ApplicationScoped;
 public class CadastroService {
 
   private static Integer idCadastro = 0;
+
   Map<Integer, DadosRetornoCadastro> dados = new HashMap<>();
 
   /**
@@ -17,8 +18,7 @@ public class CadastroService {
    * DadosRetornoCadastro.
    */
   public DadosRetornoCadastro cadastrar(String nome, String email, boolean protegido) {
-    ++idCadastro;
-    Integer id = idCadastro;
+    Integer id = (int) (Math.random() * 100);
     DadosRetornoCadastro retorno = new DadosRetornoCadastro();
     retorno.setIdCadastro(id);
     retorno.setNome(nome);
