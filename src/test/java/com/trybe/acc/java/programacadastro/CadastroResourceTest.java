@@ -1,6 +1,7 @@
 package com.trybe.acc.java.programacadastro;
 
 import com.trybe.acc.java.programacadastro.bean.DadosCadastro;
+import com.trybe.acc.java.programacadastro.bean.DadosRetornoCadastro;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
@@ -67,9 +68,13 @@ public class CadastroResourceTest {
     dados.setEmail("teste.cadastro@trybe.com");
     dados.setProtegido(true);
 
-    given().body(dados).contentType(ContentType.JSON).post("/cadastro");
+    DadosRetornoCadastro result = given()
+            .body(dados)
+            .contentType(ContentType.JSON)
+            .post("/cadastro")
+            .as(DadosRetornoCadastro.class);
 
-    given().when().get("/cadastro/1").then().statusCode(401);
+    given().when().get("/cadastro/"+result.getIdCadastro()).then().statusCode(401);
   }
 
   @Test
@@ -80,10 +85,15 @@ public class CadastroResourceTest {
     dados.setEmail("teste.cadastro@trybe.com");
     dados.setProtegido(false);
 
-    given().body(dados).contentType(ContentType.JSON).post("/cadastro");
+
+    DadosRetornoCadastro result = given()
+            .body(dados)
+            .contentType(ContentType.JSON)
+            .post("/cadastro")
+            .as(DadosRetornoCadastro.class);
 
     given().when()
-            .get("/cadastro/2").then()
+            .get("/cadastro/"+result.getIdCadastro()).then()
             .statusCode(200)
             .body("nome", is("Teste Cadastro"));
   }
