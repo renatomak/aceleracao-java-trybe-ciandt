@@ -121,13 +121,13 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ---
 
-## 6. Datas
+## 6.1 Datas
 
-6.1 Datas com horários
+6.1.1 Datas com horários
 
 - [x] [Simulador de Rendimentos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-simulador-rendimento)
 
-  6.2 Operações sobre datas ou horários
+  6.1.2 Operações sobre datas ou horários
 
 - [x] [Ano Bissexto](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/06-datas/acc-java-02-exercises-ano-bissexto)
 
@@ -137,65 +137,65 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ---
 
-## 7. Gestão de Dependências
+## 6.2 Gestão de Dependências
 
-7.1 Maven e Gradle
+6.2.1 Maven e Gradle
 
 - [x] [Gradle war](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/07-gerenciador_de_dependencias/acc-java-02-exercises-gradle-war)
 
-## 7º Desafio Agregador
+## 6.2º Desafio Agregador
 
 - [x] [Bank Account](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/07-gerenciador_de_dependencias/acc-java-02-exercises-bank-account)
 
 ---
 
-## 8. Testes JUnit 5
+## 7. Testes JUnit 5
 
-  8.1 Testes unitários com JUnit 5
+  7.1 Testes unitários com JUnit 5
 
 - [X] [Sistema de RH](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/acc-java-02-exercises-sistema-rh)
 
-  8.2 TDD com JUnit 5
+  7.2 TDD com JUnit 5
 
 - [X] [Sistema Bancario](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/acc-java-02-exercises-sistema-bancario)
 
-## 8º Desafio Agregador
+## 7º Desafio Agregador
 
 - [X] [Caixa eletronico](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/08-testes_junit5/desafio_agregador/acc-java-02-exercises-caixa-eletronico)
 
 ---
 
-## 9. ORM: Hibernate
+## 8. ORM: Hibernate
 
-9.1 Criando entidades
+8.1 Criando entidades
 
 - [X] [Veiculo Hibernate](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/acc-java-02-exercises-veiculo-hibernate)
 
-  9.2 Relacionamentos e consultas
+  8.2 Relacionamentos e consultas
 
 - [X] [Datacenter Catalogo](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/acc-java-02-exercises-datacenter-catalogo)
 
-## 9º Desafio Agregador
+## 8º Desafio Agregador
 
 - [X] [Gestão de times](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/desafio_agregador/acc-java-02-exercises-gestao-time)
 
 ---
 
-## 10. Java Web
+## 9. Java Web
 
-10.1 Como o Java vai para a Web?
+9.1 Como o Java vai para a Web?
 
 - [X] [API Rest Spring](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-api-rest-spring)
 
-10.2 Logs e Datasources
+9.2 Logs e Datasources
 
 - [ ] [Search cars]()
 
-10.3 Fazendo deploy de uma aplicação
+9.3 Fazendo deploy de uma aplicação
 
 - [ ] [Buzzwarn]()
 
-## 10º Desafio Agregador
+## 9º Desafio Agregador
 
 - [X] [Cadastro Especialidades](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-cadastro-especialidades)
 
