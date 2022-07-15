@@ -189,7 +189,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 9.2 Logs e Datasources
 
-- [ ] [Search cars]()
+- [X] [Search cars](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/acc-java-02-exercises-search-cars)
 
 9.3 Fazendo deploy de uma aplicação
 
