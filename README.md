@@ -193,7 +193,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 9.3 Fazendo deploy de uma aplicação
 
-- [ ] [Buzzwarn]()
+- [X] [Buzzwarn](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/09-ORM_hibernate/acc-java-02-exercises-buzzwarn)
 
 ## 9º Desafio Agregador
 
