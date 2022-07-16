@@ -201,21 +201,21 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ---
 
-## 11. Spring
+## 10. Spring
 
-11.1 Introdução ao Spring e Spring Boot
+10.1 Introdução ao Spring e Spring Boot
 
 - [X] [Camadas projeto Spring](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-camadas-projeto-spring)
 
-11.2 Spring - Injeção de Dependências e organização de uma aplicação Spring
+10.2 Spring - Injeção de Dependências e organização de uma aplicação Spring
 
-- [X] [Sistema de Pagamentos]()
+- [X] [Sistema de Pagamentos](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-injecao-de-dependencias-sistema-pagamentos)
 
-11.3 REST, SQL e NoSQL
+10.3 REST, SQL e NoSQL
 
 - [X] [Pedro quer viajar]()
 
-## 11º Desafio Agregador
+## 10º Desafio Agregador
 
 - [X] [Minhas Series](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-minhas-series)
 
