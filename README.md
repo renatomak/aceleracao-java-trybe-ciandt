@@ -215,7 +215,35 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [X] [Pedro quer viajar](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-pedro-quer-viajar)
 
+10.4 Testes no Spring
+
+- [ ] [calcular idade]()
+
+10.4 Deploy da Aplicação Spring com Heroku
+
+- [ ] [calculadora]()
+
 ## 10º Desafio Agregador
 
 - [X] [Minhas Series](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-minhas-series)
+
+
+## 11. Quarkus
+
+11.1 Introdução ao Quarkus
+
+- [ ] [lista de produtos]()
+
+11.2 API CRUD com tratamento de exceções
+
+- [ ] [restaurantes]()
+
+11.3 Testes com JUnit e Deploy no Heroku
+
+- [ ] [programa cadastro]()
+
+
+## 11º Desafio Agregador
+
+- [ ] [programa milhas]()
 
