@@ -213,7 +213,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 10.3 REST, SQL e NoSQL
 
-- [X] [Pedro quer viajar]()
+- [X] [Pedro quer viajar](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-pedro-quer-viajar)
 
 ## 10º Desafio Agregador
 
