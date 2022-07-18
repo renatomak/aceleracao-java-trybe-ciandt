@@ -217,7 +217,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 10.4 Testes no Spring
 
-- [ ] [calcular idade]()
+- [X] [calcular idade](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-calcular-idade)
 
 10.4 Deploy da Aplicação Spring com Heroku
 
