@@ -6,4 +6,7 @@ package com.trybe.calcularidade.exception;
 
 @SuppressWarnings("serial")
 public class ArgumentoIlegalException extends RuntimeException {
+  public ArgumentoIlegalException() {
+    super("Data não é número");
+  }
 }
