@@ -221,7 +221,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 10.4 Deploy da Aplicação Spring com Heroku
 
-- [X] [calculadora]()
+- [X] [calculadora](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/10-java-web/acc-java-02-exercises-calculadora)
 
 ## 10º Desafio Agregador
 
