@@ -232,7 +232,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 11.1 Introdução ao Quarkus
 
-- [ ] [lista de produtos]()
+- [X] [lista de produtos]()
 
 11.2 API CRUD com tratamento de exceções
 
