@@ -236,7 +236,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 11.2 API CRUD com tratamento de exceções
 
-- [ ] [restaurantes]()
+- [X] [restaurantes](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-panache-restaurantes)
 
 11.3 Testes com JUnit e Deploy no Heroku
 
