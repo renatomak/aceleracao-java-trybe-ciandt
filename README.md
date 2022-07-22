@@ -240,7 +240,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 11.3 Testes com JUnit e Deploy no Heroku
 
-- [ ] [programa cadastro]()
+- [x] [programa cadastro]()
 
 
 ## 11º Desafio Agregador
