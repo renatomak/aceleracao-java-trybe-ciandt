@@ -1,0 +1,24 @@
+{
+    "requirements": [
+      {
+        "description": "1 - Verifica adição de dois números",
+        "bonus": false
+      },
+      {
+        "description": "2 - Verifica subtração de dois números",
+        "bonus": false
+      },
+      {
+        "description": "3 - Verifica multiplicação de dois números",
+        "bonus": false
+      },
+      {
+        "description": "4 - Verifica divisão de dois números",
+        "bonus": false
+      },
+      {
+        "description": "5 - Verifica erro na divisão por zero",
+        "bonus": false
+      }
+    ]
+}
