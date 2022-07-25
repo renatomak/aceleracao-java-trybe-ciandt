@@ -1,0 +1,29 @@
+{
+    "requirements": [
+      {
+        "description": "1 - Salvar restaurantes",
+        "bonus": false
+      },
+      {
+        "description": "2 - Listar restaurantes",
+        "bonus": false
+      },
+      {
+        "description": "3 - Buscar restaurante por Id",
+        "bonus": false
+      },
+      {
+        "description":"4 - Atualizar restaurante",
+        "bonus":false
+      },
+      {
+        "description":"5 - Deletar restaurante",
+        "bonus":false
+      },
+      {
+        "description":"6 - Deve validar header customizado",
+        "bonus":false
+      }
+    ]
+}
+  
