@@ -22,4 +22,8 @@ public class LoginDto {
     this.senha = senha;
   }
 
+  @Override
+  public String toString() {
+    return "LoginDto{" + "login='" + login + '\'' + ", senha='" + senha + '\'' + '}';
+  }
 }
