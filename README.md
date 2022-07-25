@@ -245,5 +245,5 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 ## 11º Desafio Agregador
 
-- [ ] [programa milhas]()
+- [X] [programa milhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-programa-milhas)
 
