@@ -247,3 +247,17 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 - [X] [programa milhas](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/11-spring/acc-java-02-exercises-programa-milhas)
 
+## 12. Containers
+
+12.1 Java e Docker
+
+- [ ] [Testes com testcontainers]()
+
+## 12º Desafio Agregador
+
+- [ ] [Gerenciador de Estoque]()
+
+## 13º Desafio Final
+
+- [ ] [Tema 1 - Drone Feeder]()
+
