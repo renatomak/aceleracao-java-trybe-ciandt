@@ -251,7 +251,7 @@ O programa conta com mais de 125 horas de aulas presenciais e online, aborda int
 
 12.1 Java e Docker
 
-- [ ] [Testes com testcontainers]()
+- [X] [Testes com testcontainers](https://github.com/renatomak/aceleracao-java-trybe-ciandt/tree/main/12-docker/acc-java-02-exercises-testes-com-testcontainers)
 
 ## 12º Desafio Agregador
 
